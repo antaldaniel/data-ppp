@@ -15,7 +15,7 @@ Submit Lighting Talk proposal by **October 15 2023**.
 
 Rendered documents: 
 - `docs/Ligthning-talk.md` (Github Flavoured Markdown)
-- `docs/Ligthning-talk.html` (HTML, better view it [here](https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/Ligthning-talk.html), *this is the best introduction to this repository and this work*.)
+- `docs/Lightning-talk.html` (HTML, better view it [here](https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/Lightning-talk.html), *this is the best introduction to this repository and this work*.)
 - `docx/Template_LightningTalk.doc` (The template provided by IDCC for final submission.)
 
 ## Conference Paper Proposal
