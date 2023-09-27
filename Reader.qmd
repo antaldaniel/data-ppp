@@ -1,17 +1,21 @@
 ---
 title: "Data PPP Reader"
+subtitle: "List of references and some quotes"
 format: 
-   html: default
-   gfm: default 
+   html: 
+     toc-depth: 2
+   gfm: 
+     toc-depth: 2
 editor: visual
 bibliography:
 - bib/privatelyhelddata.bib
 - bib/administrativedata.bib
+- bib/OpenMusE.bib
+- bib/openmusicrepositories.bib
 ---
 
-::: {.callout-note}
-[README](). Call for Paper for _Trust through Transparency: 18th International Digital Curation Conference_.  Lightning Talk proposal for the same conference
-
+::: callout-note
+[README](). Call for Paper for [*Trust through Transparency*](https://www.dcc.ac.uk/events/idcc24)*: 18th International Digital Curation Conference*. [Lightning Talk](https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/Lightning-talk.html) proposal for the same conference. [Conference paper](https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/IDCC_CfP.html) proposal.
 :::
 
 ## Privately-held data
@@ -60,12 +64,11 @@ The authoritative source on statistical business registers is the *United Nation
 
 `bib/OpenMusE.bib`
 
-- {Open Music Europe (OpenMusE) – An Open, Scalable, Data-to-Policy Pipeline for European Music Ecosystems [@openmuse_2023]
-- Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMuse Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors' public policies [@open_music_europe_sk_mou_2023]
+-   {Open Music Europe (OpenMusE) -- An Open, Scalable, Data-to-Policy Pipeline for European Music Ecosystems [@openmuse_2023]
+-   Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMuse Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors' public policies [@open_music_europe_sk_mou_2023]
 
 `bib/openmusicrepositories.bib`
 
-- WP1 Repository: Report on the European Music Economy 
-[@open_music_europe_economy_repository]
+-   WP1 Repository: Report on the European Music Economy [@open_music_europe_economy_repository]
 
-- WP2 Repository: Report on Music Diversity and Circulation in Europe [@open_music_europe_diversity_repository]
+-   WP2 Repository: Report on Music Diversity and Circulation in Europe [@open_music_europe_diversity_repository]
