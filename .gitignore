@@ -1,3 +1,7 @@
+# Not to include scrapbook
+
+_not_included
+
 # History files
 .Rhistory
 .Rapp.history
