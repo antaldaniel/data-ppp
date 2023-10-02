@@ -8,8 +8,12 @@ format:
      toc-depth: 2
 editor: visual
 bibliography:
-- bib/privatelyhelddata.bib
 - bib/administrativedata.bib
+- bib/datalicensing.bib
+- bib/datapooling.bib
+- bib/libraryLOD.bib
+- bib/privatelyhelddata.bib
+- bib/statisticalLOD.bib
 - bib/OpenMusE.bib
 - bib/openmusicrepositories.bib
 ---
@@ -18,9 +22,35 @@ bibliography:
 [README](). Call for Paper for [*Trust through Transparency*](https://www.dcc.ac.uk/events/idcc24)*: 18th International Digital Curation Conference*. [Lightning Talk](https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/Lightning-talk.html) proposal for the same conference. [Conference paper](https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/IDCC_CfP.html) proposal.
 :::
 
+Data Pooling
+
+`bib/datapooling.bib`
+
+Mattioli uses analogies with patent pools, particularly with patent pools that uphold industry standards for pooling data [@mattioli_data-pooling_2017]. Patent pools are federations of patent holders that reduce transaction costs by collectively licensing complementary patent rights under unified agreements. The original patent pool for the compact disc (CD) and later the DVD are good examples that benefitted the music industry. Commercializing the CD as a digital audio carrier required the joint exploitation of two patented innovations: Sony's error correction technology and Philips' optical technology. What made the CD a viable global standard is that anybody who developed devices for it knew how to get access to both patents. Exploiting the two innovations jointly increased the value of Sony's and Phillips's intellectual properties, even though they competed on the final markets of CD players, Discmans, or initially on the discs market [@flamm_patent-pools_2012].
+
+Mattioli's research focuses on a seemingly straightforward case for organising similar data pools to patent pools: cancer research, where much data pooling occurs. While earlier conceptualisation of the data pooling problem focused on the free-rider problem and privacy concerns, he highlights those problems that make data pooling difficult in the music sector, too: concerns over professional, competitive or reputational standing [@mattioli_data-pooling_2017, p. 188.]. Just the way hospitals are reluctant to share data on cancer patients for fear that it will reflect poorly on the quality of the service they provide, we see very little music export data released because many small-nation institutions fear that whatever data they reveal will be seen by local stakeholders as insufficient in the competition with far wider and globally promoted American repertoire.
+
+When trying to find analogies with successful patent pools, Mattioli draws attention to categorising innovations into "incremental" and "recombinant" [@mattioli_data-pooling_2017, pp 190-191.]. In analogy with incremental information, a music organisation can perform more and more valuable data analysis as the sheer size of its datasets grows. A new music distributor with a short history can benefit less from asset valuations or time series projections initially. Still, the ability to make inferences from such data grows by adding every royalty period's data to the existing pool. A time series of 20 months may not be sufficient for business predictions, but 80 months of data gives more and more insights. The "recombinant" insights occur when this music distributor can combine its datasets with other datasets collected by different organisations. Sales for a Swedish distributor may have a different dynamic in the United Kingdom than in France: adding external data about the SKK/GBP and SKK/EUR exchange rates, consumer spending dynamics in the two countries, or simply price level data in the two countries may inform the distributor if it can exploit the different UK/France dynamics with a better sales strategy, or, on the contrary, it should just simply manage better exchange rate risks.
+
+As Mattioli concludes, the patent-data analogy is imperfect and data pooling appears to be more challenging for several reasons. While patents are finished when the patent is granted, datasets usually need constant actualisation; ownership and exploitation is far clearer with patents than with data. [@mattioli_data-pooling_2017, pp. 199.] This topic overlaps generally with the problem of data ownership, control and licensing.
+
+## Data licensing
+
+-   No one's ownership as the status quo and a possible way forward: A note on the public consultation on Building a European Data Economy [@kim_2018]
+
 ## Privately-held data
 
 `bib/privatelyhelddata.bib`
+
+The widespread use of ever-greater computing and data storage capacity changed how humanity records and stores data---accumulating substantial amounts of data records for statistical analysis used to be possible for large governmental, military or corporate structures until the middle of the 20th century. Currently, various questionnaires and sensor or digital documentation-based data accumulation happens in all public institutions, including on small municipal levels and in the private sector.
+
+The creation of official, national statistics, which were almost entirely based on censuses and sample surveys, has been using more and more so-called administrative data sources in developed countries since the 1980s and 1990s. While a population census is still necessary and held every ten years in each EU member state, statisticians have a relatively accurate view of the country's population from birth and death certificates, tax and social security data, and other computer-recorded and digitally stored data in public institutions. In 2010, many statistical offices started experimenting with using digitally stored data by commercial enterprises, such as mobile phone operators or credit card companies. The "Use of new data source \-\-- the case of Statistics Norway" by Sæbø and Dimakos presents the current state of affairs with the example of the Household Budget Survey [@saebo_new_data_sources_2023]. Until 2012, Norwegian statisticians measured household spending with a sample survey of Norwegians reporting their purchases; they asked a large sample of people drawn from the Norwegian population register (established in 1964) to fill in questionnaires. The data quality was particularly poor with food and beverages because such purchases, as opposed to infrequent buying of new television sets or festival tickets, happen daily; the reporting burden or the burden on memory is taxing when people retrospectively must fill out a questionnaire about buying bread, butter and orange juice.
+
+Norway created statistical registers to tap into governmental data stores in 1990 and into municipal ones in 1995; by 2019, it utilised about 100 records and drew data from 30 public institutional sources [@saebo_new_data_sources_2023, p1.]. Like most countries, such "administrative data" was retrieved from other governmental entities, not the private sector. Collecting data from people, companies, and non-profits still relies on census-like comprehensive and sample surveys that take the form of filling out a digital or paper format or answering questions to an interviewer who fills out the form instead of the respondent.
+
+Surveying is costly and often inaccurate. Asking randomly selected music creators about their received royalties over a year requires the respondent to answer questions after opening and reviewing various royalty statements or necessarily filters through the individual's cognitive biases and memory lapses. Statistics Norway realised that instead of asking 7000 households about what they were buying in the supermarkets, it is far more accurate and potentially cheaper to acquire the data directly from the sales logs of the supermarkets or the payment transaction records of the credit card companies. CEEMID, the predecessor of Open Music Europe, relied on similar techniques that experimenting government statisticians used: we kept asking anonymously and randomly music creators about their received royalties, but we also compared the data with the actual anonymised payouts of Artisjus in Hungary and SOZA in Slovakia.
+
+Several European countries are experimenting with new regulations that make data provision mandatory for certain enterprises like supermarkets, mobile telephone operators or credit card companies to provide privately-held, commercial data for official statistical purposes. The lessons of Norway are interesting because the new statistical law (in force since 2021) allows such data collection after a cost/benefit analysis and risk reduction carried out by Statistics Norway. While in Open Music Europe, we are not planning and not even advocating state-mandated data collection; we find these criteria useful for voluntary data sharing with the government based on individual agreements, which we endorse in the music sector.
 
 *European Statistical System Position paper on access to privately held data which are of public interest*
 
@@ -30,9 +60,15 @@ bibliography:
 
 *High-Level Expert Group on Business-to-Government Data Sharing: Towards a European strategy on business-to-government data sharing for the public interest. Final report*
 
-> B2G data-sharing collaborations should be organised: -- in testing environments ('sandboxes') for pilot testing ('pilots') to help assess the potential value of data for new situations in which a product or service could potentially be used ('use cases'), -- via public-private partnerships. [@hleg_towards_b2g_data_2020, p. 8.]
+> B2G data-sharing collaborations should be organised:
+>
+> -- in testing environments ('sandboxes') for pilot testing ('pilots') to help assess the potential value of data for new situations in which a product or service could potentially be used ('use cases'),
+>
+> -- via public-private partnerships. [@hleg_towards_b2g_data_2020, p. 8.]
 
-> Data taxonomy In this report, the term 'data' refers to data at all levels of abstraction, from raw data to pre-processed, processed data and insights derived from the data, depending on the use case, the type of data, etc. (for further details, see Annex I: Data taxonomy). Raw data: data collected from a source (e.g. numbers, instrument readings, images, text, videos, sensor data).
+> Data taxonomy
+>
+> In this report, the term 'data' refers to data at all levels of abstraction, from raw data to pre-processed, processed data and insights derived from the data, depending on the use case, the type of data, etc. (for further details, see Annex I: Data taxonomy). Raw data: data collected from a source (e.g. numbers, instrument readings, images, text, videos, sensor data).
 >
 > Pre-processed data: pre-processing includes, for example, cleaning, instance selection, re-sampling, normalisation, transformation, feature extraction and selection.
 >
@@ -60,12 +96,89 @@ p43 chart
 
 The authoritative source on statistical business registers is the *United Nations Guidelines on Statistical Business Registers. Final draft prior to official editing* [@un_sbr_guidelines_2020] which is heavily based on the former UNECE *Guidelines on statistical business registers* [@unece_sbr_guidelines_2015]. The European guideline is the *European business statistics methodological manual for statistical business registers. 2021 edition* [@eurostat_sbr_manual_2021].
 
+The statistical business register is an essential tool for creating survey frames or sample frames, in other words, to organise statistical data collection. In non-technical terms, this register is necessary to decide who should get a data request.
+
+-   For a *sample survey*, the register is used to draw a lottery of those members of the population who will be invited to provide data.
+
+-   In a *census*-type survey, all registered members of the population, for example, all music labels, will receive an invitation to an interview or form.
+
+-   In the case of *a register-based survey*, all members of the register, for example, all collective management societies in the territory, will be requested to send data directly from their databases.
+
+![Comparison of three types of statistical surveys. Based on A. Wallgren and B. Wallgren: Register-based Statistics -- Administrative Data for Statistical Purposes](png/three-types-of-surveys.png)
+
+### Slovak music industry enterprise register
+
+The creation of a registry of music industry enterprises is least challenging task, because legal persons are not protected by the same level of data protection as private individuals. Enterprises must provide much information for various open, public databases, such as company houses, that themselves are sources of government and business statistics.
+
+The music industry needs a special register because the main nomenclature for categorising businesses, NACE, does not have a music industry entry. Most, but not all music businesses are categorised as J58 (together with enterprises working for the film, television or radio industries) or R90 (together with dance, theatrical, circus and other performers, actors, even film producers.) This makes any statistical product about J58 or R90 useful for a more macro-level cultural and creative industry policy design, but not suitable for the implementation of music (or film) business, institutional or public policies. The part of the music industry categorised into J58 works for different buyers in different market conditions, employing a different workforce than most J58 music industry enterprises; the same can be said of enterprises in the R90 class or other parts of the nomenclature. On the other hands, bank or insurance statistics are usually "clean", because engaging in these economic activities requires a complex regulatory approval.
+
+The Slovak Music Industry Register should contain the company registration numbers of entities that are active in a given business year in the Slovak music industry:
+
+-   Music publishers that register new works, or receive royalties for previously registered (represented) works.
+
+-   Record lables that release new sound recordings, or receive royalties for previously released recordings.
+
+-   Concert and festival promoters, booking agents, for-profit and social enterprises of musical groups (ensembles, choirs, orchestras, bands) that engage in the creation of live music performances.
+
+-   Enterprises that work within the broader music industry as suppliers of transport for music groups, producers or merchants of "merchandise", music schools and rehearsal studios and other enterprises.
+
+The creation of such an enterprise registry does not require special data protection protocols. The music market is a public space, and legal entities anyways must give a public account of their main economic activities. A good starting points are the enterprises that are registered with SOZA.
+
+Most music enterprises are not providing statistical information to the SOSR in any given year, because only 2-3 Slovak music enterprises qualify for the enterprise size threshold for the mandatory Roc-1 survey. The smaller music enterprises are randomly selected to participate in the Roc-2 survey but not as "music enterprises" but as "sound recording" or "aritstic performance" companies, undivided from companies working for film, television, or theatre. The creation of a music industry register enables the filtering of "music-only" responses in the survey, and the calculation of statistical measures like "total revenue for the music industry" or "average number of employees in the music industry."
+
+In the banking industry, the registry is not necessary, because all banks are likely to have the xxx, and only large legal persons can provide banking services. As we discuss at great length in our working paper, , an enterprise-level surveying is more difficult in the music industry because most music enterprises are small and do not participate in the comprehensive, census-like Roc-01, and many enterprises are informal or the activities are carried out by sole proprietors (formally as freelancers) or informally by private persons. To correctly measure the music industry, we must carry out so-called mixed surveys that contain questions for legal persons and one-person enterprises, too. Which makes it necessary that we create a music professional population register, too.
+
+## Music professional population register
+
+Technically the creation of registry of persons who engage professionally in music activities is not more complex than registering legal persons. The larger population size and the special protection of data and privacy of individuals pose challenges in the creation and the use of the population register.
+
+-   Authors who register and self-publish music works and music lyrics.
+
+-   Creators of sound recordings, i.e., producers and performers of recoded fixations of music performance that are released to be bought, streamed, broadcasted or played in the public against payment.
+
+-   Concert and festival promoters, booking agents, solo peformers and members of musical groups (ensembles, choirs, orchestras, bands) that engage in the creation of live music performances without being employed in a music institution or enterprises as a legal person.
+
+-   Music professionals that work within the broader music industry as suppliers of transport for music groups, producers or merchants of "merchandise", music schools and rehearsal studios and other enterprises, as sole proprietors or in other forms that do not constitute a form of employment in a legal person.
+
+The national collective management societies like SOZA, SLOVGRAM or OZIS have a comprehensive list of creators who register their intellectual property for future payments, or receive payments, because certain forms of such payments, like radio broadcasting royalties, are only paid by these organisations. The creators they represent individually or as members form the economically more active part of the population. Experience of these organisations show that there are some groups of music creators, particularly young creators in music genres that are not radio-friendly because of their eccentric music or explicit lyrics fail to register with these organisations, because they do not expect broadcasting royalties. National collective management societies have a duty to try attract such creators to their member base, because the copyright management infrastructure offered by such organisations goes beyond the administration of the royalties that may not available for such artists.
+
+Creators tend to be the minority of the music workforce. Behind a solo artist or a band of four, we usually find at least 5 music professionals behind the stage who manage the sound, light, stage technology, the administration and sale of tickets and merchandise, transport and install the technology, or manage the crowd at entry, exit and in emergency. In larger stages and in the case of larger ensembles, the support crew size expands to up to 200 people, while even a symphonic orchestra is made of "only" 80-100 performers. Although our earlier research shows that within the music ecosystem individuals usually perform more than one activity (they promote concerts and perform music, or act as both sound engineers and music creators), a very sizable part of the music industry population has no copyrights or neighboring rights and remains invisible for the collective management societies.
+
+The natural persons population of the music industry appears in population censuses in every ten years, and randomly in sample surveys, like the Labour Force Survey (LFS) or the Adult Education Survey (AES), which is conducted in Slovakia and every EU member state in a harmonised manner. The problem of these sample surveys is similar to the enterprise surveys: it is based on a categorisation, ISCO, which does not allow an effective filtering out of responses given by the people working or learning in the music industry. Because of the relative small size of the music sector, it is possible (but far from certain) that there are not enough responses recorded in the SOSR surveys to create statistics about the music industry; unfortunately, even if the sample size is large enough, it is impossible to select those responses that relate to music.
+
+In the case of natural persons, we suggest the creation of ex ante harmonised surveys which ensure that the enough music professional persons give answers to questions that a few anyways respond as members of a random sample in LFS or AES. The coordination of these surveys is nevertheless more complicated because we cannot use so simply a natural person identifier as a company registry number to filer or join data. Yet the creation of the population register is still a first step: before we define who belongs personally to the music industry, it is not possible to administer a survey that gauges their opinions or characteristics.
+
+In the past years, SOZA, in methodological cooperation with Artisjus in Hungary and HDS in Croatia, carried out sample surveys in the music professional population that achieved a high level of representativeness among creators, even though these surveys were not based on a music professional population register. While they did not know who fills out the CEEMID music professional surveys, two mechanisms secured representativeness. Even though in the absense of a register, explicit stratification was not possible with the survey, but SOZA (and Artisjus) could acertain that the entire population receives a questionnaire. They form remained anonymous, but the entire population was invited to fill it out. Furthermore, as SOZA (and Artisjus) administers exclusively and comprehensively certain type of royalties, we could compare the true statistics (mean, median, standard deviation) of actual royalty payments to anonymously reported payments. We collected answers until the anonymous sample's statistics converged to the known, true statistical values in these anchoring points.
+
+This leads to the third part of use of the register: access to administrative data, i.e., demographic and income information from comprehensive records of IT systems that were not designed primarily for statistical production, but for the administration of music royalties (SOZA, SLOVGRAM, OZIS), or the documentation of music heritage (Hudobne centrum and the Slovak music libraries)
+
+## Data licensing
+
+`bib/datalicensing.bib`
+
+## Data Pooling
+
+`bib/datapooling.bib`
+
+## Linked Open Data in Statistics
+
+`bib/statisticalLOD.bib`
+
+-   In *Publishing census as linked open data: a case study* Petrou, Papastefanatos and Dalamagas provide a case study of LOD publication in Greece [@PetrouIrene2013Pcal].
+
+-   *Linked Open Data Statistics: Collection and ExploitationLinked Open Data Statistics: Collection and Exploitation* [@ermilov_et_al_lod_statistics_2013] in the collection *Knowledge Engineering and the Semantic Web*.
+
+## Linked Open Data in Libraries
+
+`bib/libraryLOD.bib`
+
 ## Open Music Europe cross-referencing
 
 `bib/OpenMusE.bib`
 
--   {Open Music Europe (OpenMusE) -- An Open, Scalable, Data-to-Policy Pipeline for European Music Ecosystems [@openmuse_2023]
+-   Open Music Europe (OpenMusE) -- An Open, Scalable, Data-to-Policy Pipeline for European Music Ecosystems [@openmuse_2023]
 -   Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMuse Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors' public policies [@open_music_europe_sk_mou_2023]
+-   *A framework for open policy analysis* [@OPA_framework_2020]
 
 `bib/openmusicrepositories.bib`
 

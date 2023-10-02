@@ -34,6 +34,9 @@ Source document: `IDCC_CfP.qmd` (Quarto markdown)
 Source document: `Reader.qmd` (Quarto markdown)
 - `docs/Reader.md` (Github Flavoured Markdown)
 - `docs/Reader.html` (HTML, better view it [here](https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/Reader.html).)
-
+- `bib/datapooling.bib`: Data pooling literature, not primary focus.
+- `bib/datalicensing.bib`: Data licensing literature, not primary focus.
+- `bib/libraryLOD.bib`: using linked open data in libraries (not primary focus now.)
 - `bib/privatelyhelddata.bib`: Bibilographic references about the use privately held data for official statistics.
-
+- `bib/statisticalLOD.bib`: Using linked open data in statistics.
+- `bib/OpenMusE.bib`: for cross-referencing Open Music Europe documents and statistical products.
