@@ -119,6 +119,10 @@ The authoritative source on statistical business registers is the *United Nation
 
 `bib/libraryLOD.bib`
 
+## Survey harmonisation
+
+`bib/surveyharmonization.bib`
+
 ## Open Music Europe cross-referencing
 
 `bib/OpenMusE.bib`
