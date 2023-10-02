@@ -8,6 +8,9 @@ format:
      toc-depth: 2
 editor: visual
 bibliography:
+- bib/datalicensing.bib
+- bib/datapooling.bib
+- bib/privatelyhelddata.bib
 - bib/administrativedata.bib
 - bib/datalicensing.bib
 - bib/datapooling.bib
