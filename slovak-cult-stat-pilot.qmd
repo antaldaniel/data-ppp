@@ -83,7 +83,11 @@ knitr::include_graphics(file.path("png", "banner_slovak-cult-stat-pilot.png"), d
 
 Funded by the European Union under Grant No. 101095295. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission's Citizens, Equality, Rights and Values Programme, or the official views of the Ministerstvo kultúry SR, Štatistický úrad SR, Infostat or IKP. Neither the European Union, the Slovak public bodies nor the granting authority can be held responsible for them.
 
+<<<<<<< HEAD
 Latest consultation version: [Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic](https://music.dataobservatory.eu/documents/open_music_europe/slovakia/slovak-cult-stat-pilot.html) with `docx`, `epub` and `pdf` downloads. You can comment in Word/Google Docs the docx file if you do not want to work on the markdown [souce](https://github.com/antaldaniel/data-ppp/blob/main/slovak-cult-stat-pilot.qmd).
+=======
+Latest consultation version: [](https://music.dataobservatory.eu/documents/open_music_europe/slovakia/slovak-cult-stat-pilot.html) with `docx`, `epub` and `pdf` downloads. You can comment in Word/Google Docs the docx file if you do not want to work on the markdown [souce]().
+>>>>>>> 06682cc7112e740cf6227b6ce16bf3b8527ec2a8
 
 For reference: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8399254.svg)](https://doi.org/10.5281/zenodo.8399254)
 :::

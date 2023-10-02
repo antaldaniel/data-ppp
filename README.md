@@ -5,6 +5,11 @@
 - Create a` not_included/` subfolder in your local copy if you want a sandbox for your doodles and unfinished work. They will be excluded by `.gitignore`, i.e., they will never leave your computer.
 - 🌈 You must abide by the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) Code of Conduct.
 
+## Slovak Pilot Program Proposal
+
+Latest consultation version: [Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic](https://music.dataobservatory.eu/documents/open_music_europe/slovakia/slovak-cult-stat-pilot.html) with `docx`, `epub` and `pdf` downloads. You can comment in Word/Google Docs the docx file if you do not want to work on the markdown [souce](https://github.com/antaldaniel/data-ppp/blob/main/slovak-cult-stat-pilot.qmd).
+
+
 ## Lightning Talk Proposal
 
 Proposal for a `Lightning Talk` on `Trust through Transparency`, the 18th [International Digital Curation Conference](https://www.dcc.ac.uk/events/18th-international-digital-curation-conference)
@@ -29,8 +34,6 @@ Source document: `IDCC_CfP.qmd` (Quarto markdown)
 
 
 ## Reader
-
-
 Source document: `Reader.qmd` (Quarto markdown)
 - `docs/Reader.md` (Github Flavoured Markdown)
 - `docs/Reader.html` (HTML, better view it [here](https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/Reader.html).)
@@ -40,3 +43,5 @@ Source document: `Reader.qmd` (Quarto markdown)
 - `bib/privatelyhelddata.bib`: Bibilographic references about the use privately held data for official statistics.
 - `bib/statisticalLOD.bib`: Using linked open data in statistics.
 - `bib/OpenMusE.bib`: for cross-referencing Open Music Europe documents and statistical products.
+
+_Funded by the European Union under Grant No. 101095295. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission's Citizens, Equality, Rights and Values Programme, or the official views of the Ministerstvo kultúry SR, Štatistický úrad SR, Infostat or IKP. Neither the European Union, the Slovak public bodies nor the granting authority can be held responsible for them._
