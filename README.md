@@ -7,7 +7,11 @@
 
 ## Slovak Pilot Program Proposal
 
-Latest consultation version: [Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic](https://music.dataobservatory.eu/documents/open_music_europe/slovakia/slovak-cult-stat-pilot.html) with `docx`, `epub` and `pdf` downloads. You can comment in Word/Google Docs the docx file if you do not want to work on the markdown [souce](https://github.com/antaldaniel/data-ppp/blob/main/slovak-cult-stat-pilot.qmd).
+Latest consultation version: [Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic](https://music.dataobservatory.eu/documents/open_music_europe/slovakia/slovak-cult-stat-pilot.html) with `docx`, `epub` and `pdf` downloads. You can comment in Word/Google Docs the `docx` file if you do not want to work on the markdown [souce](https://github.com/antaldaniel/data-ppp/blob/main/slovak-cult-stat-pilot.qmd).
+
+*Version history:*
+- 0.1.0: Sent for consultation to stakeholders on 2023-10-02.
+- 0.1.1: Minor editing for text clarity and addition of some citations on 2023-10-09.
 
 
 ## Lightning Talk Proposal
