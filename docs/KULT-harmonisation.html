@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Daniel Antal">
+<meta name="dcterms.date" content="2023-12-02">
+
+<title>Retrospective Harmonisation of the KULT Slovak Cultural Surveys</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="KULT-harmonisation_files/libs/clipboard/clipboard.min.js"></script>
+<script src="KULT-harmonisation_files/libs/quarto-html/quarto.js"></script>
+<script src="KULT-harmonisation_files/libs/quarto-html/popper.min.js"></script>
+<script src="KULT-harmonisation_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="KULT-harmonisation_files/libs/quarto-html/anchor.min.js"></script>
+<link href="KULT-harmonisation_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="KULT-harmonisation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="KULT-harmonisation_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="KULT-harmonisation_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="KULT-harmonisation_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #4EC0E4;
+      }
+</style>
+
+
+</head>
+
+<body>
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Retrospective Harmonisation of the KULT Slovak Cultural Surveys</h1>
+            <p class="subtitle lead">A practical guide to data preparation, and considerations for research automation and prospective ex ante and international harmonisation</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Daniel Antal <a href="https://orcid.org/0000-0003-1689-0557" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">2 December 2023</p>
+      </div>
+    </div>
+    
+      
+      <div>
+      <div class="quarto-title-meta-heading">Doi</div>
+      <div class="quarto-title-meta-contents">
+        <p class="doi">
+          <a href="https://doi.org/10.5281/zenodo.10251431">10.5281/zenodo.10251431</a>
+        </p>
+      </div>
+    </div>
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#retrospective-harmonisation-of-kult-surveys" id="toc-retrospective-harmonisation-of-kult-surveys" class="nav-link active" data-scroll-target="#retrospective-harmonisation-of-kult-surveys">Retrospective Harmonisation of KULT Surveys</a>
+  <ul class="collapse">
+  <li><a href="#rationale" id="toc-rationale" class="nav-link" data-scroll-target="#rationale">Rationale</a></li>
+  <li><a href="#working-with-the-pdf-documentation" id="toc-working-with-the-pdf-documentation" class="nav-link" data-scroll-target="#working-with-the-pdf-documentation">Working with the PDF documentation</a></li>
+  <li><a href="#translations" id="toc-translations" class="nav-link" data-scroll-target="#translations">Translations</a></li>
+  <li><a href="#from-word-to-excel" id="toc-from-word-to-excel" class="nav-link" data-scroll-target="#from-word-to-excel">From Word to Excel</a></li>
+  <li><a href="#in-the-tidyverse" id="toc-in-the-tidyverse" class="nav-link" data-scroll-target="#in-the-tidyverse">In the tidyverse</a></li>
+  </ul></li>
+  <li><a href="#labels-and-variable-names" id="toc-labels-and-variable-names" class="nav-link" data-scroll-target="#labels-and-variable-names">Labels and Variable Names</a>
+  <ul class="collapse">
+  <li><a href="#identification-of-observational-units-and-namespaces" id="toc-identification-of-observational-units-and-namespaces" class="nav-link" data-scroll-target="#identification-of-observational-units-and-namespaces">Identification of Observational Units and Namespaces</a></li>
+  <li><a href="#linking-data-about-observational-units" id="toc-linking-data-about-observational-units" class="nav-link" data-scroll-target="#linking-data-about-observational-units">Linking data about observational units</a></li>
+  </ul></li>
+  <li><a href="#variable-semantics" id="toc-variable-semantics" class="nav-link" data-scroll-target="#variable-semantics">Variable semantics</a>
+  <ul class="collapse">
+  <li><a href="#linking-data-about-the-variables" id="toc-linking-data-about-the-variables" class="nav-link" data-scroll-target="#linking-data-about-the-variables">Linking data about the variables</a></li>
+  </ul></li>
+  <li><a href="#further-work" id="toc-further-work" class="nav-link" data-scroll-target="#further-work">Further work</a>
+  <ul class="collapse">
+  <li><a href="#wp3-survey-harmonisation" id="toc-wp3-survey-harmonisation" class="nav-link" data-scroll-target="#wp3-survey-harmonisation">WP3: Survey harmonisation</a></li>
+  <li><a href="#wp1-data-gap-identification" id="toc-wp1-data-gap-identification" class="nav-link" data-scroll-target="#wp1-data-gap-identification">WP1: Data gap identification</a></li>
+  <li><a href="#wp2-data-gap-identification" id="toc-wp2-data-gap-identification" class="nav-link" data-scroll-target="#wp2-data-gap-identification">WP2: Data gap identification</a></li>
+  <li><a href="#wp4-software-ecosystem" id="toc-wp4-software-ecosystem" class="nav-link" data-scroll-target="#wp4-software-ecosystem">WP4: Software ecosystem</a></li>
+  <li><a href="#wp5-music-observatory-prototype" id="toc-wp5-music-observatory-prototype" class="nav-link" data-scroll-target="#wp5-music-observatory-prototype">WP5: Music Observatory prototype</a>
+  <ul class="collapse">
+  <li><a href="#namespaces" id="toc-namespaces" class="nav-link" data-scroll-target="#namespaces">Namespaces</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="KULT-harmonisation.epub"><i class="bi bi-file"></i>ePub</a></li><li><a href="KULT-harmonisation.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="KULT-harmonisation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="retrospective-harmonisation-of-kult-surveys" class="level2">
+<h2 class="anchored" data-anchor-id="retrospective-harmonisation-of-kult-surveys">Retrospective Harmonisation of KULT Surveys</h2>
+<p>Our granted work follows the <em>Feasibility study for the establishment of a European Music Observatory : final report</em> with caveats. <span class="citation" data-cites="emo_feasibility_2020">(<a href="#ref-emo_feasibility_2020" role="doc-biblioref">Commission et al. 2020</a>)</span> The feasibility study does not have a data map, and it reports “data gaps” that music professionals, often without the support of data specialists, felt was missing. These perceived data gaps are problematic but only sometimes reflect missing data.</p>
+<p>We distinguish between “perceived” and “actual” data gaps because only actual data gaps require the costliest, primary collection. Perceived data gaps, on the other hand, mean that the information needed by the music professionals and their organisation is available, but it is hard to find, or it is not in a usable format. Sometimes, the data is present but not processed and can be obtained retrospectively. Or, the data is available, but it does not meet FAIR standards, and it is hard to find. Often the same information need can be fulfilled with other data or statistical indicator products.</p>
+<p>Surveying is becoming very costly, partly because of the increasing wages of skilled labour and partly because of general survey fatigue in the population. Data strategists, particularly data producers, must weigh the costs and benefits of collecting more data with surveys when alternative administrative data sources or reusable, pre-existing surveys are present.</p>
+<p>The most important cultural-sector-specific data source of the Slovak statistical system is the KULT survey program. Any ex-ante, forward-looking data collection plan with surveys must first analyse what is already available in this data collection program and its history.</p>
+<p>We use the KULT summary documents to re-create the necessary metadata of the KULT microdata files and to create checkpoints. These PDF files contain the Slovak variable labels for each survey’s module and columns and the sum of numeric values, which will be used as checksums when we read the raw data into R.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Latest working version: <a href="https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/KULT-harmonisation.html">Retrospective Harmonisation of the KULT Surveys</a> on the <code>Digital Music Observatory</code> website with <code>epub</code> and <code>pdf</code> downloads. The <a href="https://github.com/antaldaniel/data-ppp/blob/main/slovak-cult-stat-pilot.qmd">source</a> file is always the latest.</p>
+<p>For reference: <a href="https://doi.org/10.5281/zenodo.10251431"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10251431.svg" class="img-fluid" alt="DOI"></a>. See source documents and version history on <a href="https://github.com/antaldaniel/data-ppp">GitHub</a>.</p>
+<p>Funded by the European Union under <a href="https://cordis.europa.eu/project/id/101095295">Grant No.&nbsp;101095295</a>. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission’s Citizens, Equality, Rights and Values Programme. Neither the European Union nor the granting authority can be held responsible for them.</p>
+</div>
+</div>
+<section id="rationale" class="level3">
+<h3 class="anchored" data-anchor-id="rationale">Rationale</h3>
+<blockquote class="blockquote">
+<p>To ensure that answers from respondents surveyed in different settings carry minimal methodological errors and biases and can be meaningfully compared, both data producers and secondary users combine surveys from different sources, that is, they harmonize survey data. Generally, they do so at different stages of the survey lifecycle. Data producers mostly employ harmonization ex-ante, when designing and implementing comparative studies (input harmonization) and when processing the survey data in preparation for their public release (ex-ante output harmonization). […] Secondary users apply harmonization methods retrospectively to already released data files.” <span class="citation" data-cites="wysmulek_expost_2022">(<a href="#ref-wysmulek_expost_2022" role="doc-biblioref">Wysmułek, Tomescu-Dubrow, and Kwak 2022</a>)</span></p>
+</blockquote>
+<p>The <code>Open Music Europe</code> project aims to become a data producer or co-producer using novel statistical methods that combine governmental data with privately held (music industry) data (See our Memorandum of Understanding <span class="citation" data-cites="open_music_europe_sk_mou_2023">(<a href="#ref-open_music_europe_sk_mou_2023" role="doc-biblioref">Ministerstvo kultúry SR and Open Music Europe 2023</a>)</span> and the more detailed statistical program <span class="citation" data-cites="antal_slovak-cult-stat-pilot">(<a href="#ref-antal_slovak-cult-stat-pilot" role="doc-biblioref">Antal 2023a</a>)</span>.) Our most immediate target for harmonisation is the KULT (enterprise or institutional surveys). To suggest beneficial and easy-to-implement, forward-looking, ex-ante modifications, we first need to carry out a retrospective or ex-post analysis to understand the data’s opportunities and weaknesses better.</p>
+</section>
+<section id="working-with-the-pdf-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-the-pdf-documentation">Working with the PDF documentation</h3>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/kult-pdf-2.png" class="img-fluid figure-img" width="662"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>It is possible to work with pdf files in R with the <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package, which can create a fully reproducible workflow, but in our case, it would be a prolonged process because we need to work with many PDF files. Instead, we converted the PDF files to a Word document and copied the tabular information into Excel. In <code>tabulizer</code>, you would have to figure out the coordinates of the table in the partly graphical PDF file and then read it into R. When you work between Word and Excel, you do this visually with a mouse.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/ilovepdf-1.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/ilovepdf-2.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/ilovepdf-3.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="translations" class="level3">
+<h3 class="anchored" data-anchor-id="translations">Translations</h3>
+<p>Because I do not speak Slovak, I used DeepL to understand what happened in the PDF files. We will not need this step in our project because we work with native Slovak speakers. Eventually, we will create bilingual labelling, but we will do it differently because of our need for consistency. Adding the translation offers a way to understand the tidy data (table) concept.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/deepl-1.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="from-word-to-excel" class="level3">
+<h3 class="anchored" data-anchor-id="from-word-to-excel">From Word to Excel</h3>
+<p>In our case, the information in the PDF file is stored as text and numbers and not as a scanned picture; therefore, we do not need OCR software to guess what the image of letters and numbers means. We have a usable Word file and can select the tables carefully, ensuring all headings are chosen.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/word-1.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Many conversion utilities can convert a PDF file into an Excel spreadsheet file. We work in Word because this way, we can avoid the same problem that we did not work with the <code>tabulirzer</code> R package: the converter utility does not for sure what a margin is and what is already part of a table. In Excel, your columns will not be aligned, rendering the conversion of a larger table useless. (I repeat the same procedure with the English language translations, as you will see below.)</p>
+<p>If you open the example Excel file, you will see examples of already well-copied data. You can use them to copy and paste a header to the top of a new sheet, in this case, the sheet made in the KULT-5 Excel file for the 2010 data.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/excel-1.png" class="img-fluid figure-img" width="683"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I used straightforward column names: <code>label_1_sk</code> for the first Slovak language labels, <code>label_2_sk</code> for the second, and <code>label_3_sk</code> for the third. In the KULT PDF for 2007 the table was broken into three columns (because of the merged summary columns), but later, it was more, so I had to add a <code>label_4_sk</code>. There were two critical columns: a numbering, which serves as a guide to the columns of the microdata CSV file, and the actual sum of numeric information reported by the statistical subjects.</p>
+<p>For example, <code>Concerts/performances of the reporting ensemble in Slovakia total</code> stitched with <code>on the domestic scene</code> corresponds to the 3rd column in Module 1 of the KULT-05 survey in 2010. The total of this statistic is 235. I call the number three <code>var_number_sk</code> and the total value a <code>checksum_sk</code> because it will be used to check if we read in the microdata correctly. The <code>_sk</code> suffix is used to record that this information is coming from the Slovak version of the Word file; in the unlikely case that you made a copying mistake, it is better to know where to search for the correspondence with the authoritative files. For labelling, the <code>_sk</code> and <code>_en</code> suffixes serve a natural purpose; I do not want to mix up Slovak and English-translated label elements.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/excel-2.png" class="img-fluid figure-img" width="683"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In a tidy data table, every observation is a row, and every variable is a column. In this case, the observation corresponds to a variable (<em>a column in the</em> microdata_file_); our KULT-05 summary PDF is observing what can be found in the original microdata. If you work with translations, you must ensure that <code>Concerts/performances of the reporting ensemble in Slovakia total</code> are in the same line in all languages because they observe the meaning of the same variable in the microdata.</p>
+<p>The variables, or the columns, must be well-aligned. For example, the <code>var_number_sk</code> must always fall into the same column. Because the table is adjusted from the top left-hand corner, I drag the columns from left to right whenever something does not align. Because the lower Module 2 table has more columns than the upper Module 1, I dragged the <code>var_number_sk</code> and the <code>checksum_sk</code> in the upper table until it aligned well with the lower Module 2 and Module 3. I called the extra column <code>label_4_sk</code> in the Slovak version and <code>label_4_en</code> in English.</p>
+<p>At this step, I also remove the footnotes. This step is not critical; when in doubt, leave them be. Removing them in R programmatically would potentially need much exception handling (if the footnotes appear in different locations), so I just do it this way because I have to work in Excel on the alignment of the columns.</p>
+<p>Now everything is almost tidy; the most critical information, i.e., where we find the <code>Concerts/performances of the reporting ensemble in Slovakia total</code> in the microdata, is aligned with the labels of every other variable.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/excel-3.png" class="img-fluid figure-img" width="683"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The last step is breaking up merged columns in Excel. Combining columns is a good practice for human readability. It will not work well with a computer-actionable table because the computer does not know intuitively what the merging means. So, I point the mouse to the select all table field (the little triangle. between the <code>A</code> heading for the first column and the <code>1</code> row label for the first row), and when the entire sheet is selected, I navigate to unmerge cells and break them up.</p>
+<p>As a result, the Excel table is less readable for humans but more understandable for the processing workflow. It is a bit disturbing that the variable labels (i.e., the description of the meaning of the variable) is fragmented into 1, 2, 3, or 4 cells, but that will be an easy fix: in R, I will concatenate them into a single label, for example, adding together elements <code>Concerts/performances of the reporting ensemble in Slovakia total</code> separated by <code>-</code> with <code>on the domestic scene</code> in row 8 of my Excel table (corresponding to KULT05.M1.3, or the 3rd column of Module 1 in the KULT05 microdata.) Because we will work with thousands of labels, this concatenation is better done in R; it would take a very long time in Excel, and it is likely that the administrator of that Excel file would get tired and make a mistake at some point.</p>
+<p>Remember that all of this post-processing in R is possible if the rows and columns are well aligned. If<code>Concerts/performances of the reporting ensemble in Slovakia total</code> are not well aligned with <code>on the domestic scene</code>, then the entire codebook and crosswalk table will be useless.</p>
+</section>
+<section id="in-the-tidyverse" class="level3">
+<h3 class="anchored" data-anchor-id="in-the-tidyverse">In the tidyverse</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># I name the label fragments as a group for easier referencing:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>labels_sk <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"label_1_sk"</span>, <span class="st">"label_2_sk"</span>, <span class="st">"label_3_sk"</span>, <span class="st">"label_4_sk"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>labels_en <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"label_1_en"</span>, <span class="st">"label_2_en"</span>, <span class="st">"label_3_en"</span>, <span class="st">"label_4_en"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>kult_5_metadata_2007 <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_excel</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">file.path</span>(Open_Music_Europe_stories_folder, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>            <span class="st">"data-raw"</span>, <span class="st">"KULT5"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">"KULT5_example.xlsx"</span>), </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sheet=</span><span class="st">"2007"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># When label cells were merged, there are empty cells </span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># now that I fill from top down.</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">starts_with</span>(<span class="st">"label"</span>), <span class="at">.direction =</span> <span class="st">"down"</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unite</span> (</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># I select any variable that is part of the labels_sk</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># group and concatenate them with the - separator</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> label_sk, </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>         <span class="fu">any_of</span>(labels_sk), <span class="at">sep =</span> <span class="st">" - "</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unite</span> (<span class="at">col =</span> label_en, </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>         <span class="fu">any_of</span>(labels_en), <span class="at">sep =</span> <span class="st">" - "</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span> ( </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># When I concatenated empty cells, I got - NA </span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># texts in the previous step, I remove them:</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>           <span class="at">label_sk =</span> <span class="fu">gsub</span>(<span class="st">" - NA"</span>, <span class="st">""</span>, label_sk), </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>           <span class="at">label_en =</span> <span class="fu">gsub</span>(<span class="st">" - NA"</span>, <span class="st">""</span>, label_en) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>I am selecting randomly 12 rows (with the highest numbers):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>kult_5_metadata_2007 <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Selecting by checksum_en</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 6
+   label_sk         var_number_sk checksum_sk label_en var_number_en checksum_en
+   &lt;chr&gt;                    &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;       &lt;dbl&gt;
+ 1 Koncerty / vyst…             2         399 Concert…             2         399
+ 2 Koncerty / vyst…             3         291 Concert…             3         291
+ 3 Koncerty / vyst…             5         173 Concert…             5         173
+ 4 Koncerty / vyst…             6         572 Concert…             6         572
+ 5 Koncerty / vyst…            12         140 Concert…            12         140
+ 6 v tom koncerty,…            15         166 includi…            15         166
+ 7 v tom koncerty,…            25         347 includi…            25         347
+ 8 Vystúpenia v za…            33         143 Perform…            33         143
+ 9 Koncerty / vyst…            34         144 Concert…            34         144
+10 Koncerty / vyst…            51         716 Concert…            51         716
+11 Celkový počet d…            52         469 Total n…            52         469
+12 v tom - diel za…            54         363 in that…            54         363</code></pre>
+</div>
+</div>
+<p>We have a variable map!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For readability I select only the English side and </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># in a different order:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>kult_5_metadata_2007 <span class="sc">%&gt;%</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span> ( <span class="fu">all_of</span>(<span class="fu">c</span>(<span class="st">"var_number_en"</span>,  <span class="st">"checksum_en"</span>, <span class="st">"label_en"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Selecting by checksum_en</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  var_number_en checksum_en label_en                                            
+          &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;                                               
+1             6         572 Concerts/performances in the country total (yr. 2 +…
+2            51         716 Concerts/performances at home and abroad (r. 6 + 34…</code></pre>
+</div>
+</div>
+<p>The <code>var_number_en</code> tells me that in the relevant module I need to look for this column number to get the information. If I sum all the reported values, I should get the <code>checksum_en</code> value which must be equal to the <code>checksum_sk</code> value. The <code>_sk</code> and <code>_en</code> refers to using the original Slovak file or the DeepL translated English version; the numbers should be the same in both.</p>
+</section>
+</section>
+<section id="labels-and-variable-names" class="level2">
+<h2 class="anchored" data-anchor-id="labels-and-variable-names">Labels and Variable Names</h2>
+<blockquote class="blockquote">
+<p>There are only two hard things in Computer Science: cache invalidation and naming things. – Phil Karlton</p>
+</blockquote>
+<p>Our entire PDF processing is motivated to create a variable map and to name columns consistently in the different microdata tables the same way if the meaning of the numbers is semantically the same in them. We cannot leave human curation out of the equation now. Sometimes, there may be a slight difference in the label’s wording (even as much as a word is Capitalised or not capitalised), but the data user must know if the semantic meaning of this variable is the same. In other words, did the KULT survey item change over the years?</p>
+<p>The best way to do it is to explicitly collect all variations and give a canonical label to the exact same ones. Because I used DeepL, there is no guarantee that every time I ran the DeepL translator, it used the exact same English synonyms for the same Slovak word. Because the Slovak text is the authoritative source, we must ensure that when a label is deemed to be identical to another one in Slovak (and has the same, final, canonical label), then the very same English translation is used for such a text in every instance.</p>
+<p>Labelling is important for tabular and visual data presentations and serves as a semantic guide for the analyst. Working with labels to reference the data is not possible in a programmatic way, so we must create an easy-to-type shorthand for each variable. For example, abbreviate “Total concerts in Slovakia” with “concerts_total_sk”.</p>
+<p>In the tidyverse dialect of R, snake_case is preferred to other languages’ CamelCase, so we give snake case variable names. When naming the variables, the following considerations are used:</p>
+<ul>
+<li>Avoid non-ASCII characters, such as Slovak special characters, because they may not be available in all programming IDEs</li>
+<li>Because programming languages are derived from English, it is easier to use English language names; the use of English variable names will increase code readability</li>
+<li>Avoid any characters that computer languages interpret with a special meaning or represent differently, and never use a <code>space</code>, <code>!</code>, <code>~</code>, <code>*</code>, <code>%</code>, <code>+</code> and other mathematical symbols in variable names (Pro tip: use similar filenames on your computer so that they remain portable between Linux, Mac, BSD and Windows systems and cloud storages.)</li>
+<li>The same concept, such as <code>concert</code> or <code>total</code> should always be <code>concert</code> (or performance, but consistently) and <code>total</code> (and not sum, or the other way around, only sum but not total)</li>
+<li>For the abbreviations of sentences or statements, use a practical word order to benefit from the use of tidyselect functions such as starts_with, ends_with; for example, it is common practice to put the language or geographic reference as a suffix to the end (and not as a prefix to the beginning), such as <code>concert_total_sk</code>, enabling the selector ends_with(“sk”)</li>
+<li>Whenever possible, avoid the use of capitalisation; the selectors will not work if Slovakia is sometimes abbreviated as <code>SK</code> and sometimes as <code>sk</code> or even <code>Sk</code>.</li>
+</ul>
+<p>It is likely that the variable labels and variable names will be canonised after using the data a bit.</p>
+<section id="identification-of-observational-units-and-namespaces" class="level3">
+<h3 class="anchored" data-anchor-id="identification-of-observational-units-and-namespaces">Identification of Observational Units and Namespaces</h3>
+<p>One of the potential problems in the creation of an integrated, longitudinal (or panel) dataset is that the <code>Štátna filharmónia Košice</code> may sometimes be labelled as <code>ŠTÁTNA FILHARMÓNIA KOŠICE</code>. It is even more frustrating when one space is replaced with two <code>Štátna filharmónia  Košice</code> because it is almost impossible to detect for a human reader in a big spreadsheet.</p>
+<p>Identity matching is very important; if we create statistics that must involve all philharmonic orchestras but not chamber orchestras, the <em>Štátna filharmónia Košice</em> must always be selected from our 15 tables or definitively stated “missing”. An observation (row) cannot hide behind a <code>Štátna filharmónia - Košice</code> label variation.</p>
+<p>To avoid identification problems, the Statistical Office of the Slovak Republic assigns the organization identification number (IČO) to all types of legal entities, entrepreneurs and public authorities. Whenever the IČO is present, we will retain it, but the use of IČO is not optimal for our use case. Some reporting units may not have an IČO number (because they are internal units of a larger entity, such as the public broadcaster). If we want to compare Czech and Slovak orchestras, we need a more universal identifier.</p>
+</section>
+<section id="linking-data-about-observational-units" class="level3">
+<h3 class="anchored" data-anchor-id="linking-data-about-observational-units">Linking data about observational units</h3>
+<p>The Virtual International Authority File (<code>VIAF</code>) identifier serves as a global identifier in the world’s national libraries and other libraries that use the same referencing as their national library. The VIAF record of <a href="https://viaf.org/viaf/search?query=local.names%20all%20%22%C5%A0t%C3%A1tna%20filharm%C3%B3nia%20Ko%C5%A1ice%22&amp;sortKeys=holdingscount&amp;recordSchema=BriefVIAF">Štátna filharmónia Košice</a> shows the accepted and preferred names of the orchestra in many global libraries.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/viaf-1.png" class="img-fluid figure-img" width="683"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Beyond that, we can also immediately see how we can find information about the orchestra in many countries:</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/viaf-2.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>It is immediately apparent that using this identifier goes far beyond the ability to join datasets properly. Using the VIAF ID as an identifier, we may find further datasets or information carriers unknown to us and outside of our possession via the web of data or the semantic web.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/isni-1.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>An alternative to VIAF is the ISNI. ISNI serves a different purpose; in this case, we can see the name changes going back to Czechoslovakia since the orchestra’s inception in 1968. While VIAF is controlled by the national libraries (and its use is free, provided a librarian provides an entity with a VIAF ID), the ISNI is free for all who pay a registration fee.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/wikidata-1.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A third alternative is Wikidata, which uses the QID to identify entities, such as textual references in Slovak, English, and German Wikipedias, as a permanent ID. Its use is free but with caveats.</p>
+<p>The great advantage of Wikidata QIDs, is that they serve as a reconciliation tool among many global and national IDs, for example, in the example below we can immediately find how to connect the VIAF and ISNI files of , and go further, for example, to the <a href="https://catalogue.bnf.fr/ark:/12148/cb13985419h">Bibliothèque nationale de France</a>.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/wikidata-2.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/bnf-1.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Which is the best to use? There is no clear answer to this question; therefore, we created a namespace in a survey harmonisation program. We collect all name variations of observational units, select a canonical Slovak and a canonical English version, and add various identifiers for the unit.</p>
+<p>For data processing and the creation of statistics, internally we can change VIAF, QID, ISNI, and even BNF identifiers if we remain consistent. If we use VIAF for Štátna filharmónia Košice, we should always refer to them with their VIAF ID <a href="https://viaf.org/viaf/123337893">viaf:123337893</a>) . If we refer to Slovenská Filharmónia with <a href="https://isni.org/isni/000000011421725X">isni:000000011421725X</a>, we should always refer to them with ISNI.</p>
+<p>It is very practical to have a QID to extend our knowledge base and database because it can add different entry points to other relational or graph databases. We generally recommend to record at least one of VIAF and ISNI, QID, and when applicable, IČO for Slovak data.</p>
+</section>
+</section>
+<section id="variable-semantics" class="level2">
+<h2 class="anchored" data-anchor-id="variable-semantics">Variable semantics</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(retroharmonize)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>kult5_raw <span class="ot">&lt;-</span> <span class="fu">read_surveys</span> ( </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">file.path</span>(KULT_raw_folder, <span class="dv">2007</span><span class="sc">:</span><span class="dv">2022</span>, <span class="st">"KULT-5.csv"</span>),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">.f =</span> <span class="st">"read_csv"</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="linking-data-about-the-variables" class="level3">
+<h3 class="anchored" data-anchor-id="linking-data-about-the-variables">Linking data about the variables</h3>
+<p>A dataset can only be used by an analyst if that person understands the contents of the dataset. The tidy dataset concept ensures that an analyst understands the table’s structure. When every observation is in a single row, and every variable is in a column, the dataset is tidy and ideally stored in a relational (tabular) database. Internalizing the knowledge of tidy data is important because users of unreflected data still try to bring the dataset to a tidy format when they wrangle it in a spreadsheet editor.</p>
+<p>More semantic information is needed to create derived tables, statistics, or modify tables. We need not only to know that <code>total_concert_audience</code> is a number but also if the unit measured is a number or a thousand. We must understand if budgetary variables are expressed in SKK or EUR. When we have a dimension for the <code>female</code>, <code>male</code>, and <code>non-binary</code> categories, we need to know if <code>F</code> means female or something else. Datasets are usually very hard to reuse if such information is lost, so we are developing an R package that stores this information in a way that easily converts data together with the metadata to the Data cube W3C global, interoperable standard.</p>
+<p>Perhaps the most important semantic information is a precise description of the data: it relates to <code>concerts</code>, <code>audiences</code> and <code>total</code> (not average) values. Often, we would like to calculate the Slovak audiences and compare them to neighbouring Czech, Hungarian, or Austrian values. In Slovakia, Czechia, and Hungary, such data will be found in national knowledge centres under the <code>koncert</code> heading, while in Austria, it will be under <code>Konzert</code> and in global databases, most likely under <code>concert</code>.</p>
+<p>Controlled vocabularies and subject terms, just like authority files on institutional and person names, enable us to link the information to a variable column in a spelling- and even language-independent way. For example, marking a variable with the <a href="https://id.loc.gov/authorities/subjects/sh85030620.html">sh85030620</a> subject heading of the Library of Congress Subject Headings will make it understandable in many libraries of the world that we are looking for information on concerts.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/lcch-1.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Statistical agencies and their Statistical Data and Metadata eXchange, or survey archives such as GESIS, use such controlled and linked vocabularies to create new data catalogues or match data. The global W3C DCAT 2.0 definition and its European version, the DCAT-AP, allow an automatic connection among European open data portals and APIs. The <code>Open Music Europe</code> project develops tools and the Digital Music Observatory in a way that our datasets are equipped with such linking.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/lcch-2.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Data linking is not only a way to expand our human knowledge, or the knowledge of our intelligent software agents. The links refer to permanent, well-known definitions that are usually created in two formats, depending on the visitor type (human through a browser or a software agent via an application.) Data linking makes our datasets and data catalogue truly interoperable (humans and intelligent artificial agents can use them alike) and reusable (precise documentation will be available for decades and in many natural languages.)</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/wikidata-concert-1.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Like in the case of namespaces, Wikidata is a controlled vocabulary reconciliation tool among many languages and national knowledge centres. Therefore, we will usually add the following information to a <code>concert_total_audience_sk</code> variable: A descriptive label in the Slovak and English language, at least one reliable knowledge-centers controlled vocabulary term(s) for the concepts, and the relevant Wikidata entries for further reconciliation among countries and systems.</p>
+<div class="cell" data-layout-align="center" data-fig.with="100%">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/wikidata-concert-2.png" class="img-fluid figure-img" width="673"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We do not recommend reliance only on Wikidata; while it is the easiest and fastest to find definitions on Wikidata, statistical agencies, libraries, and music archives generally maintain more precise and purpose-built vocabularies. Whenever we do not see such a conceptual description (link) immediately, starting with the Wikidata entry is a good start.</p>
+</section>
+</section>
+<section id="further-work" class="level1">
+<h1>Further work</h1>
+<section id="wp3-survey-harmonisation" class="level2">
+<h2 class="anchored" data-anchor-id="wp3-survey-harmonisation">WP3: Survey harmonisation</h2>
+<p>The most important cultural-sector-specific data source of the Slovak statistical system is the KULT survey program. Any ex-ante, forward-looking data collection plan with surveys must first analyse what is already available in this data collection program and its history.</p>
+<p>It is a task for WP3 to analyse the survey program’s contents to contrast the available data and the additionally easily collectable new information with the data needs identified by WP1, WP2, and WP3 regarding sustainability and education. For this, we need to map concepts from theSOZ vocabulary and other vocabularies to the KULT variable map and compare it with the concepts that the researchers in WP1, WP2 and WP3 want to measure to fill the data gaps identified by the <em>Feasibility study for the establishment of a European Music Observatory : final report</em> or other representative data users. <span class="citation" data-cites="emo_feasibility_2020">(<a href="#ref-emo_feasibility_2020" role="doc-biblioref">Commission et al. 2020</a>)</span></p>
+<p>As a first step, we need to create a consistent labelling of the variables in Slovak and English, starting with the Slovak variables, as the language of the survey program is only Slovak. Then, with the domain-specific expertise of the researchers in WP1, WP2, and WP3, we need to connect the variables (and their labels) to their more abstract concepts, such as “concerts”, “budgets”, and “audiences”. In WP1, we work mainly with other surveys; however, KULT is important in the categorisation of economic performance, i.e., when we want to delineate the economic performance of the NACE group <code>J58</code>, it will be the music and audiovisual KULT surveys that can help us most.</p>
+<p>In the first phase, we do not need to create a 100% conceptualisation of the KULT archive: we need to focus on those measurement areas that are particularly important for the data gaps identified by the work packages; for example, “music works”, “sound recordings”, “concerts”, or various employment concepts. In our next, January workshop, we can prioritise the review and changes of concepts and create new question labels or reuse the existing question labels for variables that we want to measure in a new survey or where we want to initiate changes. See the related work in the open repository of the work package [<span class="citation" data-cites="open_music_europe_society_repository">Open Music Europe (<a href="#ref-open_music_europe_society_repository" role="doc-biblioref">2023b</a>)</span></p>
+</section>
+<section id="wp1-data-gap-identification" class="level2">
+<h2 class="anchored" data-anchor-id="wp1-data-gap-identification">WP1: Data gap identification</h2>
+<p>The living document for the WP1 is already relatively clear on the targetted economic concepts to measure: gross value added, various income components and employment. We need to find novel ways for categorisation of employment or revenue to separate music-related income or employment from non-music income. Is the employment related to the creation of sound recordings or music works? Or the performance of music works? See the related work in the open repository of the work package <span class="citation" data-cites="open_music_europe_economy_repository">(<a href="#ref-open_music_europe_economy_repository" role="doc-biblioref">Open Music Europe 2023c</a>)</span></p>
+</section>
+<section id="wp2-data-gap-identification" class="level2">
+<h2 class="anchored" data-anchor-id="wp2-data-gap-identification">WP2: Data gap identification</h2>
+<p>So far, the living document for the WP2 needs to be clearer on what music diversity and circulation concepts it wants to measure. This WP2 will most likely rely on many non-surveying data sources; nevertheless, the conceptualisation of music diversity and circulation must start any preparation for Taskstream 2 or survey design. See the related work in the open repository of the work package <span class="citation" data-cites="open_music_europe_diversity_repository">(<a href="#ref-open_music_europe_diversity_repository" role="doc-biblioref">Open Music Europe 2023a</a>)</span></p>
+</section>
+<section id="wp4-software-ecosystem" class="level2">
+<h2 class="anchored" data-anchor-id="wp4-software-ecosystem">WP4: Software ecosystem</h2>
+<p>The development of the <a href="https://retroharmonize.dataobservatory.eu/">retroharmonize</a> R package was a generalisation of harmonisation problems with CAP surveys conducted in Hungary, Slovakia and Croatia (in the CEEMID project, a predecessor of <code>Open Music Europe</code>) with Eurobarometer surveys <span class="citation" data-cites="r_package_retroharmonize">(<a href="#ref-r_package_retroharmonize" role="doc-biblioref">Antal 2021</a>)</span>. In the later generalisation, we used the Afrobarometer and the Arab Barometer survey data. Methodologically, the workflow is similar to the workflow of Marta Kołczyńska <span class="citation" data-cites="kolczynska_2022">(<a href="#ref-kolczynska_2022" role="doc-biblioref">Kołczyńska 2022</a>)</span>, who was a contributor to the first release of the package. It was also used with the CEEMID/Digital Music Observatory Music Professional Surveys.</p>
+<p>The KULT survey program’s data sets new requirements. Unlike the Eurobarometer, Afrobarometer and Arab Barometer, this survey program was not published for microdata access, and. the level of documentation is lower; the number of surveys is high. Another novelty is that the KULT surveys are longitudinal; i.e., the same observational units (respondents) appear in multiple files. The longitudinal nature of the program adds an entirely new dimension to harmonisation: the entity matching of observational (statistical) units.</p>
+<p>In <code>Open Music Europe</code>, we aim to produce novel datasets that need further functionality for ex-ante harmonisation. As the package’s name suggests, it is a retrospective harmonisation package and will not make ex-ante harmonisation fully reproducible. The new functionality aims to improve data linking and documentation and add support to the concept harmonisation part of the general research workflow. These additions enhance the usability of the retrospective harmonisation.</p>
+<p>We identified two important features that are not specific to survey harmonisation and will eventually be detached to further generalised packages.</p>
+<p>The <a href="https://dataset.dataobservatory.eu/">dataset</a> package aims to make native R datasets more reusable and interoperable by retaining more provenance, semantic and structural metadata and providing easier import/export/exchange with standardised data catalogues and their datasets <span class="citation" data-cites="r_package_dataset">(<a href="#ref-r_package_dataset" role="doc-biblioref">Antal 2023c</a>)</span>. This package improves the portability, interoperability, and reusability of our results. For more detailed description of the planned work see <span class="citation" data-cites="antal_dataset_working_paper">(<a href="#ref-antal_dataset_working_paper" role="doc-biblioref">Antal 2023b</a>)</span>.</p>
+<p>The planned crosswalk package aims to make relabelling and recording easier. This is a general task that is necessary for administrative data sources, too.</p>
+<p>The DDIwR package <span class="citation" data-cites="r_package_DDIwR">(<a href="#ref-r_package_DDIwR" role="doc-biblioref">Dusa 2021</a>)</span> aims to manage better the surveying workflow and the archival of surveying documents. We are still investigating to what extent this is helpful for <code>Open Music Europe</code>, while it certainly adds to the future-proof qualities of our work, the exploitation of these additional features is more straightforward in a long-term or permanent program (such as KULT itself, not <code>Open Music Europe</code>.)</p>
+</section>
+<section id="wp5-music-observatory-prototype" class="level2">
+<h2 class="anchored" data-anchor-id="wp5-music-observatory-prototype">WP5: Music Observatory prototype</h2>
+<section id="namespaces" class="level3">
+<h3 class="anchored" data-anchor-id="namespaces">Namespaces</h3>
+<p>Global namespaces and authority files are, by design, machine-actionable; they can be read by humans, activating a html representation for human browsing and an RDF serialisation for data applications. We will encourage the use of at least two PIDs for each observational unit, following the best practices that will be elaborated in greater detail in 5.1.</p>
+<ul>
+<li><p>We will use either ISNI or VIAF identifiers for natural and legal persons. The use of ISNI is paid, and the organisation itself must initiate it. The use of VIAF is free because it is a public service of the Slovak National Library, but it goes through a curation process. For our purposes, they are equally good and they can be used interchangeably.</p></li>
+<li><p>We will also use a QID for data coordination. The QID is a globally unique identifier in Wikidata and Dbpedia. They are used in the statistical, research and cultural heritage domains as temporary or necessary global IDs when the use of an authority file is not possible or takes a long time (for example, we have to encourage each orchestra to obtain its own ISNI number.)</p></li>
+</ul>
+<p>The use of Wikidata is getting more and more common among knowledge organisations and even EU organisations. Originally developed as a reconciliation tool for Wikipedia, Europeana already recognised its value for pan-European data harmonisation in 2015. Since that, it had been used as a decentralised, curated, shared authority control system in several European countries. We think that VIAF is the most suitable authority control, but the flexibility and functionality of Wikidata makes it a worthy parallel system in itself <span class="citation" data-cites="bianchini_beyond_2021 van_veen_wikidata_2019 rossenova_wikidata_2022">(<a href="#ref-bianchini_beyond_2021" role="doc-biblioref">Bianchini, Bargioni, and Pellizzari di San Girolamo 2021</a>; <a href="#ref-van_veen_wikidata_2019" role="doc-biblioref">Veen 2019</a>; <a href="#ref-rossenova_wikidata_2022" role="doc-biblioref">Rossenova, Duchesne, and Blümel 2022</a>)</span> We reached out to the Wikimedia Foundation and <em>WMSK</em>, former official legal name <em>Wikimedia Slovenská republika</em> to not only use their open source product, i.e, Wikibase for authority control reconciliation, but as a tool to push our knowledge and our namespace to the Wikidata. <span class="citation" data-cites="fagerving_wikidata_2023">(<a href="#ref-fagerving_wikidata_2023" role="doc-biblioref">Fagerving 2023</a>)</span></p>
+
+</section>
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-r_package_retroharmonize" class="csl-entry" role="listitem">
+Antal, Daniel. 2021. <span>‘<span class="nocase">retroharmonize Ex Post Survey Data Harmonization</span>’</span>. Zenodo. <a href="https://doi.org/10.5281/zenodo.5781724">https://doi.org/10.5281/zenodo.5781724</a>.
+</div>
+<div id="ref-antal_slovak-cult-stat-pilot" class="csl-entry" role="listitem">
+———. 2023a. <span>‘Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic’</span>. <a href="https://doi.org/10.5281/zenodo.8399254">https://doi.org/10.5281/zenodo.8399254</a>.
+</div>
+<div id="ref-antal_dataset_working_paper" class="csl-entry" role="listitem">
+———. 2023b. <span>‘<span class="nocase">Making Datasets Truly Interoperable and Reusable in R</span>’</span>. Zenodo. <a href="https://doi.org/10.5281/zenodo.10091666">https://doi.org/10.5281/zenodo.10091666</a>.
+</div>
+<div id="ref-r_package_dataset" class="csl-entry" role="listitem">
+———. 2023c. <span>‘Dataset Create Interoperable and Well-Documented Data Frames’</span>. CRAN. <a href="https://doi.org/10.5281/zenodo.6703764">https://doi.org/10.5281/zenodo.6703764</a>.
+</div>
+<div id="ref-bianchini_beyond_2021" class="csl-entry" role="listitem">
+Bianchini, Carlo, Stefano Bargioni, and Camillo Carlo Pellizzari di San Girolamo. 2021. <span>‘Beyond <span>VIAF</span> Wikidata as a Complementary Tool for Authority Control in Libraries’</span>. <em>Information Technology and Libraries</em> 40 (2). <a href="https://doi.org/10.6017/ital.v40i2.12959">https://doi.org/10.6017/ital.v40i2.12959</a>.
+</div>
+<div id="ref-emo_feasibility_2020" class="csl-entry" role="listitem">
+Commission, European, Sport Directorate-General for Education Youth, Culture, M Clarke, P Vroonhof, J Snijders, A Le Gall, et al. 2020. <em>Feasibility Study for the Establishment of a European Music Observatory : Final Report</em>. Publications Office. <a href="https://doi.org/doi/10.2766/9691">https://doi.org/doi/10.2766/9691</a>.
+</div>
+<div id="ref-r_package_DDIwR" class="csl-entry" role="listitem">
+Dusa, Adrian. 2021. <span>‘DDIwR DDI with r’</span>. <a href="https://CRAN.R-project.org/package=DDIwR">https://CRAN.R-project.org/package=DDIwR</a>.
+</div>
+<div id="ref-fagerving_wikidata_2023" class="csl-entry" role="listitem">
+Fagerving, Alicia. 2023. <span>‘Wikidata for Authority Control: Sharing Museum Knowledge with the World’</span>. <em>Digital Humanities in the Nordic and Baltic Countries Publications</em> 5 (1): 222–39. <a href="https://doi.org/10.5617/dhnbpub.10665">https://doi.org/10.5617/dhnbpub.10665</a>.
+</div>
+<div id="ref-kolczynska_2022" class="csl-entry" role="listitem">
+Kołczyńska, Marta. 2022. <span>‘Combining Multiple Survey Sources: A Reproducible Workflow and Toolbox for Survey Data Harmonization’</span>. <em>Methodological Innovations</em> 15 (1): 62–72. <a href="https://doi.org/10.1177/20597991221077923">https://doi.org/10.1177/20597991221077923</a>.
+</div>
+<div id="ref-open_music_europe_sk_mou_2023" class="csl-entry" role="listitem">
+Ministerstvo kultúry SR, and Open Music Europe. 2023. <span>‘<span>Memorandum o porozumení o využití výsledkov analýz otvorených politík v kontexte slovenského kultúrneho a kreatívneho priemyslu a sektorových verejných politík v spolupráci s konzorciom pre výskum a inovácie s názvom OpenMuse. [Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMuse Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors’ public policies]</span>’</span>. <a href="https://www.crz.gov.sk/zmluva/7645338/">https://www.crz.gov.sk/zmluva/7645338/</a>.
+</div>
+<div id="ref-open_music_europe_diversity_repository" class="csl-entry" role="listitem">
+Open Music Europe. 2023a. <span>‘Repository: Report on Music Diversity and Circulation in Europe. <span>GitHub</span>’</span>. Open Policy Analysis Repository with Standardized File Structure. 2023. <a href="https://github.com/dataobservatory-eu/report-music-diversity-circulation-europe/">https://github.com/dataobservatory-eu/report-music-diversity-circulation-europe/</a>.
+</div>
+<div id="ref-open_music_europe_society_repository" class="csl-entry" role="listitem">
+———. 2023b. <span>‘Repository: Report on Music, Society, and Citizenship in Europe. <span>GitHub</span>’</span>. Open Policy Analysis Repository with Standardized File Structure. 25 March 2023. <a href="https://github.com/dataobservatory-eu/report-music-society-citizenship">https://github.com/dataobservatory-eu/report-music-society-citizenship</a>.
+</div>
+<div id="ref-open_music_europe_economy_repository" class="csl-entry" role="listitem">
+———. 2023c. <span>‘Repository: Report on the European Music Economy. <span>GitHub</span>’</span>. Open Policy Analysis Repository with Standardized File Structure. 26 March 2023. <a href="https://github.com/dataobservatory-eu/report-european-music-economy">https://github.com/dataobservatory-eu/report-european-music-economy</a>.
+</div>
+<div id="ref-rossenova_wikidata_2022" class="csl-entry" role="listitem">
+Rossenova, Lozana, Paul Duchesne, and Ina Blümel. 2022. <span>‘Wikidata and Wikibase as Complementary Research Data Management Services for Cultural Heritage Data’</span>. In <em><span>CEUR</span> Workshop Proceedings</em>. <a href="https://serwiss.bib.hs-hannover.de/frontdoor/deliver/index/docId/2573/file/rossenova_etal2022-wikidata_research_data_mgmt.pdf">https://serwiss.bib.hs-hannover.de/frontdoor/deliver/index/docId/2573/file/rossenova_etal2022-wikidata_research_data_mgmt.pdf</a>.
+</div>
+<div id="ref-van_veen_wikidata_2019" class="csl-entry" role="listitem">
+Veen, Theo van. 2019. <span>‘Wikidata: From <span>“an”</span> Identifier to <span>“the”</span> Identifier’</span>. <em>Information Technology and Libraries</em> 38 (2): 72–81. <a href="https://doi.org/10.6017/ital.v38i2.10886">https://doi.org/10.6017/ital.v38i2.10886</a>.
+</div>
+<div id="ref-wysmulek_expost_2022" class="csl-entry" role="listitem">
+Wysmułek, Ilona, Irina Tomescu-Dubrow, and Joonghyun Kwak. 2022. <span>‘Ex-Post Harmonization of Cross-National Survey Data: Advances in Methodological and Substantive Inquiries’</span>. <em>Quality &amp; Quantity</em> 56 (3): 1701–8. <a href="https://doi.org/10.1007/s11135-021-01187-7">https://doi.org/10.1007/s11135-021-01187-7</a>.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
