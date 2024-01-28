@@ -1,8 +1,8 @@
 ---
 title: "Open Music Europe Software Ecosystem"
-subtitle: "Functional requirements for Data Collection tasks T1.2, T2.2, T3.2 and data publication tasks T4.2, T5.1" 
+subtitle: "Functional requirements elicitation and release timeline" 
 version: 0.9
-doi: ""
+doi: "10.5281/zenodo.10578360"
 title-block-banner: "#00348A"
 author:
   - name: Daniel Antal
@@ -30,19 +30,38 @@ bibliography:
   - bib/rdf.bib
   - bib/OpenMusE.bib
   - bib/OMEsoftware.bib
+  - bib/ontologies.bib
   - bib/wikidata.bib
 ---
+
+```{r setup, include=FALSE}
+library(here)
+knitr::opts_chunk$set(echo      = FALSE, 
+                      message   = FALSE, 
+                      warning   = FALSE,
+                      out.width = '90%', 
+                      fig.align = 'center')
+
+```
+
+```{r ome-banner}
+knitr::include_graphics(here::here("png", "Banner_OME_Software_Ecosystem.png"))
+```
+
 
 {{< pagebreak >}}
 
 # Executive Summary
+
+
+
 
 ::: callout-tip
 ### O2. BRIDGE data gaps {.unnumbered}
 
 OpenMusE will pioneer new best-practice methods and tools for data collection from multiple sources, and integrate these into an open-source software ecosystem that non-specialist stakeholders can use [@openmuse_2023].
 
-> Our ambition is to create an ecosystem of statistical software that is interoperable with the systems of ESSnet via the widely-used R statistical environment. On the basis of this ecosystem, we are planning a complementary, decentralised music data and intelligence hub that is complementary to both the centralised functions of the future \[European Music Observatory\] (EMO) and the ESSnet. This intelligence hub, the Open Data Observatory, has a service level similar to that of the Eurostat Rest API (high-quality data and visualisation products with various statistical quality control available in a Rest API meeting Dublin Core, DataCite, and SDMX interoperability standards). In addition, the Open DataObservatory will fill the gaps in the offering provided by Eurostat and the ESSnet network,due to their non-music specific mandate and cost/benefit analysis.
+> Our ambition is to create an ecosystem of statistical software that is interoperable with the systems of ESSnet via the widely-used R statistical environment. On the basis of this ecosystem, we are planning a complementary, decentralised music data and intelligence hub that is complementary to both the centralised functions of the future \[European Music Observatory\] (EMO) and the ESSnet. This intelligence hub, the Open Data Observatory, has a service level similar to that of the Eurostat Rest API (high-quality data and visualisation products with various statistical quality control available in a Rest API meeting Dublin Core, DataCite, and SDMX interoperability standards). In addition, the Open Data Observatory will fill the gaps in the offering provided by Eurostat and the ESSnet network,due to their non-music specific mandate and cost/benefit analysis.
 :::
 
 According to the Grant Agreement, the `Open  Data  Observatory` is partly a statistical software service provider that maintains a software ecosystem (developed in WP4), and partly a solution provider that makes the reproducible open policy analysis method available for various end-user groups represented in our Consortium and beyond.
@@ -55,14 +74,10 @@ The functional requirements of the D4.1 Open Music Europe Software Ecosystem are
 
 -   [x] The reproducible pilots of T1.3, T2.3, T3.3, and T4.3, which implement the indicators, methods, and *software tools* designed by OpenMusE to realise concrete benefits for music industry stakeholders, and show how these benefits can be replicated throughout Europe.
 
-```{r setup, include=FALSE}
-library(here)
-knitr::opts_chunk$set(echo      = FALSE, 
-                      message   = FALSE, 
-                      warning   = FALSE,
-                      out.width = '90%', 
-                      fig.align = 'center')
+```{r OME-github-screenshot, fig.cap="Download, install, or request new features on [github.com/dataobservatory-eu/open_music_software](https://github.com/dataobservatory-eu/open_music_software)."}
+knitr::include_graphics(here("png", "OME_GitHub_screenshot.png"))
 ```
+
 
 ## Background {.unnumbered}
 
@@ -70,13 +85,13 @@ In the background of OME we have shown that in the past decade, the *eurostat* [
 
 R is a high-level language that is not intended for general-purpose programming. Instead, it offers increasing interoperability with general-purpose languages like Python, C++, Java, SQL, or RDF. So, whilst relying on the data know-how embedded in our R software as a background, we must bridge these packages that can import various other software components to meet the objectives of Open Music Europe.
 
-`Slovak Demo Music Database`: A SOZA-REPREX background described in the Consortium Agreement and in the *Feasibility Study On Promoting Slovak Music In Slovakia & Abroad* [@antal_promoting_slovak_2020].
+`Slovak Demo Music Database`: A SOZA-REPREX background described in the Consortium Agreement and in the *Feasibility Study On Promoting Slovak Music In Slovakia & Abroad* [@antal_promoting_slovak_2020]. From this background the The Slovak Comprehensive Music Database will be a foundational data system for `T2.3`. It is developed in `T2.2`.  
 
-`Listen Local Demo App`: A SOZA-REPREX background described
+`Listen Local Demo App`: A SOZA-REPREX background described *Feasibility Study On Promoting Slovak Music In Slovakia & Abroad* that overrules Spotify recommendations to make them more inclusive and meet local content regulations (i.e., add more Slovak language and Slovak-origin music.) This working demo application will be modernised a re-launched with a far more comprehensive functionality in `T2.3`. 
 
-`SurveyHarmonies`:
+`SurveyHarmonies`: The _SurveyHarmonies_ system for ex-ante survey harmonisation. This application may be further developed. 
 
-`Eviota`:
+`Eviota`: _Eviota_, a minimum viable product for integrated financial and sustainability reporting for music SMEs. This application will be further developed in `T3.3`.
 
 The problem of this emerging system of grant application was two-fold:
 
@@ -85,7 +100,7 @@ The problem of this emerging system of grant application was two-fold:
 
 ## Requirements elicitation {.unnumbered}
 
-Because we aim to fill data gaps with an open-source software ecosystem so that non-technical music researchers can work with them and make them available in the Open Music Observatory, we embraced and slightly modified the requirements elicitation methodology of the Polifonia Horizon Europe project \[\]; this way we could also utilise the excellent formal ontologies and tools developed by this project for music research.
+Because we aim to fill data gaps with an open-source software ecosystem so that non-technical music researchers can work with them and make them available in the Open Music Observatory, we embraced and slightly modified the requirements elicitation methodology of the Polifonia Horizon Europe project; this way we could also utilise the excellent formal ontologies and tools developed by this project for music research.
 
 Polifonia uses the *eXtreme Design* methodology complemented with some user-experience design concepts; this method utilises software design patterns and competency questions [@blomqvist_experimenting_2010; @blomqvist_engineering_2016].The eXtreme Design methdology itself is rooted in Ontology Design Patterns [@gangemi_ontology_2005], which is an adoptation of software design patterns to ontologies. The use of XD was particularly useful to us, because it had been applied in the he cultural heritage [@carriero_pattern-based_2021], and our beachhead market was the application of music heritage and rights management data.
 
@@ -104,7 +119,7 @@ We solicited user requirements from the following organisations:
 |                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                |
 | -   REPREX and Hudobné centrum presented our ideas to the congress of Slovak music libraries and recruited early adopters.                                                                                                                                                                                                                                                               | -   Hudobné centrum and REPREX are testing data coordination with select *International Association of Music Libraries, Archive s and Documentation Centres* (IAML) libraries of Slovakia.                                     |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| -   Wikipedia Slovensko (WMSK) for using the best practices from various European projects around the use of Wikibase for data coordination on large scale. \                                                                                                                                                                                                                            | -   We started consultation with Wikimedia Foundations for global scale-up.                                                                                                                                                    |
+| -   Wikipedia Slovensko (WMSK) for using the best practices from various European projects around the use of Wikibase for data coordination on large scale.\                                                                                                                                                                                                                             | -   We started consultation with Wikimedia Foundations for global scale-up.                                                                                                                                                    |
 |     \                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                                |
 |     Not yet translated into stories. We need to create two project pages that are understandable for the Wikipedia Slovensko and the Wikidata communities.                                                                                                                                                                                                                               | -   Wikimedia Slovensko (WMSK), REPREX, Hudobné centrum and SOZA have created a Memorandum of Understanding on bringing forward the data stewardship and cooperation proposal to the wider Wikipedia and Wikidata communities. |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -118,7 +133,7 @@ We solicited user requirements from the following organisations:
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | -   Reprex: user requirements to re-process statitical data for the Open Music Observatory, fictional persona of [Ahmed](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/eurostat-user2.html).                                                                                                                                                  | -   We are planning an outreach to UNESCO to review the possibility of the same level of data access that we have now to the Eurostat data warehouse.                                                                          |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| -   Slovak and Lithuanian national library, Hungarian national museum on working with authority files; not yet translated into stories. \                                                                                                                                                                                                                                                | -   We are consulting CISAC and the national libraries on the best use of authority control systems in the music sector.                                                                                                       |
+| -   Slovak and Lithuanian national library, Hungarian national museum on working with authority files; not yet translated into stories.\                                                                                                                                                                                                                                                 | -   We are consulting CISAC and the national libraries on the best use of authority control systems in the music sector.                                                                                                       |
 |     \                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                                |
 |     Relevant for `T2.3`, `T4.3`, `T5.1` and `T6.3`.                                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                                                |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -174,9 +189,9 @@ Our data coordination model, developed in WP1, WP2, and WP3 and piloted in Slova
 
 The *Feasibility study for the establishment of a European Music Observatory* [@emo_feasibility_2020] could have been more actionable because it loosely defined data gaps. The OME Taskstream 1 aims to identify better the data gaps with higher economic, sociological, legal, and statistical research support at three levels.
 
-1.  Researchers must assist music industry stakeholders to conceptualise their data needs. Because they do not possess technical expertise, they will utilise controlled vocabularies, taxonomies, and lightweight (visual) ontologies in T1.1, T2.1, and T3.1 to communicate data gaps and data sources more precisely. We do not support this process directly; we suggest using the Wikibase GUI, OpenRefine, and Protégé to create higher-quality documentation that can be made more machine-actionable and reproducible.
+1.  Researchers must assist music industry stakeholders to conceptualise their data needs. Because they do not possess technical expertise, they will utilise controlled vocabularies, taxonomies, and lightweight (visual) ontologies in `T1.1`, `T2.1`, and `T3.1` to communicate data gaps and data sources more precisely. We do not support this process directly; we suggest using the Wikibase GUI, OpenRefine, and Protégé to create higher-quality documentation that can be made more machine-actionable and reproducible.
 
-2.  The team of T6.3 (Data Management Plan) must reconcile the expressive, human-language and visual representation of knowledge with coded ontologies to connect them to our open-source software ecosystem. We suggest that they assist the researchers with Wikibase GUI, OpenRefine, and Protégé so that they can translate the researchers' implicit knowledge into an explicit and coded form. We expect that the DMP will make the coded knowledge available in RDF and use and adopt, as necessary, ontologies available in OWL.
+2.  The team of `T6.3` (Data Management Plan) must reconcile the expressive, human-language and visual representation of knowledge with coded ontologies to connect them to our open-source software ecosystem. We suggest that they assist the researchers with Wikibase GUI, OpenRefine, and Protégé so that they can translate the researchers' implicit knowledge into an explicit and coded form. We expect that the DMP will make the coded knowledge available in RDF and use and adopt, as necessary, ontologies available in OWL.
 
 3.  We add the coded knowledge to the ingested data. We develop or adopt R software packages for this purpose.
 
@@ -208,17 +223,17 @@ The [Data Coordination Solution](#data-coordination-solutions) section explains 
 
 Data processing is very well supported in the R ecosystem. We have to add very little to it; our goal is to enable users with R scripting skills to benefit from them.
 
-+--------------------------+-----------------------------------------+
-| Processing task          | Software ecosystem components           |
-+==========================+=========================================+
-| Music industry databases | -   ETL scrips for SOZA                 |
-|                          |                                         |
-|                          | -   ETL Scripts for Hudobné centrum     |
-+--------------------------+-----------------------------------------+
-|                          |                                         |
-+--------------------------+-----------------------------------------+
-|                          |                                         |
-+--------------------------+-----------------------------------------+
++--------------------------+----------------------------------------+
+| Processing task          | Software ecosystem components          |
++==========================+========================================+
+| Music industry databases | -   ETL scrips for SOZA                |
+|                          |                                        |
+|                          | -   ETL Scripts for Hudobné centrum    |
++--------------------------+----------------------------------------+
+|                          |                                        |
++--------------------------+----------------------------------------+
+|                          |                                        |
++--------------------------+----------------------------------------+
 
 : Software components for data processing
 
@@ -232,17 +247,17 @@ The [Data Processing Solutions](#data-processing-solutions): How the software ec
 
 The [Data release](#data-release) chapter of this document describes how we release open data for the music sector. The requirements are set by T5.1 and T6.3 (DMP). Because the Data Release only starts after 31 May 2024, this part of the software ecosystem is evolving.
 
-+--------------------------+-----------------------------------------+
-| Data release tasks       | Software ecosystem components           |
-+==========================+=========================================+
-| Music industry databases | -   The crosswaslk                      |
-|                          |                                         |
-|                          | -   The dataset and tuRtle package for  |
-+--------------------------+-----------------------------------------+
-|                          |                                         |
-+--------------------------+-----------------------------------------+
-|                          |                                         |
-+--------------------------+-----------------------------------------+
++--------------------------+----------------------------------------+
+| Data release tasks       | Software ecosystem components          |
++==========================+========================================+
+| Music industry databases | -   The crosswaslk                     |
+|                          |                                        |
+|                          | -   The dataset and tuRtle package for |
++--------------------------+----------------------------------------+
+|                          |                                        |
++--------------------------+----------------------------------------+
+|                          |                                        |
++--------------------------+----------------------------------------+
 
 : Software components for data processing
 
@@ -263,8 +278,10 @@ The background:
 -   `2020.06.04`: The *regions* extension to is first released on CRAN; it supports the metadata reconciliation of subnational statistics and complements the usability of *eurostat*. It goes through further releases till 2021.
 -   `2020.09.21.`: The first CRAN release of the *retroharmonize* R package.
 -   `2021.06.17.`: The discontinued, orphaned *spotifyr* package is taken over by REPREX and re-released on CRAN under version 2.2.1; goes through minor changes till 2022. GitHub repository: [charlie86/spotifyr](https://github.com/charlie86/spotifyr)
--   `2022.06.28`: The *statcodelists* 0.9.2 package is released on CRAN to support the further usability of the *retroharmonize* and *dataset* packages. GitHub repository: [antaldaniel/statcodelists](https://github.com/antaldaniel/statcodelists/), product webiste: \[statcodelists\](https://statcodelists.dataobservatory.eu/.
+- `2022.06.28`: The *statcodelists* 0.9.2 package is released on CRAN to support the further usability of the *retroharmonize* and *dataset* packages. GitHub repository: [antaldaniel/statcodelists](https://github.com/antaldaniel/statcodelists/), product website: [statcodelists](https://statcodelists.dataobservatory.eu/.
 -   `2022.12.02.` The *dataset* 0.1.9. prototype for inviting requirements, future contributors, and users.
+- `2023.04.30.`: The _SurveyHarmonies_ system for ex-ante survey harmonisation.
+- `2023.04.30.`: _Eviota_, a minimum viable product for integrated financial and sustainability reporting for music SMEs. 
 
 The foreground:
 
@@ -272,12 +289,12 @@ The foreground:
 -   `2023.10.10.`: Review of WP4 programming tasks.
 -   `2023.10.18.`: Polifonia Stakeholder Network workshop; reuse of the *Polifonia Ontology Network* and joint requirement elicitation. [polifonia-project/stories](https://github.com/polifonia-project/stories).
 -   `2023.10.24.`: Task description for `rSPARQL-Anything`. GitHub repository: [antaldaniel/rSPARQL-Anything](https://github.com/antaldaniel/rSPARQL-Anything).
-- `2023.11.09`: _Making Datasets Truly Interoperable and Reusable in R_ (working paper with software code prototypes); DOI: [10.5281/zenodo.10091666](https://doi.org/10.5281/zenodo.10091666)
+-   `2023.11.09`: *Making Datasets Truly Interoperable and Reusable in R* (working paper with software code prototypes); DOI: [10.5281/zenodo.10091666](https://doi.org/10.5281/zenodo.10091666)
 -   `2023.11.20.`: Requirement elicitation: Story of [Ahmed](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/eurostat-user2.html) and [Rebeca](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/eurostat-user1.html), starting open repository for UTU, REPREX cooperation.
 -   `2023.11.20`: Requirement harmonisation with `D3.1`; data chapter added to Deliverable.
 -   `2023.12.01.`: Requirement elicitation: Stories of [Michal](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/michal.html), [Ivana](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/ivana.html) and [Natalia](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/natalia.html).
 -   `2023.12.01.`: The KULT package - case study of retrospective harmonisation of KULT 5, 10, 11, 19. Not released (sensitive data contents); private GitHub Repo: `dataobservatory-eu/KULT`; an update of the *retroharmonize* package to 0.2.5.003.
--   `2023.12.06.`: Requirement elicitation: Story of [Max](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/max.html) and [Georg](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/georg.html) --; [Jana](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/jana.html)
+-   `2023.12.06.`: Requirement elicitation: Story of [Max](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/max.html);  [Georg](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/georg.html) and  [Jana](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/jana.html).
 -   `2023.12.08.`: The 0.2.0 *dataset* version released on the Comprehensive R Archive Network after peer-review.
 -   `2023.12.17`: The *dataset* 0.2.8 is released on CRAN; supports [Dublin Core](https://dataset.dataobservatory.eu/articles/dublincore.html), [DataCite](https://dataset.dataobservatory.eu/articles/datacite.html) and to some extent SDMX and XKOS.
 -   `2023.12.19.`: The *eurostat* 4.0.0 is released on CRAN to maintain usability of the background after API change in the Eurostat data warehouse. GitHub repository: [rOpenGov/eurostat](https://github.com/rOpenGov/eurostat)
@@ -395,8 +412,6 @@ The application profile is a specification for metadata records to meet the spec
 
 The most relevant work for designing the metadata aspects of our software components is the unofficial CiteDCAT-AP specification of the Joint Research Centre of the European Commission [@perego_datacite_2021], which is seeking a solution to bridge the library-oriented approach of the European FAIR applications and the data cataloging approach of statisticians and open data providers by trying to create a mapping of DataCite and DCAT-AP.
 
-*Compatibility with Dublin Core and DataCite*
-
 *Compatibility with PON*
 
 ## Statistical Data and Metadata eXChange Information Model
@@ -420,6 +435,120 @@ We want to achieve the highest FAIR and OPA standards with meeting above the man
 :::
 
 Because the DMP describes a machine-actionable, highly automated or reproducible research data management practice for the Open Music Europe project, our data processing in R must support the ontologies and other metadata definitions described in the DMP.
+
+*Compatibility with Dublin Core and DataCite*
+
+The `Dublin Core`, also known as the `Dublin Core Metadata Element Set` (DCMES), is a set of fifteen main metadata items for describing digital or physical resources, such as datasets or their printed versions. Dublin Core has been formally standardized internationally as ISO 15836, as IETF RFC 5013 by the Internet Engineering Task Force (IETF), as well as in the U.S. as ANSI/NISO Z39.85 With the help of *dataset,* our data-to-policy pipeline always add the Dublin Core metadata elements to any incoming or processed dataset[@dublin_core_dcmi_2020].
+
+```{r dublincore, eval=FALSE}
+as_dublincore(iris_dataset, "list")
+#> $title
+#> [1] "Iris Dataset"
+#> 
+#> $creator
+#> [1] "Edgar Anderson [aut]"
+#> 
+#> $identifier
+#> [1] "https://doi.org/10.5281/zenodo.10396807"
+#> 
+#> $publisher
+#> [1] "American Iris Society"
+#> 
+#> $subject
+#> NULL
+#> 
+#> $type
+#> [1] "DCMITYPE:Dataset"
+#> 
+#> $contributor
+#> NULL
+#> 
+#> $date
+#> function () 
+#> .Internal(date())
+#> <bytecode: 0x0000011e191b1600>
+#> <environment: namespace:base>
+#> 
+#> $language
+#> [1] "en"
+#> 
+#> $relation
+#> [1] ":unas"
+#> 
+#> $format
+#> [1] "application/r-rds"
+#> 
+#> $rights
+#> [1] ":unas"
+#> 
+#> $datasource
+#> [1] ":unas"
+#> 
+#> $description
+#> [1] "The famous (Fisher's or Anderson's) iris data set."
+#> 
+#> $coverage
+#> [1] ":unas"
+```
+
+With the help of *dataset,* our data-to-policy pipeline always add the DataCite metadata elements to any incoming or processed dataset. While DataCite is less widely used as the Dublin Core, it is more suitable for research data management, and it is the choice of the EU Open Data Portal and open science recommendations, too. We made *dataset* compatible with the newest, 4.4 definition in December 2023.[@datacite_metadata_scheme_4-4].
+
+```{r datacite, eval=FALSE}
+as_datacite(iris_dataset, "list")
+#> $Title
+#> [1] "Iris Dataset"
+#> 
+#> $Creator
+#> [1] "Edgar Anderson [aut]"
+#> 
+#> $Identifier
+#> [1] "https://doi.org/10.5281/zenodo.10396807"
+#> 
+#> $Publisher
+#> [1] "American Iris Society"
+#> 
+#> $PublicationYear
+#> [1] "1935"
+#> 
+#> $Subject
+#> NULL
+#> 
+#> $Type
+#> [1] "Dataset"
+#> 
+#> $Contributor
+#> NULL
+#> 
+#> $DateList
+#> [1] ":tba"
+#> 
+#> $Language
+#> [1] "en"
+#> 
+#> $AlternateIdentifier
+#> [1] ":unas"
+#> 
+#> $RelatedIdentifier
+#> [1] ":unas"
+#> 
+#> $Format
+#> [1] "application/r-rds"
+#> 
+#> $Version
+#> [1] "0.1.0"
+#> 
+#> $Rights
+#> [1] ":unas"
+#> 
+#> $Description
+#> [1] "The famous (Fisher's or Anderson's) iris data set."
+#> 
+#> $Geolocation
+#> [1] ":unas"
+#> 
+#> $FundingReference
+#> [1] ":unas"
+```
 
 ### The datacube R package
 
@@ -451,7 +580,26 @@ The developer team of *ontologics* immediately saw much complementarity with evo
 
 The prototype of the *tuRtle* R package [@tuRtle_0_1_0] was released as a working paper vignette article of the dataset 0.3.0 package, after consultation with the *ontologics* teams ideas and requirements. In its nucleus, it was developed along the *dataset* package to provide full ecosystem interoperability.
 
+```{r tuRtle-screenshot, fig.align="The product page of the tuRtle R package extension"}
+
+knitr::include_graphics(here::here("png", "tuRtle_website_screenshot_0_1_0.png"))
+```
+
 The tuRtle R package aims to translate R language object datasets, i.e. data.frames, tibbles, tsibbles, ts time series objects, data.tables into datasets coded in the Turtle language (we are targetting the Turtle 1.2 definitions, but currently support only elements that had been defined in 1.1 [@rdf_turtle_1_2]).
+
+```{r turtle-example, eval=FALSE}
+remotes::install_github("dataobservatory-eu/tuRtle", build = FALSE)
+library(tuRtle)
+testtdf <- data.frame (s = c("eg:o1", "eg:01", "eg:02"),
+                       p = c("a", "eg-var:", "eg-var"),
+                       o = c("qb:Observation",
+                             "\"1\"^^<xs:decimal>",
+                             "\"2\"^^<xs:decimal>"))
+
+examplefile <- file.path(tempdir(), "ttl_dataset_write.ttl")
+ttl_write(tdf=testtdf, file_path = examplefile)
+readLines(examplefile)
+```
 
 Turtle is the most expressive metadata language for the semantic web, i.e., data linking. Data applications and software agents can read it, but it remains at the level of expressiveness that humans can read with little or no training.
 
@@ -461,7 +609,7 @@ We released the working prototype together with dataset 0.3.0 and tested its out
 knitr::include_graphics(here::here("png", "dataset_ttl.png"))
 ```
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 dataset_ttl_write(
   iris_triples, 
   ttl_namespace = vignette_namespace,
@@ -493,10 +641,6 @@ readLines(vignette_temp_file, n = 23)
 #> [22] "   iris:Species   \"setosa\"^^<xs:string> ;"                         
 #> [23] "   ."
 ```
-
-## From R to NQuad
-
-As an experiment for wider interoperability, we also adopted an R function written by xxxx for translating R data objects into Nquads. Nquads is another serialisation format for data linking that is machine readable; it is less expressive than Turtle and less suitable for human data coordination, but it is more easily supported by scripts or other interoperable data application software. This functional software will be peer-reviewed later and further developed only in case we find that data owners or users show a preference for Nquads instead of Turle or XML.
 
 ## The dataobservatory R package
 
@@ -538,14 +682,19 @@ REPREX started working with IKP and Hudobné centrum on processing survey microd
 
 ## Processing Data for Music Diversity
 
-REPREX is working together with SOZA and Hudobné centrum on a scalable ETL function package that allows the synchronisation of database tables from their systems into the `T2.3 Slovak Comprehensive Music Database` in a way that is scalable throughout Europe with similar systems of *International Association of Music Information Centers* (IAMIC), *International Association of Music Libraries, Archive s and Documentation Centres* (IAML) , _Confédération Internationale des Sociétés d'Auteurs et Compositeurs_ (CISAC), and their member organisations. Our initial user requirement elicitation contains some expectations about these software components, but the final requirement setting requires several iterations with Wikimedia Slovensko (WMSK), the Wikipedian and Wikidata communities. 
+REPREX is working together with SOZA and Hudobné centrum on a scalable ETL function package that allows the synchronisation of database tables from their systems into the `T2.3 Slovak Comprehensive Music Database` in a way that is scalable throughout Europe with similar systems of *International Association of Music Information Centers* (IAMIC), *International Association of Music Libraries, Archive s and Documentation Centres* (IAML) , *Confédération Internationale des Sociétés d'Auteurs et Compositeurs* (CISAC), and their member organisations. Our initial user requirement elicitation contains some expectations about these software components, but the final requirement setting requires several iterations with Wikimedia Slovensko (WMSK), the Wikipedian and Wikidata communities.
 
 ## Processing Data about Music Sustainability and Sociology
 
+```{r retroharmonize-cap-music}
+knitr::include_graphics(here::here("png", "retroharmonize_cap_music.png"))
+```
+
 ## Processing Data for the Open Music Observatory
 
-The working paper _Making Datasets Truly Interoperable and Reusable in R_ and prototype code contains a solution to translate R data objects to N-Quads [@antal_dataset_working_paper_2023; @rdf_n-quads_1_1], however, after usability considerations, we decided to support the Turtle format. While the N-Quad format did not go through rigorous testing and was not released, if any stakeholder prefers this serialisation format, we already have a solution for that.
+The working paper *Making Datasets Truly Interoperable and Reusable in R* and prototype code contains a solution to translate R data objects to N-Quads [@antal_dataset_working_paper_2023; @rdf_n-quads_1_1], however, after usability considerations, we decided to support the Turtle format. N-Quads is less expressive than Turtle and less suitable for human data coordination, but it is more easily supported by scripts or other interoperable data application software.
 
+While the N-Quad format did not go through rigorous testing and was not released, if any stakeholder prefers this serialisation format, we already have a solution for that.
 
 ## The dataset R package
 
@@ -570,6 +719,10 @@ In T4.1, REPREX developed dataset 0.3.0 and 0.3.1 as a foundational R package fo
 ## The crosswalk R package
 
 The crosswalk R pacakge is being developed from the crosswalk functions of the retroharmonize R package, which is part of the REPREX background in OME. This important background has enabled ARTISUS, SOZA and REPREX to retrospecitvely harmonize pre-existing survey data in GESIS, particulary the EU Cultural Access and Participation surveys, with the Hungarian, Slovak and Croatian CAP surveys.
+
+```{r retroharmonize-crosswalk, fig.cap="The retroharmonize approach to crosswalking"}
+knitr::include_graphics(here::here("png", "retroharmonize_crosswalk_solution.png"))
+```
 
 Applying a uniform crosswalk schema to survey metadata is methodology that has been developed decades ago, but there had not been any good solutions in the R ecosystem to implement it.
 
@@ -616,5 +769,7 @@ Our foreesen \[dataobservatory\] R pacakge will serve as a connector among Datas
 ## 4.4 Wikibase
 
 Replace is planning the use of Wikibase in `T5.1`; it requires the `Open Music Europe Software Ecosystem` to accommodate Wikibase Suite, which is a combination of *MediaWiki*, *MariaDB* and *Wikibase* itself. See [2. Data Coordination Solutions](#wikibase-coordination).
+
+{{< pagebreak >}}
 
 ## References
