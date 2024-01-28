@@ -2,7 +2,7 @@
 title: "Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic"
 subtitle: "Business-to-government data sharing, novel re-use of public sector information for the creation of missing marco-, industry-, and institutional KPIs for the Slovak cultural and creative industry strategy implementation (working document version 0.1)"
 version: 0.1.3
-doi: "10.5281/zenodo.8399254"
+doi: "10.5281/zenodo.10372026"
 title-block-banner: "#00348A"
 author:
   - name: Daniel Antal
@@ -54,7 +54,7 @@ Based on the *Memorandum o porozumení o využití výsledkov analýz otvorenýc
 ::: callout-tip
 Latest consultation version: [Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic](https://music.dataobservatory.eu/documents/open_music_europe/slovakia/slovak-cult-stat-pilot.html) on the Digital Music Observatory website with `docx`, `epub` and `pdf` downloads. You can comment in Word/Google Docs the docx file if you do not want to work on the markdown [souce](https://github.com/antaldaniel/data-ppp/blob/main/slovak-cult-stat-pilot.qmd).
 
-For reference: [DOI](https://doi.org/10.5281/zenodo.10372026). See source documents and version history on [GitHub](https://github.com/antaldaniel/data-ppp).
+For reference: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10372026.svg)](https://doi.org/10.5281/zenodo.10372026). See source documents and version history on [GitHub](https://github.com/antaldaniel/data-ppp).
 
 You can download the PowerPoint presentations and summaries of our staeholder discussion with Dr Joost Poort (University of Amsterdam), Daniel Antal, CFA (Reprex), Dr. James Edwards (SINUS) and Magr. Tomas Miks (SOZA) [here](https://github.com/dataobservatory-eu/report-european-music-economy/raw/main/presentations/Open_Music_Europe_Slovakia_20230921.pptx).
 :::
@@ -149,33 +149,33 @@ The music industry needs a special register because the main nomenclature for ca
 
 Most, but not all, music businesses are categorised as `J58` (together with enterprises working for the film, television or radio industries) or `R90` (together with dance, theatrical, circus and other performers, actors, and even film producers.) Any statistics calculated using the `J58` or `R90` category, for example, the total or average net turnover of such enterprises or their share in GVA and GDP, are only helpful for the macro-level cultural and creative industry policy design. The management of a music enterprise cannot compare their revenue, employee compensation, or corporate profit and loss to such statistics because their changes in time represent not only the business results of other music enterprises but also unrelated film or theatrical revenues. For a public policy planner, a decrease in `J58` is an early indicator of possible GVA decline and a reduction in tax receipts but gives no guidance if the problem is in the film, television or music industry. For the management of music enterprises, this indicator is far less helpful. When the total or average turnover decreases, or increases in `J58`, such a structural business statistical indicator change may be consistent with *both* decreasing music and growing film industry revenues.
 
-## Informal enterprises, ensembles and projects
+### Informal enterprises, ensembles and projects
+
 The music industry also shares a characteristic with many creative industries in the sense that it is often project-based: many professionals work together to stage or record music for a limited time. Because music (like, for example, theatre and film) is project-based, music professionals are often attached to many enterprises that do not take a legal form. For instance, a classical musician may work partly in a symphonic orchestra and partly in a chamber orchestra. These orchestras may have overlapping and distinct staff members, and they work on different cultural products (recordings) and services (ticketed performances), potentially even with other cultural groups, such as with actors in staging a theatrical play, opera or ballet, or working on a film or television project.
 
-This problem is highlighted in the administration of the `KULT05`  _Survey of musical ensembles and artistic ensembles in Slovakia_ [Hudobné telesá a umelecké súbory v SR], where the subjects are ensembles (or project "enterprises") of music performers and their managerial, artistic or technical support staff, like tour managers, sound engineers, or orchestra directors. In enterprise surveys (even among non-profits), SOSR uses the ICO identifier as a Slovak unique identifier for the subjects instead of the often ambiguous and error-prone names. But in `KULT05`, we often find subjects with the same ICO number: there are institutions that maintain several orchestras or ensembles whose "employees",  i.e., the musicians and their support staff, may overlap but not necessarily the same. Consequently, statistical subjects, i.e., ensembles, do not have an ICO identifier because they are semi-independent entities or "projects" of a larger institution or legal person. The `KULT05` survey can be seen as a mixed survey because it targets both formal institutions and informal institutions (i.e. ensembles of music professionals) that do not have an enterprise form. Such a mixed survey management requires a better identifier than the ICO. 
+This problem is highlighted in the administration of the `KULT05` *Survey of musical ensembles and artistic ensembles in Slovakia* \[Hudobné telesá a umelecké súbory v SR\], where the subjects are ensembles (or project "enterprises") of music performers and their managerial, artistic or technical support staff, like tour managers, sound engineers, or orchestra directors. In enterprise surveys (even among non-profits), SOSR uses the ICO identifier as a Slovak unique identifier for the subjects instead of the often ambiguous and error-prone names. But in `KULT05`, we often find subjects with the same ICO number: there are institutions that maintain several orchestras or ensembles whose "employees", i.e., the musicians and their support staff, may overlap but not necessarily the same. Consequently, statistical subjects, i.e., ensembles, do not have an ICO identifier because they are semi-independent entities or "projects" of a larger institution or legal person. The `KULT05` survey can be seen as a mixed survey because it targets both formal institutions and informal institutions (i.e. ensembles of music professionals) that do not have an enterprise form. Such a mixed survey management requires a better identifier than the ICO.
 
 The use of ICO or the names of ensembles is problematic in the retrospective analysis of the microdata that we will touch upon in [Retrospective harmonisation of survey data](#retrospective-survey-harmonisation) later.
 
+Our solution to this problem is the creation of a strict namespace and using authority files to identify non-enterprise (and enterprise) entities for our music industry register.
 
-Our solution to this problem is the creation of a strict namespace and using authority files to identify non-enterprise (and enterprise) entities for our music industry register. 
+::: callout-tip
+#### Authority Files
 
-::: {.callout-tip}
-#### Tip with Title
+When we want to work with longitudinal or panel data, we have to ensure that \[fictional example: `New Košice Orchestra` and `Contemporary Košice Orchestra` are kept as one observational unit if they only went through name changes, and if the identify fundamentally changed, they are kept separately. \]
 
-When we want to work with longitudinal or panel data, we have to ensure that \[fictional example: `New Košice Orchestra`  and `Contemporary Košice Orchestra` are kept as one observational unit if they only went through name changes, and if the identify fundamentally changed, they are kept separately. \]
-
-The KULT microdata files (**to our knowledge**) use two identifiers: names and the _organisation identification number_ (ICO), which the SOSR assigns to every legal person and other non-governmental or governmental institutions. For our purposes, neither the ICO nor the name titles are ideal identifiers alone. The use of ICO alone is not practical for the retrospective harmonisation of the datasets because some entities do not have an ICO number, or some ICO organisations have several statistical subjects (for example, the same organisation maintains several orchestras.)  The name titles have been manually registered, and they are inconsistent. Over an extended period, names and ICO numbers may change (for example, with the fusion of two or more organisations.)
+The KULT microdata files (**to our knowledge**) use two identifiers: names and the *organisation identification number* (ICO), which the SOSR assigns to every legal person and other non-governmental or governmental institutions. For our purposes, neither the ICO nor the name titles are ideal identifiers alone. The use of ICO alone is not practical for the retrospective harmonisation of the datasets because some entities do not have an ICO number, or some ICO organisations have several statistical subjects (for example, the same organisation maintains several orchestras.) The name titles have been manually registered, and they are inconsistent. Over an extended period, names and ICO numbers may change (for example, with the fusion of two or more organisations.)
 :::
 
 Namespaces (in the statistical and data science practice) and authority files (in information and library science) ensure that entities are matched correctly. As it is getting more and more common to join data from different databases (this is the aim of our data coordination program, too), it is an increasingly widespread good practice to use globally unique identifiers that are also "permanent" (PID), or at least, very-long term. The ICO is a very good namespace connecting enterprise data within the Slovak Republic. Still, it fails when we want to link data from neighbouring countries or with informal enterprises, bands, and ensembles.
 
-Global namespaces provide global identifiers for (statistical) units beyond the territory of Slovakia, and authority files connect such identifiers with known names name variations and even define a preferred name (in our fictional example, is it `New Košice Orchestra`  or  `Contemporary Košice Orchestra`?)
+Global namespaces provide global identifiers for (statistical) units beyond the territory of Slovakia, and authority files connect such identifiers with known names name variations and even define a preferred name (in our fictional example, is it `New Košice Orchestra` or `Contemporary Košice Orchestra`?)
 
 By design, global namespaces and authority files are machine-actionable; they can be read by humans, activating an html representation for human browsing and an RDF serialisation for data applications. We will encourage using at least two PIDs for each observational unit, following the best practices that will be elaborated in greater detail in [Retrospective harmonisation of survey data](#retrospective-survey-harmonisation) later.
 
 -   We will use `ISNI` or `VIAF` identifiers for natural and legal persons. The use of `ISNI` is paid, and the organisation must initiate it. `VIAF` is free because it is a public service of the Slovak National Library, but it goes through a curation process. For our purposes, they are equally good and they can be used interchangeably.
 
--   We will also use a `QID` for data coordination. The `QID` is a globally unique identifier in Wikidata and Dbpedia. They are used in the statistical, research and cultural heritage domains as temporary or necessary global IDs when using an authority file is not possible or takes a long time (for example, we have to encourage each orchestra to obtain its own `ISNI` number.) _We also asked Wikimedia Slovensko to formally partner with our project_
+-   We will also use a `QID` for data coordination. The `QID` is a globally unique identifier in Wikidata and Dbpedia. They are used in the statistical, research and cultural heritage domains as temporary or necessary global IDs when using an authority file is not possible or takes a long time (for example, we have to encourage each orchestra to obtain its own `ISNI` number.) *We also asked Wikimedia Slovensko to formally partner with our project*
 
 The use of Wikidata is getting more and more common among knowledge organisations and even EU organisations for the coordination of namespaces or authority files. Originally developed as a reconciliation tool for Wikipedia, Europeana already recognised its value for pan-European data harmonisation in 2015. Since then, several European countries have used it as a decentralised, curated, shared authority control system. We think that VIAF is the most suitable authority control, but the flexibility and functionality of Wikidata make it a worthy parallel system in itself [@bianchini_beyond_2021; @van_veen_wikidata_2019; @rossenova_wikidata_2022]. We reached out to the Wikimedia Foundation and *WMSK*, former official legal name *Wikimedia Slovenská republika* to not only use their open source product, i.e., Wikibase for authority control reconciliation but as a tool to push our knowledge and our namespace to the Wikidata. [@fagerving_wikidata_2023]
 
@@ -283,7 +283,7 @@ We practice the open collaboration method, rooted in available knowledge managem
 
 #### Codebook creation
 
-The KULT survey documentation contains Slovak language descriptions of the variables in a narrative format, often with coding information. We create a machine-readable and programmatically easy-to-handle variable name for each variable, therefore creating the mapping 168 "total_own_turnover", and whenever necessary, we make a new auxiliary variable. 
+The KULT survey documentation contains Slovak language descriptions of the variables in a narrative format, often with coding information. We create a machine-readable and programmatically easy-to-handle variable name for each variable, therefore creating the mapping 168 "total_own_turnover", and whenever necessary, we make a new auxiliary variable.
 
 #### Variable names, auxiliary variables
 
@@ -293,13 +293,14 @@ The auxiliary variables are usually constant attribute variables in each dataset
 
 We will translate each variable label to English and add the 1-2 most relevant concepts for all variables to make the variable descriptions machine-actionable. Concept mapping requires a good command of the domain and statistically controlled vocabularies. Our initial concept mapping will go through two layers of peer review: Hudobne Centrum, the data steward organisation of the KULT surveys, will review our mapping first from a musical point of view, and we will ask the SOSR for a statistical revision.
 
-As an end result, we can bring each dataset column to a machine-actionable format that already offers itself for ex-ante harmonisation with further surveys and data sources. We will make the new joined datasets available in CSV, Excel, and SPSS formats for convenience. 
+As an end result, we can bring each dataset column to a machine-actionable format that already offers itself for ex-ante harmonisation with further surveys and data sources. We will make the new joined datasets available in CSV, Excel, and SPSS formats for convenience.
 
 #### Namespace and entity matching
 
-The KULT surveys are enterprise surveys by nature, although they relate to social or cultural enterprises, which often do not have an enterprise form or even a legal personality. 
+The KULT surveys are enterprise surveys by nature, although they relate to social or cultural enterprises, which often do not have an enterprise form or even a legal personality.
 
 ### Crosswalking
+
 A schema crosswalk is a table that shows equivalent elements (or "fields") in more than one database schema. It maps the elements in one schema to the equivalent elements in another. In this case, we will create a schema crosswalk table for connecting the SOSR statistical microdata to a more user-friendly, bilingual, improved, and enriched KULT database.
 
 ### Creation of novel indicators for the Slovak music industry and potentially other CCIs
