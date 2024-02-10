@@ -274,7 +274,7 @@ We practice the open collaboration method, rooted in available knowledge managem
 ### Retrospective harmonisation of survey data {#retrospective-survey-harmonisation}
 
 | No.      | Survey Title (SK)                                                             | Survey Title (EN)                                                                     |
-|------------------|-----------------------|-------------------------------|
+|----------|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | `KULT05` | Hudobné telesá a umelecké súbory v SR                                         | Musical ensembles and artistic ensembles in Slovakia                                  |
 | `KULT10` | Ročný výkaz no knižnici                                                       | Annual survey of libraries                                                            |
 | `KULT11` | Ročný výkaz no audiovízii                                                     | Annual audiovisual survey                                                             |
