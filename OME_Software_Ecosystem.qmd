@@ -48,13 +48,9 @@ knitr::opts_chunk$set(echo      = FALSE,
 knitr::include_graphics(here::here("png", "Banner_OME_Software_Ecosystem.png"))
 ```
 
-
 {{< pagebreak >}}
 
 # Executive Summary
-
-
-
 
 ::: callout-tip
 ### O2. BRIDGE data gaps {.unnumbered}
@@ -78,20 +74,19 @@ The functional requirements of the D4.1 Open Music Europe Software Ecosystem are
 knitr::include_graphics(here("png", "OME_GitHub_screenshot.png"))
 ```
 
-
 ## Background {.unnumbered}
 
 In the background of OME we have shown that in the past decade, the *eurostat* [@r_package_eurostat], *iotables* [@r_package_iotables], *retroharmonize* [@r_package_retroharmonize], \[regions\], and *spotifyr* R package [@r_package_spotifyr] was an intrepid R package system that could be used in a partly reproducible manner to create relevant data assets for music industry use. With this package, ARTISJUS, SOZA and REPREX created complex music valuation models and supporting datasets and carried out partly ex-ante harmonised cultural access and participation surveys, which were retroactively harmonised with the EU's datasets held at GESIS.
 
 R is a high-level language that is not intended for general-purpose programming. Instead, it offers increasing interoperability with general-purpose languages like Python, C++, Java, SQL, or RDF. So, whilst relying on the data know-how embedded in our R software as a background, we must bridge these packages that can import various other software components to meet the objectives of Open Music Europe.
 
-`Slovak Demo Music Database`: A SOZA-REPREX background described in the Consortium Agreement and in the *Feasibility Study On Promoting Slovak Music In Slovakia & Abroad* [@antal_promoting_slovak_2020]. From this background the The Slovak Comprehensive Music Database will be a foundational data system for `T2.3`. It is developed in `T2.2`.  
+`Slovak Demo Music Database`: A SOZA-REPREX background described in the Consortium Agreement and in the *Feasibility Study On Promoting Slovak Music In Slovakia & Abroad* [@antal_promoting_slovak_2020]. From this background the The Slovak Comprehensive Music Database will be a foundational data system for `T2.3`. It is developed in `T2.2`.
 
-`Listen Local Demo App`: A SOZA-REPREX background described *Feasibility Study On Promoting Slovak Music In Slovakia & Abroad* that overrules Spotify recommendations to make them more inclusive and meet local content regulations (i.e., add more Slovak language and Slovak-origin music.) This working demo application will be modernised a re-launched with a far more comprehensive functionality in `T2.3`. 
+`Listen Local Demo App`: A SOZA-REPREX background described *Feasibility Study On Promoting Slovak Music In Slovakia & Abroad* that overrules Spotify recommendations to make them more inclusive and meet local content regulations (i.e., add more Slovak language and Slovak-origin music.) This working demo application will be modernised a re-launched with a far more comprehensive functionality in `T2.3`.
 
-`SurveyHarmonies`: The _SurveyHarmonies_ system for ex-ante survey harmonisation. This application may be further developed. 
+`SurveyHarmonies`: The *SurveyHarmonies* system for ex-ante survey harmonisation. This application may be further developed.
 
-`Eviota`: _Eviota_, a minimum viable product for integrated financial and sustainability reporting for music SMEs. This application will be further developed in `T3.3`.
+`Eviota`: *Eviota*, a minimum viable product for integrated financial and sustainability reporting for music SMEs. This application will be further developed in `T3.3`.
 
 The problem of this emerging system of grant application was two-fold:
 
@@ -208,7 +203,7 @@ The problem with the UTU and REPREX background R packages is that they use a har
 +----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Releasing data with improved semantics | -   The dataset package connects the usability of *rdflib*, and R binding to the Pyton-based RDFLIB to export into any graph database ("triplestore"). See our tutorial, which will be improved with more user feedback.                                                                                                                                                                                                                                                                                                                                                           |
 |                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|                                        | -   The Wikixxx must be simultaneously developed with a Wikidata bot; we initiated a Wikimedia in Residence xxxx.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                                        | -   The wikidataR must be simultaneously developed with a Wikidata bot; we initiated a Wikimedia in Residence through Wikipedia Slovensko.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 +----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Software components for data coordination
@@ -223,17 +218,17 @@ The [Data Coordination Solution](#data-coordination-solutions) section explains 
 
 Data processing is very well supported in the R ecosystem. We have to add very little to it; our goal is to enable users with R scripting skills to benefit from them.
 
-+--------------------------+----------------------------------------+
-| Processing task          | Software ecosystem components          |
-+==========================+========================================+
-| Music industry databases | -   ETL scrips for SOZA                |
-|                          |                                        |
-|                          | -   ETL Scripts for Hudobné centrum    |
-+--------------------------+----------------------------------------+
-|                          |                                        |
-+--------------------------+----------------------------------------+
-|                          |                                        |
-+--------------------------+----------------------------------------+
++--------------------------+---------------------------------------+
+| Processing task          | Software ecosystem components         |
++==========================+=======================================+
+| Music industry databases | -   ETL scrips for SOZA               |
+|                          |                                       |
+|                          | -   ETL Scripts for Hudobné centrum   |
++--------------------------+---------------------------------------+
+|                          |                                       |
++--------------------------+---------------------------------------+
+|                          |                                       |
++--------------------------+---------------------------------------+
 
 : Software components for data processing
 
@@ -261,8 +256,6 @@ The [Data release](#data-release) chapter of this document describes how we rele
 
 : Software components for data processing
 
-rdf_n-quads_1_1
-
 ::: callout-note
 ### More: Data ingestion
 
@@ -278,10 +271,10 @@ The background:
 -   `2020.06.04`: The *regions* extension to is first released on CRAN; it supports the metadata reconciliation of subnational statistics and complements the usability of *eurostat*. It goes through further releases till 2021.
 -   `2020.09.21.`: The first CRAN release of the *retroharmonize* R package.
 -   `2021.06.17.`: The discontinued, orphaned *spotifyr* package is taken over by REPREX and re-released on CRAN under version 2.2.1; goes through minor changes till 2022. GitHub repository: [charlie86/spotifyr](https://github.com/charlie86/spotifyr)
-- `2022.06.28`: The *statcodelists* 0.9.2 package is released on CRAN to support the further usability of the *retroharmonize* and *dataset* packages. GitHub repository: [antaldaniel/statcodelists](https://github.com/antaldaniel/statcodelists/), product website: [statcodelists](https://statcodelists.dataobservatory.eu/.
+-   `2022.06.28`: The *statcodelists* 0.9.2 package is released on CRAN to support the further usability of the *retroharmonize* and *dataset* packages. GitHub repository: [antaldaniel/statcodelists](https://github.com/antaldaniel/statcodelists/), product website: \[statcodelists\](https://statcodelists.dataobservatory.eu/.
 -   `2022.12.02.` The *dataset* 0.1.9. prototype for inviting requirements, future contributors, and users.
-- `2023.04.30.`: The _SurveyHarmonies_ system for ex-ante survey harmonisation.
-- `2023.04.30.`: _Eviota_, a minimum viable product for integrated financial and sustainability reporting for music SMEs. 
+-   `2023.04.30.`: The *SurveyHarmonies* system for ex-ante survey harmonisation.
+-   `2023.04.30.`: *Eviota*, a minimum viable product for integrated financial and sustainability reporting for music SMEs.
 
 The foreground:
 
@@ -294,7 +287,7 @@ The foreground:
 -   `2023.11.20`: Requirement harmonisation with `D3.1`; data chapter added to Deliverable.
 -   `2023.12.01.`: Requirement elicitation: Stories of [Michal](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/michal.html), [Ivana](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/ivana.html) and [Natalia](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/natalia.html).
 -   `2023.12.01.`: The KULT package - case study of retrospective harmonisation of KULT 5, 10, 11, 19. Not released (sensitive data contents); private GitHub Repo: `dataobservatory-eu/KULT`; an update of the *retroharmonize* package to 0.2.5.003.
--   `2023.12.06.`: Requirement elicitation: Story of [Max](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/max.html);  [Georg](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/georg.html) and  [Jana](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/jana.html).
+-   `2023.12.06.`: Requirement elicitation: Story of [Max](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/max.html); [Georg](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/georg.html) and [Jana](https://music.dataobservatory.eu/documents/open_music_europe/dataset-development/stories/jana.html).
 -   `2023.12.08.`: The 0.2.0 *dataset* version released on the Comprehensive R Archive Network after peer-review.
 -   `2023.12.17`: The *dataset* 0.2.8 is released on CRAN; supports [Dublin Core](https://dataset.dataobservatory.eu/articles/dublincore.html), [DataCite](https://dataset.dataobservatory.eu/articles/datacite.html) and to some extent SDMX and XKOS.
 -   `2023.12.19.`: The *eurostat* 4.0.0 is released on CRAN to maintain usability of the background after API change in the Eurostat data warehouse. GitHub repository: [rOpenGov/eurostat](https://github.com/rOpenGov/eurostat)
@@ -390,7 +383,7 @@ Data coordination requires a very high-level, expressive knowledge layer indepen
 
 -   [x] Receive data from the EU Open Data Portal with the DCAT-AP application profile.
 
--   [x] Recieve data from the SDMX data sources of Eurostat, OECD, xxx.
+-   [x] Recieve data from the SDMX data sources of Eurostat, OECD, UN Statistical Division, IMF and BIS.
 
 The bare minimum requirement for scaling up data ingestion and achieving the data dissemination standard that we promise in our grant agreement is being able to work with two information models: the Statistical Data and Metadata eXchange and the *DCAT-AP* [@DCAT_2020].
 
@@ -416,7 +409,7 @@ The most relevant work for designing the metadata aspects of our software compon
 
 ## Statistical Data and Metadata eXChange Information Model
 
-While the *eurostat* package, released initially in xxx, and the subsequent REPREX packages, xxx, xxxx, xxx, gave momentum to fill data gaps in the music sector in a reviewable, partly reproducible, and efficient way, they did not follow the standardisation of statistical metadata that took place since 2012. When they were released, SDMX as an information model to support business processes of statistical offices had only been used a little outside of national statistical offices or large international organisations like the IMF or the World Bank. The shortcoming of this approach was evident in 2023 when the UTU background *eurostat* needed extensive recoding to remain workable without any essentially new functionality. Incorporating the knowledge base of the SDMX model into our software ecosystem will be future-proof. On the other hand, moving towards SDMX will keep our background future-proof while we can import or exchange data with a growing number of statistical sources, not only with Eurostat. The value proposition of moving to the SDMX information model is that Open Music Europe can offer more than a simple, reproducible downloader to Eurostat products: we can also provide novel data combinations from various statistical data sources or better utilise semi-finished statistical products that are not directly usable for the music researcher.
+While the *eurostat* package, released initially in 2015, and the subsequent REPREX packages, iotables, *regions*, *retroharmonize* and *spotifyr* released in 2018-2021, gave momentum to fill data gaps in the music sector in a reviewable, partly reproducible, and efficient way, they did not follow the standardisation of statistical metadata that took place since 2012. When they were released, SDMX as an information model to support business processes of statistical offices had only been used a little outside of national statistical offices or large international organisations like the IMF or the World Bank. The shortcoming of this approach was evident in 2023 when the UTU background *eurostat* needed extensive recoding to remain workable without any essentially new functionality. Incorporating the knowledge base of the SDMX model into our software ecosystem will be future-proof. On the other hand, moving towards SDMX will keep our background future-proof while we can import or exchange data with a growing number of statistical sources, not only with Eurostat. The value proposition of moving to the SDMX information model is that Open Music Europe can offer more than a simple, reproducible downloader to Eurostat products: we can also provide novel data combinations from various statistical data sources or better utilise semi-finished statistical products that are not directly usable for the music researcher.
 
 ## Importing/Exporting Coded Knowledge
 
@@ -438,7 +431,7 @@ Because the DMP describes a machine-actionable, highly automated or reproducible
 
 *Compatibility with Dublin Core and DataCite*
 
-The `Dublin Core`, also known as the `Dublin Core Metadata Element Set` (DCMES), is a set of fifteen main metadata items for describing digital or physical resources, such as datasets or their printed versions. Dublin Core has been formally standardized internationally as ISO 15836, as IETF RFC 5013 by the Internet Engineering Task Force (IETF), as well as in the U.S. as ANSI/NISO Z39.85 With the help of *dataset,* our data-to-policy pipeline always add the Dublin Core metadata elements to any incoming or processed dataset[@dublin_core_dcmi_2020].
+The `Dublin Core`, also known as the `Dublin Core Metadata Element Set` (DCMES), is a set of fifteen main metadata items for describing digital or physical resources, such as datasets or their printed versions. Dublin Core has been formally standardized internationally as ISO 15836, as IETF RFC 5013 by the Internet Engineering Task Force (IETF), as well as in the U.S. as ANSI/NISO Z39.85 With the help of *dataset,* our data-to-policy pipeline always add the Dublin Core metadata elements to any incoming or processed dataset[@dublin_core_dcmi_2020].
 
 ```{r dublincore, eval=FALSE}
 as_dublincore(iris_dataset, "list")
@@ -700,9 +693,9 @@ While the N-Quad format did not go through rigorous testing and was not released
 
 The *dataset R* package in a very early, conceptual form was released in 2022 as a preparation for T4.1 The dataset 0.2.0 was released for peer-review on rOpenSci and on CRAN to get feedback on the feasibility and recruit knowledgable software developer contributors, early users and reviewers. The dataset 0.2.0 as REPREX background can be seen as a conceptual prototype without real functionality.
 
-In T4.1, the *dataset* package was seen as foundational element of the `Open Music Europe Software Ecosystem`: we develop new functionalities within this pacakge to test logical, functional fit and full interoperability, then move them out into separate packaging for richer functionality and easier documentationn and maintenance.
+In T4.1, the *dataset* package was seen as foundational element of the `Open Music Europe Software Ecosystem`: we develop new functionalities within this pacakge to test logical, functional fit and full interoperability, then move them out into separate packaging for richer functionality and easier documentation and maintenance.
 
-In T4.1, REPREX developed dataset 0.3.0 and 0.3.1 as a foundational R package for our Open Music Europe Ecosystem contributions to the wider R statistical environment and programming language open source ecosystem. The dataset R package not only does some heavy lifting to process music data but also has attracted potential contributors, co-authors, and valuable elements to our ecosystem.
+In T4.1, REPREX developed dataset 0.3.0 and 0.3.1 as a foundational R package for our Open Music Europe Ecosystem contributions to the wider R statistical environment and programming language open source ecosystem [@r_package_dataset_0_3_1]. The dataset R package not only does some heavy lifting to process music data but also has attracted potential contributors, co-authors, and valuable elements to our ecosystem.
 
 -   [ ] 0.2.0 was released after peer-review on rOpenSci and CRAN as a prototype before the kick-off of Open Music Europe in December 2022.
 
@@ -714,7 +707,7 @@ In T4.1, REPREX developed dataset 0.3.0 and 0.3.1 as a foundational R package fo
 
 -   [x] 0.3.0 included the prototype of the *tuRrtle* package for compatibility with *ontologics*.
 
--   [x] 0.3.1 was released with minor improvements and backward compatibility with old versions of R.
+-   [x] 0.3.1 was released with minor improvements and backward compatibility with old versions of R. DOI: [10.5281/zenodo.10304055](https://zenodo.org/records/10574908)
 
 ## The crosswalk R package
 
