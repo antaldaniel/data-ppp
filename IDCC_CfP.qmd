@@ -2,7 +2,8 @@
 title: "IDCC CfP"
 format: 
    html: default
-   gfm: default 
+   gfm: default
+   docx: default
 editor: visual
 ---
 
