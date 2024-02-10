@@ -1,0 +1,45 @@
+---
+title: "Slovak Comprehensive Music Database"
+subtitle: "The Slovak Comprehensive Music Database (SKCMDb) is the public manifestation of the Slovak Music Dataspace"
+format: 
+   html: 
+     toc-depth: 2
+   docx: 
+     toc-depth: 2
+bibliography:
+  - bib/datalinking.bib
+  - bib/dataspace.bib
+  - bib/datamodels.bib
+  - bib/eXtremeDesign.bib
+---
+
+## Dataspace
+
+The Slovak Comprehensive Music Database (SKCMDb) is the public manifestation of the Slovak Music Dataspace.
+
+The data space is an exchange, processing, quality control, sharing and data provision system among trusted partners of the Slovak and global music sector. It is not a central database but a coordination tool to ensure that SOZA, Music Center Slovakia, the IAML Slovak music libraries, record labels, publishers, orchestras, bands and individual music creators can exchange data, information and knowledge efficiently.
+
+![The dataspace behind the SKCMDb brings together governance rules to exchange data with state-of-the-art technology among Slovak institutions, enterprises, music creators and music professionals. It is a consensual method to lower the cost of high-quality data for music. distribution, rights management, and documentation for future generations of audiences.](png/data_sharing_value_wheel_16x9.png)
+
+The Slovak Comprehensive Music Database (SKCMDb) is a public database developed by SOZA, Music Center Slovakia and Reprex within the Open Music Europe project funded by the European Union's Horizon Europe program, based on a Memorandum of Understanding signed with the Ministry of Culture. It is a public database supporting better promotion of music originating from Slovakia or created in the Slovak Republic at home and abroad.
+
+The data sharing and coordination mechanism behind the SKCMDb, i.e., the Slovak Music Dataspace, contains rules and agreements among institutions, people, and their IT systems to facilitate data exchange, to reduce the documentation costs of music distribution and rights management, and to combat misinformation about Slovak music that threatens the visibility or monetisation of Slovak content.
+
+> A data space is an ecosystem of exchange, processing, sharing and provision of data between trusted partners, for a fee or not. It is not about copying or repatriating data centrally, but about ensuring that each data holder has full control over the conditions (e.g., who, when, and under what condition) of access to their data [@dataspace_for_cci_2022, p16].
+
+## Data Coordination and Exchange
+
+The specification of the Slovak Music dataspace follows the the recommendations of the expert group behind *Design Principles for Data Spaces* [@design_principles_data_spaces_2021, p26], as well as considering the definitions and recommendations of the *Dataspace for Cultural and Creative Industries* [@dataspace_for_cci_2022], and the scientific consensus described in *Dataspaces: Fundamentals, Principles, and Technique* [@curry_dataspaces_2020].
+
+
+
+- [x] Data spaces should provide a framework for effective and efficient data exchange. This means they should allow for adoption of common APIs, data structure and security schemas, as well as adoption of information (data) models that can be represented in data formats compatible with adopted APIs, for the purpose of sharing and exchanging data.
+
+
+-   [x] Data spaces should provide a structure for trustworthiness in which data consumers and data providers. The dataspace partners build trust with common ethical values and with the disclosure and addressing of potential conflicts of interest, for example, among private and public institutions, composers, producers and performers. Partners increase trust with high data quality. They minimise biases by excluding groups of artists or genres of music. Data protection rules, including a clear interpretation of GDPR, ensure the balance between public interest and privacy concerns.
+
+*SOZA, Music Center Slovakia, and Reprex have been working for months to refine a shared understanding of GDPR and data protection processes for the harmonised needs of collective rights management, music documentation and music education, in line with the statutes of SOZA and the public sector obligations of Music Center Slovakia. We start to inform music creators and initiate a discussion with institutions and individuals in February 2024.*
+
+Polifonia uses the eXtreme Design methodology complemented with some user-experience design concepts; this method utilises software design patterns and competency questions [@blomqvist_experimenting_2010; @blomqvist_engineering_2016].The eXtreme Design methdology itself is rooted in Ontology Design Patterns [@gangemi_ontology_2005], which is an adoptation of software design patterns to ontologies. The use of XD was particularly useful to us, because it had been applied in the he cultural heritage [@carriero_pattern-based_2021], and our beachhead market was the application of music heritage and rights management data.
+
+The application of software design patterns is only sometimes straightforward in functional programming, as it aims mainly to provide a high-level overview of how objects and classes should interact. To retain the applicability of this methodology across the different layers of our software ecosystem, the new R packages developed in Open Music Europe are object-oriented, and they utilise the relatively simple but versatile s3 object-oriented class system of the R statistical ecosystem and language. This way we can document various functional and non-functional requirements in a standard way in the Open Music Europe project, and provide a simple checklist for the T4.3 which will test the usability of our tools. We needed very little modification in eXtreme Design: its original application for ontology design patterns described in the OWL/RDF metadata languages do not need a big "push" as our R packages are intended to put the coded knowledge from ontologies into work, i.e., improving database tables or stand-alone datasets for our internal and external stakeholders.
