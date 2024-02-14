@@ -121,7 +121,7 @@ Humans are playing critical roles in the management of data at large scales, thr
 
 -   In *Publishing census as linked open data: a case study* Petrou, Papastefanatos and Dalamagas provide a case study of LOD publication in Greece [@PetrouIrene2013Pcal].
 
--   *Linked Open Data Statistics: Collection and ExploitationLinked Open Data Statistics: Collection and Exploitation* [@ermilov_et_al_lod_statistics_2013] in the collection *Knowledge Engineering and the Semantic Web*.
+-   *Linked Open Data Statistics: Collection and Exploitation* [@ermilov_et_al_lod_statistics_2013] in the collection *Knowledge Engineering and the Semantic Web*.
 
 ## Linked Open Data in Libraries
 
