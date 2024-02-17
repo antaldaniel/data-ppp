@@ -1,0 +1,75 @@
+---
+title: "Pollinator"
+format: docx
+editor: visual
+bibliography:
+    - bib/dataspace.bib
+    - bib/naturebasedsolutions.bib
+---
+
+**From databases to a data space**: the dataspace is a new data innovation that can exponentially increase research productivity in pollinators and nature-based solutions in animal-pollinated food, biofuel, and CO2 sequestration value chains. From a technical point of view a pollinator data space can be seen as an intelligent connector of biodiversity, environmental and socio-economic databases. This can allow existing research databases, such as those of the Safeguard project at the University of Würzburg or the EU Pollinator Hub to automatically update themselves from open science databases. For example, Safeguard 10240 via Wikispecies with taxonomy-based global databases, Safeguard 11060 with a wider areas open hydrological and air pollution measurements; or compare Hive scales data from Austria in the EU Pollinator Hub with similar data measurements in South Holland on the coverage are of the [Bijenlandschap.nl PPP](https://www.bijenlandschap.nl/) from South Holland, or Latvia, from different landscapes with different climate, flora and fauna.[^1].
+
+[^1]: "From a technical perspective, a data space can be seen as a data integration concept which does not require common database schemas and physical data integration, but is rather based on distributed data stores and integration on an »as needed« basis on a semantic level."[@design_principles_data_spaces_2021, p7] From an organisational point of view, they are federated data ecosystems with harmonised data collection, exchange, and processing that allow cross-linking biodiversity and socio-economic survey databases, hydrological, air pollution and meteorological, or even satellite sensory data.
+
+**From monocultural beehives to diversified nature-based services**: Beekeepers and their bees should not only produce honey. Our smart, connected apiaries in the Research Hive Network allow them to pivot to sell nature-based solutions with validated pollination services to apple or almond producers, biofuel crops like rapeseed, or even support CO2 sequestration. How could bees and their keepers be paid to pollinate crops and parks, if they cannot account for their services? Fitting the beehives with proper sensors and telemetry and training the beekeepers to citizen science practices will not only make their honey production more productive and sustainable with less physical visits, but they can offer both nature-based solutions to the food and biofuel economy and research services, too.
+
+**Optimised economic and environmental impact**: Our data space allows the linking of financial performance measurement (accounting data), and sustainability measurement (particularly ESRS E4), to help the risk management and mitigation of the food value chain and to measure and motivate better the positive impacts of nature-based solutions, such as monitored pollination services provided by bees, beekeepers and their apiaries.
+
+**Social impacts and education**. Our research hives are ideally suited to be placed into kinderboederijs and community gardens and help the education about pollinators, biodiversity, and nature-based solutions. They can be an important starting point for citizen science volunteering activities for other non-beekeeping activities that require human labour, particularly field surveys of wild pollinators.
+
+## Digital Prototyping
+
+We would like to build the prototype of a European Pollinator dataspace with open-source tools. We would like to show research organisations along the ecological corridors of Bijenlandschap.nl, and our research and development partners, how to connect the knowledge embedded in their databases in a way that they can be automatically synchronised with each other, and other global knowledge systems such as Wikispecies. In this prototype we would like to add some beekeepers as citizen scientists, beehives, apiaries, to show how IoT and harmonised citizen science surveys can enrich with new data "professional" research databases.
+
+::: callout-tip
+## A very small pollinator dataspace
+
+We would like to demonstrate how a data space works with a few, select datasets of the EU Pollinator Hub, the Safeguard datasets and other databases managed by the University of Würzburg, the European Environmental Agency, Copernicus, and Research Hive Network of Beesage.
+
+- Duration: 1-3 months. 
+- Budget: Scaleable, €3000-15,000.
+:::
+
+## Research Network Prototyping
+
+We want to lay the foundations of the incubation of nature-based solutions with pollinators with our technical, educational and business innovation. We want to show how we can turn an apiary in a kinderboedij or other educational field into a centre of citizen science and the locus of a nature-based business incubator.
+
+::: callout-tip
+## Research Hive Network with Citizen Science
+
+We would like to find an educational partner experienced in vocational training, particularly of citizen scientists of volunteers, and turn a few community environmental educationn areas, such as kinderboerderijs or community gardens into research hubs.
+
+-  Place beehives into kinderboerderij or community gardens with a strong community of volunteers.
+-  Turn the beehives into prototypes of the Hive Research Network with placing BeeSage's award-winning innovative products into the hives.
+-  Train the beekeepers and volunteers to make field surveys of wild pollinators, and simple measurements that complement the real-time information.
+-  Feed the data via our data spaces survey harmonisation tools, and via direct data pipelines from the hives into the Pollinator Data Space.
+-  Analyse the data from volunteers, the research hives, and local meteorological, environmental and hydrological stations, and environmental satellite sensory data at the end of the period.
+-  Provide feedback to the citizen scientist and their trainers.
+
+**Duration:** 9 months (spring to late autumn.)
+
+**Budget:** scaleable €3000-20,000.
+
+:::
+
+## Nature-based Service Incubator Prototyping
+
+Nature-based solutions, inspired and supported by nature, which are cost-effective, simultaneously provide environmental, social and economic benefits and help build resilience. The last years have been pivotal for the incorporation of nature-based solutions in key intergovernmental agreements, such as the [Sharm el-Sheikh Implementation Plan](https://unfccc.int/sites/default/files/resource/cp2022_L19_adv.pdf) at the UNFCCC COP27 and the _Kunming-Montreal Global Biodiversity Framework_. The European Environmental Agency made them an essential cornerstone of SOER 2020 [@SOER_2020], and the European Union made them a supported policy measure in the *General Union Environment Action Programme to 2030* [@eur-lex_decision_2022_591]. Important aspects of the Green Deal policies, for example, the Climate Delegated Act of the Taxonomy Regulation [@climate_delegated_act_2021_2139]. 
+
+The [research of nature-based solutions](https://research-and-innovation.ec.europa.eu/research-area/environment/nature-based-solutions/research-policy_en) is also highly prioritised in the EU R&D granting programmes.
+
+Nature-based solutions are equally desirable in the dense urban areas, like most of the Bijenlandschap.nl landscape of South Holland, or in rural, marine or coastal areas. Yet even simple nature-based solutions, like paying apiaries for pollination services by food or biofuel farms or the food/biofuel industry, though commonplace in the United States or Australia, are to be developed in Europe.
+
+Unlike in the U.S. and Australia, European agriculture and forestry, as well as apiaries, are mainly small, family businesses that do not have complicated financial and sustainability performance management tools to calculate the monetary benefits of pollination or other nature-based solutions. In the coming years, this must change because the EU is introducing a revolutionary change in financial accounting and auditing. Economic and sustainability reporting must be based on integrated, factual enterprise resource planning in large companies and their supply chains. It is unlikely that farms or beekeepers will take the initiative with such ERP systems. They still must be prepared because they will be forced to provide accurate data if they want to remain in the supply chain of large food corporations or supermarket chains. The improved and integrated sustainability management, mainly introducing the ESRS E-4 standard for food and biofuel producers, should be seen as an opportunity for the innovators of nature-based solutions.
+
+::: {.callout-tip} 
+## Business Incubation of Nature-based Startups
+
+Even relatively simple nature-based solutions, such as introducing paid pollination services or incentives to help wild pollinators and their research, require new technical and business innovation. Such services must be provided with clean and smart technologies, which must be accounted for to be economically viable. We want to collaborate with a prestigious university or business school incubator to organise a hackathon and a product/market fit for nature-based startups.
+
+**Duration**: 3-9 months, depending on the complexity of the prototype of an incubation program (or an awareness-raising hackathon) 
+
+**Budget**: €10,000 for an awareness raising hackathon, €15-30,000 for incubation planning.
+
+:::
+

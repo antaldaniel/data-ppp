@@ -1,0 +1,198 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## Metadata organisation
+
+We will organise metadata to conform with the DataCube/DataSet model, because it is the most widely used standard with statistical data; apart from that, we will follow a usability criterion to add further information in a way that may come natural for the R user.
+
+When exporting to RDF, the metadata will be converted into triple statements, i.e., subject-predicate-object pair, where many statements' subjects will be the dataset. In such cases, storing the metadata in a well-defined key-value pair and serialising them with a clear connection to the subject is sufficient. Key-value pairs are easy to read as lists or tabular data frames themselves.
+
+More structured metadata may be better stored in JSON-LD or XML, for example, but that will conflict with usability. JSON-LD can be converted to often nested lists, which again require some familiarity with abstract knowledge objects. Of course, all metadata can and should be flattened to triples, i.e., long, three-dimensional tabular data; however, flatting complex lists is not straightforward. As a compromise, we will work as long as possible with flattened data.frames to contain data, and when we run out of options, we will resort to more complex metadata storage that will be fully optional for advanced users.
+
+## Findability, interoperability
+
+Findability accessibility are key concepts in FAIR, but they are hardly independent of the tool that the user is using to find the information. Various standards, protocols, and ontology help make our datasets findable in different contexts.
+
+For internet search engines, schema.org has a Dataset and the data catalogue or even a data feed (API) definition. Schema.org is mentioned infrequently in European open science, although European scientists, like everybody else, often start with a Google, Bing, or Yahoo! search. Mapping Dublin Core or DataCite requirements to schema.org will undoubtedly add to the findability and the potential impact of a data release.
+
+## Accessibility and reusability
+
+DataCite and Dublin Core are used for scientific use and reuse---OpenAIRE also relies on them. Dublin Core is a global library standard, and DataCite is a newer one aimed more at storing knowledge and information digitally. Practitioners of research data management often target these standards, even though SDMX (Statistical Data and Metadata Exchange; or DCAT for standardised data catalogues) are more logical starting points for a data analyst.
+
+The most problematic usability or accessibility question is the proper use of the data: sometimes numerical data can be accessed unintendedly, where the numbers still appear in front of the analyst, but they lose their meaning and mislead the data user. Datasets must be accessed in a proper way to be used as intended. SDMX, for example, contains plenty of metadata that is optimal for data reuse in a quantitative, analytical workflow and certainly contains metadata on how the data should be understood and organised. DataCite or Dublin Core are very general and often work with different data carriers, are sound recordings of oral history archives or photographic documentation. Their generality goes at the expense of data accessibility and reusability. While playing an oral history recording or viewing a photograph can be self-explanatory, using abstract information objects like a dataset or a music work always requires specialist data (or music) knowledge.
+
+We believe that GSIM, the vocabulary connecting SDMX, the statistical (processed) data standard, and DDI (the microdata standard) are far superior for data reuse.
+
+However, GSIM is designed to support processes where qualified people interact with the digital resources under human and computer oversight. Therefore, they are far-far complicated to be used by an individual researcher or a small group of analysists. We do not intend to provide support to produce metadata that meets these standards. Instead, we focus on retrieving and utilising such metadata so that our user can properly understand and work with the data and to record "enough" semantic and data organisational information for reuse.
+
+In reuse, of course, "enough" requires our subjective judgment. We want to create an R extension that even beginner or intermediate R users can use easily, while we want to empower them to work with data more confidently. In doing so, we will work with key concepts of reproducible research, particularly in terms of quality control and reviewability, as we add enough semantics, descriptions and process information that flaws in the data analysis can be easily spotted. This will go beyond FAIR requirements and pave the way towards TRUST. We will deal with these issues, which go beyond data towards knowledge in recording *Semantic information*. We first deal with simpler, more descriptive metadata first to meet the basic requirements of FAIR.
+
+```{r}
+
+dataset_properties <- data.frame(
+  c()
+)
+
+
+```
+
+```{r}
+example1 <- data.frame(
+  measurement = c(1,3,2,4,2),
+  obs_status = rep("A", 5),
+  freq = rep("A", 5), 
+  conf_status = rep("F", 5)
+)
+
+example1 
+```
+
+You can add options to executable code like this
+
+```{r}
+attr(example1, "all_observations") <- data.frame(
+  obs_status = "A",
+  freq = "A",
+  conf_status = "F"
+)
+
+# remove the information that was sent to attributes
+example1[,which(colnames(example1) %in% c("obs_status", "freq", "conf_status"))] <- NULL
+
+# print the attributes
+attributes(example1)$all_observations
+
+
+
+
+```
+
+A data.frame is easier to define in the wide format, but with many constants, it is more difficult to read, so it makes sense to store the key-value pairs in the long form.
+
+```{r}
+
+get_string <- function(x) as.character(x[[1]])
+get_class <- function(x) class(x)
+
+attr(example1, "all_observations") <- data.frame (
+ var_name  = c("obs_status", "freq", "conf_status"),
+ value =  c("A", "A", "F"), 
+ class = rep("character", 3)
+)
+
+  
+```
+
+```{r}
+# print the remaining dataset
+cat("The dataset:/n")
+attr(example1, "all_observations")
+```
+
+The `all_observations` field is easy to validate: it must have exactly one rows. Once we have several observation statuses or frequencies in a dataset, they are no longer constants, and they must be mapped clearly to each row (observation.)
+
+```{r}
+example1b <- example1
+example1b$obs_status <- attr(example1, "all_observations")[var_name == "obs_status", "value"]
+example1b$conf_status <- attr(example1, "all_observations")[var_name == "conf_status", "value"]
+
+example1b
+
+```
+
+## Descriptive metadata
+
+We start with the simple and obvious choices from DataCite, Dublin Core (a more general library standard), schema.org (for web searches and the non-semantic web) and DCAT (Data Catalogue) for descriptive metadata.
+
+DCAT is largely based on Dublin Core and dcterms, and, therefore interoperable; DataCite uses a different data model for more complex metadata such as semantic Subject, dates, references, and bibliographic information. We will have to deal with them separately.
+
+However, metadata is the same or practically the same in these three standards, which will help the findability and accessibility of our datasets. Datasets should have a unique identifier, human-readable title, publisher, and main creator. This information will be stored again in key-value pairs because they contain simple information that can be mapped to various ontologies.
+
+However, metadata is the same or practically the same in these three standards which will help the findability and accessibility of our datasets. Datasets should have a unique identifier, human readable title, publisher, a main creator. This information will be stored again in key-value pairs, because they contains simple information that can be mapped to various ontologies.
+
+Sometimes more information can be added about creators, for example, we will deal with peculiarities of such cases case-by-cases. Sometimes it is easier to let the user add the entire metadata in the format that is best for the chosen ontology. For the most fundamental standards and ontologies we will try to provide an interoperable solution.
+
+### Size or extent
+
+There is one fundamental difference between DataCite, Dublin Core, schema.org, DCAT and the Data Cube vocabulary that we will use for the data itself. The Data Cube and schema.org view a dataset as an abstract information: a good analogy is a data.frame which is in use in an R session and is kept in RAM memory. Data catalogues, repositories and libraries will only contain datasets serialised into a file, and do not differentiate between the dataset in memory and in file. This is problematic if we have different file type support (for example, we provide access to a dataset in CSV and SPSS, too), because the different file types will certainly have different sized, and they will likely contain different level of metadata.
+
+In R, a logical solution would be to use as the size/extent of serialised R object, i.e., and rds file, but this would limit interoperability, not to mention that the same data.frame may be serialised to a different size on different computers. SDMX and DSD treats each file containing the dataset as a separate object and we will follow this route, too. Practically, of course, the user will want to document the dataset in a third-party or later accessible, long-term storage, so adding metadata to each file will come natural. However, this means that different metadata will be added to different files, because they require a different software for use, and they need a different disk or memory size to be used.
+
+The practical way to measure and record the size/extent information is to write the R object into a temporary file, measure the size of the file, then add the metadata of the temporary file, and save the final version with the relevant size/extent information. The result will not be 100% acccurate but for descriptive purposes more than sufficient.
+
+## Provenance
+
+Recording provenance is possible in many ways. The best way to store provenance information cannot be answered without anticipating the need for provenance. For FAIR findability and usability, creator names, publishers are helpful: they often appear in search terms, and they will be used in attribution (referencing the dataset.) These simpler use cases can be added as simple information objects, such a adding a creator name.
+
+We do not aim for a full computational reproducibility (for which the user may want to put all software used in the process into a docker, and recall from memory the entire call stack), or a full quality control chain (that would require the use of GSIM or PROVO or some advanced model.) If the aim of provenance is to be used in verification or quality control, a more process-driven approach is needed which will require a more complex data model. The user may use PROVO-O, the ontology for describing complex provenance processes that allow the registration of various agents (persons, institutions) in various roles with a long history. Such a quality management would be beyond the scope of our R user persona. Nevertheless, a simple, subjective provenance that goes beyond the FAIR requirements in DataCite, Dublin Core and DCAT will certainly improve the reviewability and reproducibility of the data.
+
+For example, we may want to record the fact that a dataset was originally aquired at a given time via the *eurostat* R package from the Eurostat data warehouse by a human software agent running this code, i.e., our analyst. Adding this metadata in a standard and future-proof way is possible but requires a different approach with DataCite, Dublin Core or PROVO. We will use PROVO, which allows an arbitrary extension of provenance, but only to the level of complexity that can be mapped into a DataCite or Dublin Core description.
+
+### Primary source
+
+PROVO uses among many related items the primary source as a special object. If we trace back a dataset downloaded with *eurostat* and analysed further, we usually would stop in reviewing the work at Eurostat. Eurostat is a statistical agency with a very well-defined and institutionalised quality assurance for the data and the metadata itself. The primary source is ideally such a competent collecting and processing institution ("agent"), where our provenance chain can stop: either because further review is not practical, or because the institution anyways has internal procedures to provide a connecting, well described chain of data provenance.
+
+PROVO, DataCite, DublinCore all allow the connect various resources and agents (people and instituions) for provenance or attribution purposes, but identifying a primary source is simple a practical and good way to think about reviewability. It encourages to the users to think about his/her responsibilty to remain reviewable after this primary source point. Giving attribution to the primary source is imparative from an ethical or a rights management point of view, too.
+
+### Persons, Institutions and Agents
+
+Bringing natural or legal persons in relation with the dataset is a good practice, but FAIR or repositories stop at a point. We will use the general `agent` term for these persons and institutions. Usability, particularly usability for beginner or intermediate R users will sacrifice flexibility and generalization, however, an advanced agent is always free to record an entire process in PROVO and add it to the future-proof RDF serialisation. From a usability point of view, we follow these guidelines.
+
+-   Ensure that bare minimum level of FAIR, i.e. the mandatory properties of Dublin Core, DataCite, schema.org and DCAT are always attached to the dataset, such as a unique ID, a title, and at least one creator and publisher.
+
+-   Make the addition of recommended FAIR Dublin Core, DataCite, schema.org or DCAT properties easy for a beginner or intermediate R user.
+
+## Semantic information
+
+A tidy dataset already contains minimal semantic information. We will encourage the users to "upgrade" the tidy datasets to datacubes or at least apply some of the semantic solutions of a datacube. Eventually, we may define a formal datacube class because it is ideal for statistical work; however, the entire datacube definition is superfluous to store microdata, for example, from inventory lists, financial ledgers, and registries.
+
+We believe that for data analysts who have already embraced the tidy data concept, the use of the datacube model will come naturally. During data wrangling or pre-processing, they do not use some of the data cube concepts. However, as soon as they start to use the data, filter observations, mutate columns or create joins, they intuitively start using the semantics of a data cube. The more reflected these concepts are, the less likely they will make semantic errors.
+
+For example, a persistent and often hard-to-detect error occurs when two variables are mutated into a sum or a product with dissimilar units of measures; for example, with euro and dollar measurements, euro and thousands of euros measurements, or kilograms and tons. The workflow error does need to be validated that the two columns have the same unit of measure and decimal multipliers. The unreflected data analyst is more likely to make this mistake if the unit of measure as an attribute to measured variables is not found in the dataset.
+
+The tidy data principle says that different units of measures, i.e. euro and dollar values, should go into different tables; the datacube says that the currency unit (and the decimal multiplier) should be added to the dataset. This requires the organisation of tabular data so that one column must have only one unit of measure and a decimal multiplier in the wide format when each variable is a column of the tabular dataset. Further semantic information is required: we must state which column contains the unit of measure (euro) and decimal multiplier (thousand euros) and which columns are measured in this unit. At last, we may have yet other variables which are not measured by this unit but add further potential dimension to a data analysis. We may record observations of gross and net wages for women and men in euros or thousand euros. The gross and net wages must be clearly expressed in euros or thousand euros. The gender or sex variable allows us to create separate mean, median or total wage statistics for men, women and non-binary people, i.e., add new dimensions to the analysis.
+
+Properly using measurements, attributes of observations and dimensions paves the way to define datacube slides, which are semantically well-understood and usable subsets of the dataset. For example, we can create a slice for data about women or men only; something that a data analyst would do with a filtering.
+
+### From tidy data towards datacubes
+
+For data analysts who have already embraced the tidy data concept, the use of the datacube model will come naturally. During data wrangling or pre-processing, they do not use some of the data cube concepts. However, as soon as they start to use the data, filter observations, mutate columns or create joins, they intuitively start using the semantics of a data cube. The more reflected these concepts are, the less likely they will make semantic errors.
+
+For example, a persistent and often hard-to-detect error occurs when two variables are mutated into a sum or a product with dissimilar units of measures; for example, with euro and dollar measurements, euro and thousands of euros measurements, or kilograms and tons. The workflow error does need to be validated that the two columns have the same unit of measure and decimal multipliers. The unreflected data analyst is more likely to make this mistake if the unit of measure as an attribute to measured variables is not found in the dataset.
+
+The tidy data principle says that different units of measures, i.e. euro and dollar values, should go into different tables; the datacube says that the currency unit (and the decimal multiplier) should be added to the dataset. This requires the organisation of tabular data so that one column must have only one unit of measure and a decimal multiplier in the wide format when each variable is a column of the tabular dataset. Further semantic information is required: we must state which column contains the unit of measure (euro) and decimal multiplier (thousand euros) and which columns are measured in this unit. At last, we may have yet other variables which are not measured by this unit but add further potential dimension to a data analysis.  We may record observations of gross and net wages for women and men in euros or thousand euros. The gross and net wages must be clearly expressed in euros or thousand euros. The gender or sex variable allows us to create separate mean, median or total wage statistics for men, women and non-binary people, i.e., add new dimensions to the analysis.
+
+The comprehensive extension of a tidy dataset to a datacube or providing a complete data structure definition requires a full description of every observation as an object.  For example, in a micro dataset, we may want to identify the female, male or other workers who receive the gross and net wage unambiguously, or we want to identify countries or regions where we took the average gross or net wage. Unambiguously and thoroughly describing the observation (statistical) unit has many benefits. However, it may be impractical because of the documentation work required, or it may be impossible due to the data protection considerations. 
+
+We need to use our subjective judgement here. We follow the structure for compatibility with well-defined data structure definitions but with metadata, which we find strictly necessary for diligent data analyst work.  
+
+1.   Instead of using the base R data.frame row.names, we delete row.names (which are by default just row numbers) and create a mandatory id column with unique observation or row identifiers. We encourage to make them globally unique with a prefix, and locally unique for semantically valid join operations.
+
+2. We make the recording of confidentiality status and publisher mandatory: the publisher is an agent responsible for not releasing confidential observations.
+
+3.  We make mandatory the use of observation status, which distinguishes among missing, logically missing, actual, estimated, forecasted and other measurements (observations.)
+
+4.  We make it mandatory to define the unit of measure (defaulting to number) and decimal multiplier (defaulting to 1.)
+
+5.  We encourage using standard code lists for the unit of measure so that humans and machines can unambiguously understand them.
+
+
+
+The datacube, like tidy microdata datasets, is made of observations, which are organised in rows. Each observation has an identifier, measured properties, and various dimensions and attributes added to the observation. Depending on the use of the data, this further semantic information may play the role of a dimension or an attribute; for example, the SEX (gender) variable may simply describe the observations made about humans, in which case it is an attribute. It can also allow us to calculate statistics for a female, male and non-binary subpopulation, in which case they play the role of dimensions.
+
+Some important statistical attributes usually do not play the role of a dimension, and it is very an excellent practice to include with the data: observation status (i.e., an observation is an actual measurement, forecast, imputed estimate, or it is missing); the unit of the measurement (natural numbers, grams, tons, currency units).
+
+The time and location of the observation are also essential pieces of information that may play the role of an attribute or a dimension.
+
+1\. Make the identifier column (primary key) mandatory.
+
+2\. The WRC and SDMX Dataset concept contains 3+1 objects: the abstract dataset, codebook, and data structure definition (semantics). We should encourage the user to use it, and create a minimalistic dataset/codebook/data structure defintion for each case.
+
+3\. The codebook defines the vocabulary or range of valid and missing information. We should provide a simplified codebook for all datasets (at least containing the variable classes, i.e., if the data should be stored as numeric or text) and encourage the user to make it more precise.
+
+4\. If used, we should validate the standard use of some attributes of primary importance, such as observation status, and confidentiality status (can the observation be published?).
+
+5\. Repeating metadata should be stored so that it can be brought into the dataset and returned to the dataset effortlessly. For example, if the confidentiality status of every observation is "sensitive" in a dataset or every measurement took place at the exact same geographical location. These attributes are constant and can be efficiently stored as attributes. For long-term, unambiguous reuse, for example, in RDF serialisation, they will likely be part of the dataset again; however, an analyst in a pipeline will almost certainly want to hide them.

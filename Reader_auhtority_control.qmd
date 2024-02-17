@@ -1,0 +1,15 @@
+---
+title: "Reader"
+format: html
+editor: visual
+bibliography: bib/wikidata.bib
+---
+
+## Wikibase
+
+
+We think that VIAF is the most suitable authority control, but the flexibility and functionality of Wikidata makes it a worthy parallel system in itself. 
+[@bianchini_beyond_2021; @van_veen_wikidata_2019; @rossenova_wikidata_2022] We reached out to the Wikimedia Foundation and _WMSK_, former official legal name _Wikimedia Slovenská republika_ to not only use their open source product, i.e, Wikibase for authority control reconciliation, but as a tool to push our knowledge and our namespace to the Wikidata. [@fagerving_wikidata_2023]
+
+
+One of our project aim to provide an entry point to provide every music organisaiton and person an identifier on Wikidata, learning from the experience of the _Beyond the Fountain_ project [@siler_beyond_2022]

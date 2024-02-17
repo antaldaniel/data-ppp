@@ -115,18 +115,6 @@ A dataspace is an emerging data management approach used to tackle heterogeneous
 
 Humans are playing critical roles in the management of data at large scales, through activities including schema building, matching data elements, resolving conflicts, and ranking results. The application of human-in-the-loop within intelligent systems in smart environments presents challenges in the areas of programming paradigms, execution methods, and task design. This chapter examines current human-in-the-loop approaches for data management tasks, including data integration, data collection (e.g. citizen sensing), and query refinement. [@ulHassan_human-in-the-loop_2020]
 
-## Linked Open Data in Statistics
-
-`bib/statisticalLOD.bib`
-
--   In *Publishing census as linked open data: a case study* Petrou, Papastefanatos and Dalamagas provide a case study of LOD publication in Greece [@PetrouIrene2013Pcal].
-
--   *Linked Open Data Statistics: Collection and Exploitation* [@ermilov_et_al_lod_statistics_2013] in the collection *Knowledge Engineering and the Semantic Web*.
-
-## Linked Open Data in Libraries
-
-`bib/libraryLOD.bib`
-
 ## Survey harmonisation
 
 `bib/surveyharmonization.bib`
