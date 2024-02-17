@@ -1,0 +1,258 @@
+---
+title: "Chapter 4"
+title-block-banner: "#00348A"
+author:
+  - name: Daniel Antal
+    orcid: 0000-0003-1689-0557
+papersize: A4
+format:
+  html: 
+    toc-depth: 3
+  epub: default
+  docx: 
+   reference-doc: docx/OpenMusE_simple_template.docx
+  pdf:
+    colorlinks: true
+    latex: 
+       - lof: true
+editor: visual
+toc: true
+lang: en-GB
+date: today
+bibliography:
+- bib/capsurveys.bib
+- bib/datalicensing.bib
+- bib/indicators.bib
+- bib/datapooling.bib
+- bib/privatelyhelddata.bib
+- bib/administrativedata.bib
+- bib/OpenMusE.bib
+- bib/openmusicrepositories.bib
+- bib/slovakia.bib
+- bib/statreg.bib
+- bib/surveyharmonization.bib
+- bib/statisticalmethodology.bib
+- bib/wikidata.bib
+---
+
+Open Music Europe intends to build an open statistical infrastructure that is compatible with the national statistical infrastructures of the EU/EEA/candidate member states, but which is based on voluntary industry cooperation. We will build a similar framework that national statistical offices have in Europe, but at a smaller, cheaper, and more flexible scale, and on a different legal basis. The "data-to-policy pipeline" will offer data in processed form that is ready to use in evidence-based business and policy administration.
+
+In brief, a data pipeline is a method in which raw data is ingested from various data sources and then ported to a data store for further analysis: in this case, to an open, shared, collaborative music observatory. We extend this pipeline using reproducible research techniques, good statistical practices, and a novel application of the *Open Policy Analysis Guidelines* in order to support evidence-based policy analysis, scientific music research, and sound business strategy-building (for further details, see Open Music Europe D1.1). Inputs to the data-to-policy pipeline will include secondary microdata and processed statistical data sources accessed in accordance with the Open Data Directive, supplemented with primary data collection conducted using transferable methods. Specifically:
+
+-   We will utilise enterprise, mixed, and personal **survey data**. Secondary data from existing survey programmes (e.g., EU-SILC, Eurobarometer, ESS, national-level cultural access and participation surveys, etc.) will be analysed as appropriate. Primary survey data will then be collected using questionnaires and procedures that are ex-ante harmonised with selected existing survey programmes.
+
+-   We will tap into **administrative records** (i.e., consistent data sources originally not intended for statistical purposes). Administrative data can complement, replace on a cost-benefit basis, or improve survey data.
+
+-   We will use **input-output data** on environmental impacts within the context of the ESG sustainability reporting tool developed and piloted in task 3.3.
+
+-   We will experiment with **other data sources**, such as data harvested regularly from streaming service APIs, that Eurostat considers "experimental" in their definitions of statistical processes. The degree to which such data is relevant in WP3 is yet to be determined, but it could shed light on, for instance, the impact of platform user network relations on taste formation; for details, see Open Music Europe D1.1.
+
+These data sources are all considered in the following sections.
+
+## 4.1 Secondary data: Surveys
+
+### 4.1.1 Available survey data
+
+As mentioned above in Section 3, survey data relevant to the topic of music, society, and citizenship exist on both the EU and national levels. The following table summarises relevant EU-level data controllers, datasets, conditions for microdata access, along with a link to metadata or technical information. Additional datasets may be added as the work package progresses.
+
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|-------|-------|-------|-------|-------|-------|-------|--------------------|-------|
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | **Survey**         |     | **Controller** |     | **Microdata access** |     | **Metadata or description**                                            |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | LFS                |     | Eurostat       |     | Formal application   |     | https://ec.europa.eu/eurostat/cache/metadata/en/lfsa_esms.htm          |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | AES 2007, 2011     |     | Eurostat       |     | Formal application   |     | https://ec.europa.eu/eurostat/cache/metadata/en/trng_aes_12m0_esms.htm |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | EU-SILC 2008, 2015 |     | Eurostat       |     | Formal application   |     | https://ec.europa.eu/eurostat/cache/metadata/en/ilc_sieusilc.htm       |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | ICT 2012-2017      |     | Eurostat       |     | Formal application   |     | https://ec.europa.eu/eurostat/cache/metadata/en/isoc_i_esms.htm        |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | HETUS              |     | Eurostat       |     | Formal application   |     | https://ec.europa.eu/eurostat/cache/metadata/en/tus_esms.htm           |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | HBS                |     | Eurostat       |     | Formal application   |     | https://ec.europa.eu/eurostat/cache/metadata/en/hbs_esms.htm           |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | EB67.1             |     | GESIS          |     | Open access          |     | https://search.gesis.org/research_data/ZA4529                          |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | EB79.2             |     | GESIS          |     | Open access          |     | https://search.gesis.org/research_data/ZA5688                          |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | EB88.1             |     | GESIS          |     | Open access          |     | https://search.gesis.org/research_data/ZA6925                          |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+|     | PISA 2018          |     | OECD           |     | Open access          |     | https://www.oecd.org/pisa/data/pisa2018technicalreport/                |     |
+|     |                    |     |                |     |                      |     |                                                                        |     |
+
+Aggregated Eurostat data will be accessed via the *eurostat* package and processed using R, whereas microdata will be imported into R and processed.
+
+Relevant national-level survey data are also available. Some aggregated data is made available via national statistical institute websites or can be requested in digital form by the general public. Other aggregated data and all metadata require a formal application process and/or dialogue and formal agreements with governmental stakeholders to access. This process has been initiated in Slovakia, and microdata has been delivered for the 2014, 2015, and 2016 Kult 5-01 surveys (annual report on musical ensembles and the artistic ensembles). An early step in the data collection phase of the work package will be to check the conditions for access to data of interest in Bulgaria, Germany, Hungary, and Italy.
+
+### 1.1.2 Ex-post harmonisation of secondary survey data
+
+Retrospective survey harmonisation usually refers to social science surveys conducted with a questionnaire, when researchers expose randomly selected respondents to randomly assigned treatments---for example, ask the respondent about their subjective well-being before and after taking a pill or a placebo and combining it with blood pressure or weight measurement. These measurements may be human-transcribed to the survey questionnaire or recorded by a different tool when a new data integration problem occurs.
+
+Our researchers have long been engaged in retrospective survey harmonisation, for example, in the case of Cultural Access and Participation surveys with the methodology created by the ESSNet-Culture working group of Eurostat and the participating EU national statistical authorities [@de_haan_virtuele_2008; @frank_guy_essnet-culture_2012; @de_haan_nowadays_2012]. We have extensive experience administering CAP surveys in Slovakia and Hungary and retroactively harmonising them with CAP surveys carried out within various EU-harmonised survey programs, such as Eurobarometer, EU-SILC and AES. Retrospective survey harmonisation can join data from different surveys if they use a similar sampling method and questionnaire items. If ex ante harmonisation is possible before the fieldwork, a much higher quality of harmonisation is possible.
+
+"To ensure that answers from respondents surveyed in different settings carry minimal methodological errors and biases and can be meaningfully compared, both data producers and secondary users combine surveys from different sources, that is, they harmonize survey data. Generally, they do so at different stages of the survey lifecycle. Data producers mostly employ harmonization ex-ante, when designing and implementing comparative studies (input harmonization) and when processing the survey data in preparation for their public release (ex-ante output harmonization). \[...\] Secondary users apply harmonization methods retrospectively to already released data files." [@wysmulek_expost_2022]
+
+We would like to ex ante harmonise additional surveys to meet the subsample requirements for music professionals and music enterprises in `Roč 1-01` and `Roč 2-01` and `KULT-05`; `KULT-10`; `KULT-11` and `KULT-16` or, if this is not possible, to use "small area statistics" to work from smaller samples.
+
+## 4.2 Administrative data sources
+
+Administrative data collection refers to the activities involved in collecting, processing, storing, and disseminating statistical data from one or more administrative sources. In the context of national statistical productions, this usually means re-processing government financial statistics, tax administration data, public expenditure records, etc. Administrative data sources can replace, complement or validate survey data.
+
+In `WP4`and `WP5` we follow data strategies that were developed in Norway. Norway has been conducting household budget surveys since the 1960s and phased them out in 2012 in line with recent trends to replacing far more costly surveying with direct data retrieval from other information systems.
+
+*Statistics Norway* realised that instead of asking 7000 households about what they were buying in the supermarkets, it is far more accurate and potentially cheaper to acquire the data directly from the sales logs of the supermarkets or the payment transaction records of the credit card companies.
+
+Norway created statistical registers to tap into governmental data stores in 1990 and into municipal ones in 1995; by 2019, it utilised about 100 records and drew data from 30 public institutional sources [@saebo_new_data_sources_2023, p1.]. Like most countries, such "administrative data" was retrieved from other governmental entities, not the private sector. Collecting data from people, companies, and non-profits still relies on census-like comprehensive and sample surveys that take the form of filling out a digital or paper format or answering questions to an interviewer who fills out the form instead of the respondent. Pulling data directly from the accounting data of supermarkets or credit card companies is a novel technique in Norway and some other countries. Such access to *privately-held data* or *privately-held administrative data* is a novel technique that had been canonised by the UN and EU statistical bodies in the recent years only.
+
+The `Open Music Europe` project obviously does not have a legal status to tap into administrative records of tax authorities and other state bodies, however, on a voluntary basis we can tap into privately-held administative data and reconcile this information with our survey data, and the the administrative and survey data held in the Statistical Office of the Slovak Republic.
+
+The lessons of Norway are interesting because the new statistical law (in force since 2021) allows such data collection after a cost/benefit analysis and risk reduction carried out by Statistics Norway. Norway, like all EFTA countries and Eurostat participates in ESS and applies the same statistical EU/EEA regulations that Slovakia, Bulgaria or Hungary applies. We consulted the SOSR on the basis of our working paper [@antal_slovak-cult-stat-pilot] which forms the basis of the following subchapter on data coordination.
+
+### 4.2.1 Data coordination
+
+The use of several data sources, including harmonised surveys and administrative data require a data coordination strategy, which relies on registers. "A register aims to be a complete list of the objects in a specific group of objects or population." [@anders_register-based_2007] We are planning music industry registers where the objects are music works and sound recordings (in statistical terms, music products), and the populations are music authors, music performers, groupings of performers (as the majority of the musicians perform, record, release in groups, ensembles, orchestras), record labels (which may be formal and informal businesses) and music publishers (enterprises.) From a statistical point of view, our planned music industry registers can be seen as "administrative registers" because they were not initially created for a statistical purpose by a statistical authority.
+
+A statistical register is a continuously or regularly updated set of objects for a given population. It contains information on the identification and accessibility of population units as well as other attributes which support the surveying process of the population. It serves as a constantly updated list of potential data sources: people or enterprises, for example, who may be invited to a sample survey or a census. The statistical register is both a coordination tool for data collection (everybody is found who should provide data), and an important data quality management tool (we know if somebody was not found, how it will distort our resulting datasets.) For example, as earlier stated, Statistics Norway applies about 100 statistical registers. Our primary concern in Slovakia is the creation of a music business register, because this could provide indicators for the public policy-level and institutional/enterprise level implementation of the Slovak cultural strategy.
+
+The authoritative source on statistical business registers is the United Nations Guidelines on Statistical Business Registers. Final draft prior to official editing [@un_sbr_guidelines_2020] which is heavily based on the former UNECE Guidelines on statistical business registers [@unece_sbr_guidelines_2015]. The European guideline is the European business statistics methodological manual for statistical business registers. 2021 edition [@eurostat_sbr_manual_2021].
+
+The statistical business register is an essential tool for creating survey frames or sample frames, in other words, to organise statistical data collection. In non-technical terms, this register is necessary to decide who should get a data request.
+
+-   For a *sample survey*, the register is used to draw a lottery of those members of the population who will be invited to provide data.
+
+-   In a *census*-type survey, all registered members of the population, for example, all music labels, will receive an invitation to an interview or form.
+
+-   In the case of *a register-based survey*, all members of the register, for example, all collective management societies in the territory, will be requested to send data directly from their databases.
+
+·         Structured business statistics (SBS), international trade in goods statistics (ITGS), international trade in services data (ITS), harmonised index of consumer prices data (HICP), and government finance statistics (GFS). These data will be collected using the R package *eurostat.*
+
+·         Potentially, Eurostat data on participation in education and training (educ_part), education personnel (educ_uoe_per), educational finance (educ_uoe_fin), and education and training outcomes (educ_outc). These data will be collected using the R package *eurostat.*
+
+·         Data on EU-funded initiatives and projects (e.g., Creative Europe, Erasmus+, Horizon Europe, etc.) targeting policy-relevant topics highlighted in Annex 4: e.g., non-formal music education; music libraries and music data centres; music and social integration, civic engagement, cultural pluralism, etc.; musical heritage; the protection of minority music; music and working life; music piracy; music and health care; music and social well-being; and music and sustainable development. Relevant data on EU-funded projects that is available or will likely soon be available in machine-readable formats include the number of initiatives funded, participating organisations and countries, and financial scale and timespan, as well as potentially reported KPIs such as number of beneficiaries, etc. The R package *dataset*, developed by Open Music Europe partner REPREX,will expedite the collection and processing of such data. In order to demonstrate value-added, a manual collection of a limited set of data on selected EU-funded projects on music and sustainability was performed (see Annex 2).[\[JRE1\]](#_msocom_1)
+
+As with survey data, some national-level administrative data are available via national statistical institute websites or can be requested in digital form by the general public, whereas other data requires a formal application process and/or dialogue and formal agreements with governmental stakeholders to access. This process has been initiated in Slovakia.
+
+### 4.2.2 Input-output data
+
+As noted in Open Music Europe D1.1, the *iotables* R package on rOpenGov, developed under the leadership of REPREX, provides access to the Eurostat data warehouse's symmetric input-output data. Symmetric input-output tables (IOTs) and auxiliary tables connect thousands of statistical indicators (which are otherwise difficult to use) into analytical tables into a matrix of indicators that can be used with the fundamental matrix algebraic equations of input-output economics, and calculate economic, social or environmental impacts.
+
+This system of indicators can be extended with new social surveys data, by adding them as a row of indicators conforming the symmetric categories of the IOTs. While it is unlikely that our project can generate indicators for every column of a standard IOT, a simpler extension may be the creation of targetted surveys that allow the delineation of of existing cells: for example, dividing the J58 divison of the standard Eurostat IOTs to a J58M and J58A (music and audiovisual) element to create impact assessments for recorded music (labels and music publishers) separated from the audiovisual sector.
+
+Slovakia has already made a significant and exemplary investment in creating a satellite account system for the cultural and creative industries [@horecka_summary_2022], which allows architecture and advertising to have high-quality data. Our ideal scenario, which requires further feasibility testing, is that we will be able to create a new music account in the Slovak Cultural & Creative Industries Satellite Account system. Our preliminary consultation in this issue made it clear that in order to achieve this goal, we need to modernise several KULT surveys in Slovakia which collect data from both the music and the audiovisual sectors of J58. Our efforts will show how different surveys, public administrative sources and privately-held administrative sources can provide a wider knowledge base. The domain-specific part of this work is carried out in WP1 and the data coordination and processing in WP5 and WP4; the task of WP3 is to ensure a proper retrospecitve harmonisation of pre-existing surveys, and the creation of new surveys that can support the separation of exsiting national accounts.
+
+The *iotables* R package helps the user to bring together the necessary data from Eurostat's data warehouse and process it into readily-usable indicators and multipliers. This service can be seen as a middleware between data processing and data analysis. Input-output data will be used in the context of the task 3.3, a pilot study in which an organisational ESG sustainability report is created for partner Music Innovation Hub (MIH).
+
+### 4.3 Primary data collection
+
+We will perform some retroactive survey harmonisation tasks on a selection of KULT surveys for the period of 2007-2023 in order to prepare for an ex ante harmonisation of these important data points of the Slovak cultural statistics going forward from 2024.
+
+Reprex, on the basis of our MoU, but with a separate legal agreement received access to the microdata and the codebooks and variable maps concerning these surveys. The microdata will not get into the possession of the Consortium, but Sinus will supervise the entire oversight of the reproducible workflow. The eventual new statistical products will go through automated unit tests, and tests by Sinus, IKP and the Statistical Office of SR. This workflow is in line with the evolving statistical practice of working with privately held administrative data.
+
+We would like to improve the coverage, usability and punctuality of Slovak cultural statistics, particularly in the field of music and to some extent, connecting domains that are currently served by the same data sources (mainly audiovisual statistics, which by some definitions overlap with music.) The primary data source of these statistics is the KULT survey program.
+
+The KULT surveys are designed to produce cross-sectional data that is comparable over short periods of time. They are not designed to be used for the creation of more valuable, longer longitudinal datasets; however, as a compromise between backward compatibility and new needs, in many aspectes they are outdated. The KULT microdata, like most statistical data sources, is not fully utilised. Because survey data cannot be collected ex post, statistical programs "over-collect" and do not necessarily utilise every information content in the microdata. The processing of raw data is always subject to cost-value analysis and shorter-term priorities.
+
+Our primary data collection starts with an analysis of existing micordata, because we want to squeeze out us much information as possible from existing survey programs and keep collecting the same information going forward for full compatibility. Whenever we can use questionnaire elements and their answers, even if they had not been explicitly used for statistical end-products, we maintain the consistency of the both the statistical product and the statistical workflows in general, for example, collection. The limitation of subject burden (an orchestra cannot be expected to fill out many questionnaires with precision) means that the questionnaire design should be streamlined. So overall, when planning for new data collection in Slovakia, we want to minimise changes from existing surveys and add new questionniare items in a way that they are ex ante harmonised with pre-exisiting items.
+
+Our task is to create an ex post or retrospective harmonisation of the KULT data to find ways to improve, enrich or reuse the existing historical data and to describe new data to be collected going forward potentially. This is a cross-cutting task between tasks 1.1, 2.1, 3.1, 4.1 and 5.1, i.e. a Taskstream 1 task that sets requirements for data to be collected and collection tools to be made available in the Taskstream 2. This means that WP1 and WP2 are involved in defining and prioritising the data gaps to be filled and the concepts of music economy, music diversity and music circulation that require data collection. In 3.1 and 4.1 we use retrospective data harmonisation to see if we can "squeeze out" more data from existing but underutilised datasets or if we need to experiment with new data to be collected with survey methods in Taskstream 2. Another important expected result is to validate data gaps from a different point of view: sometimes, a data gap is not identified because the data appears to be present, but the quality of the data is so low that stakeholders do not use it. This appears to be the case in several countries with concert attendance, where the concert attendance measured by statistical offices seems to differ greatly from the administrative data of collective management societies that license the music and often know about every ticket sold.
+
+Our retrospective harmonisation can pinpoint data that has a low data quality. In subsequent tasks, we can offer various methods to improve such data. Our work is an essential methodological work required for the modernisation of music and cultural statistics.
+
+### 4.3.1 Basic considerations
+
+We would like to improve the coverage, usability and punctuality of Slovak cultural statistics, particularly in the field of music and to some extent, connecting domains that are currently served by the same data sources (mainly audiovisual statistics which by some definitions overlap with music.)
+
+The main data source of these statistics is the KULT survey program. The KULT surveys are designed to produce cross-sectional data that is comparable over short periods of time. They are not designed to be used for the creation of more valuable, longer longitudinal datasets. The KULT microdata, like most statistical data sources, is not fully utilised. Survey data cannot be collected ex post, and statistical programs "overcollect" and not necessarily utilise every information content in the microdata, because that part of the statistical production is subject to a partly different cost-value analysis. This means that often we may fill data gaps from the secondary processing of existing data sources. Whenever this is not the case, it is a requirement to fill data gaps in a way that maintains the consistency of the both the statistical product and the statistical workflows in general, for example, collection. The limitation of subject burden (an orchestra cannot be expected to fill out many questionnaires with precision) means that the questionnaire design should be streamlined.
+
+### 4.3.x Concept matching
+
+The KULT survey documentation contains Slovak language descriptions of the variables in a narrative format, often together with coding information. We create a machine-readable and programmatically easy-to-handle variable name for each variable, therefore creating the mapping 168 "total_own_turnover", and whenever necessary, we create a new auxiliary variable. The auxiliary variables are usually attribute variables that were constant in each dataset, and they were not explicitly coded, such as the time reference for the year 2007 or the unit of measure reference for SKK or EUR. For programmatic use, we will use only ASCII characters to avoid spaces and characters with special meanings in various programming languages. Variable naming is usually following either the camelCase or the snake_case convention. Because in the tidy use of R the snakecase is recommended, we will create snake case variable names.
+
+We will translate each variable label to English and add the 1-2 most relevant concepts for all variables to make the variable descriptions machine-actionable. Concept mapping requires a good command of the domain and statistically controlled vocabularies. Our initial concept mapping will go through two layers of peer review: Hudobne Centrum, the data steward organisation of the KULT surveys, will review our mapping first from a musical point of view, and we will ask the SOSR for a statistical revision.
+
+As an end result, we will be able to bring each dataset column to a machine-actionable format that already offers itself for ex ante harmonisation with further surveys and data sources. For convenience, we will make the new joined datasets available in CSV, Excel, and SPSS formats. In this re-processed datasets we can identify which information is present with good quality, and where we need to initiate new primary data collection.
+
+We will use several, well-curated concept lists to connect the information content of pre-exisiting Slovak surveys with other survey harmonisation candidates:
+
+-   \_\_theSOZ\_:
+-   Eurostat's controlled vocuabularies
+-   SDMX cross-domain concepts, which are independent of the music domain (such as reference period, occupational groups of employees, etc.)
+
+### 4.3.x Identity matching and coordination of data subjects or observational units
+
+Namespaces (in the statistical and data science practice) and authority files (in information and library science) contain exactly this information: they describe the 'concept' of an observational unit, connect various name variations that were in use, including possible nicknames, and defines the validity of the concept in time. For example, no data must be recorded about the \[New Kosice Orchestra before its founding year of 2007\]. Eventually, we can see this task as a "concept matching" for statistical units or observation units and not for variables. This kind of identity and concept matching allows the add data about the observation units from various administrative and survey data sources and provides a data harmonisation on the level of observations (rows).
+
+An important benefit of this observation unit identification is that microdata can be resampled or improved when the original coverage of the target population varies across years. For longitudinal or panel data, it requires judgment how long we can observe the same target population.
+
+The use of PIDs for observational units allows data improvements and increases the longevity of datasets. In laymen's terms, we can say that we can increase the historical time series coverage meaningfully with this harmonisation; we can add more history to data than normal statistical production would give. For example, if there were greatly different orchestras in 2007 and 2022, we can create a "stable group of orchestras" and compare them separately and meaningfully over 15 years. The KULT program -- like all the enterprise surveys of Slovakia -- use the ICO identifier for entities as a global ID within the administrative records of the Slovak Republic.
+
+The ICO identifier is a public identifier for organisations, but some organisations are not eligible to have one. For example, if a radio station or a university has a choir as an internal unit, it may not be eligible for an ICO. The datasets in this case, use the organisation's name as an ID, which is acceptable in a single year but is very problematic over 15 years. We see in the KULT files that the lack of a strict namespace or authority file creates identification problems; some observational units appear over different names; sometimes, the name variations appear to be simple data entry errors (spelling mistakes.)
+
+The best practice of observation identification is the use of a persistent global identifier (PID). The use of the PID allows us to connect data and knowledge about the *fictional* *New Kosice Orchestra* across various data sources. Furthermore, the use of PIDs will enable Open Music Europe to scale up our data harmonisation efforts beyond Slovakia, for example, benchmarking Slovak data against Bulgarian data. The ICO code is not in use outside the SR; therefore, it is far better to identify the *New Kosice Orchestra* with a global ISO-standard identifier, for example, with an ISNI code.
+
+Global namespaces and authority files are, by design, machine-actionable; they can be read by humans, activating a html representation for human browsing and an RDF serialisation for data applications. We will encourage the use of at least two PIDs for each observational unit, following the best practices that will be elaborated in greater detail in 5.1.
+
+-   We will use either ISNI or VIAF identifiers for natural and legal persons. The use of ISNI is paid, and the organisation itself must initiate it. The use of VIAF is free because it is a public service of the Slovak National Library, but it goes through a curation process. For our purposes, they are equally good and they can be used interchangeably.
+
+-   We will also use a QID for data coordination. The QID is a globally unique identifier in Wikidata and Dbpedia. They are used in the statistical, research and cultural heritage domains as temporary or necessary global IDs when the use of an authority file is not possible or takes a long time (for example, we have to encourage each orchestra to obtain its own ISNI number.)
+
+The use of Wikidata is getting more and more common among knowledge organisations and even EU organisations. Originally developed as a reconciliation tool for Wikipedia, Europeana already recognised its value for pan-European data harmonisation in 2015. Since that, it had been used as a decentralised, curated, shared authority control system in several European countries. We think that VIAF is the most suitable authority control, but the flexibility and functionality of Wikidata makes it a worthy parallel system in itself [@bianchini_beyond_2021; @van_veen_wikidata_2019; @rossenova_wikidata_2022] We reached out to the Wikimedia Foundation and *WMSK*, former official legal name *Wikimedia Slovenská republika* to not only use their open source product, i.e, Wikibase for authority control reconciliation, but as a tool to push our knowledge and our namespace to the Wikidata. [@fagerving_wikidata_2023]
+
+### 4.3.2 Ex-post harmonisation of surveys
+
+The ex-post harmonisation of surveys is a necessary first step to understand if a perceived data gaps is illusory, i.e. the data is already collected, just not processed, or perhaps even misunderstood. The best case if the data gaps can be solved with retrospective processing.
+
+### 4.3.3 Ex-ante harmonisation of surveys
+
+The ex-ante harmonisation of surveys is a forward-looking excercize when we conduct new surveys keeping in mind with backward compatibility in time (the data should be harmonised into longitudional datasets for time-wise comparison among perids, for example, years) and with other surveys conducted parallel in the same time frame. In our case, the most likely scenario is that we would like to create auxilliary dataasets to official surveys; in this case we must ensure that we use the same survey frame as the official survey but add further data with a parallel, but ex-ante harmonised survey. When the data is collected, it must go through again ex-post harmonisation with those surveys that had been collected in earlier timeframes, or with surveys that were collected in the same timeframe but independently from our questionnaire.
+
+XX
+
+### 4.3.4        MSME and music professional survey
+
+XX
+
+1.3.4        Cultural access and participation survey
+
+XX
+
+*ESSnet-Culture Final Report* -- "a survey formula with a limited number of questions, which could be introduced in future European surveys such as the EU-SILC, thus allowing input harmonisation" (2012, p. 21).
+
+2              Indicator candidates
+
+As *Open Music Europe D6.3 -- Data management plan* indicates, the statistical infrastructure of indicators (see Figure 7 below; DOI: <https://doi.org/10.6084/m9.figshare.23600571>) serves as a guideline for our pursuit of mixed data sources:
+
+Figure 7: Statistical infrastructure for indicator development
+
+XX
+
+2.1       EU-level indicator candidates
+
+XX
+
+2.2       National-level indicator candidates
+
+2.2.1        Bulgaria
+
+Indicator candidates for Bulgaria will be identified during the data collection phase of the work package, following the example of Slovakia below.
+
+2.2.2        Germany
+
+Indicator candidates for Germany will be identified during the data collection phase of the work package, following the example of Slovakia below
+
+2.2.3        Hungary
+
+Indicator candidates for Hungary will be identified during the data collection phase of the work package, following the example of Slovakia below
+
+2.2.4        Italy
+
+Indicator candidates for Italy will be identified during the data collection phase of the work package, following the example of Slovakia below
+
+2.2.5        Slovakia
+
+XX
+
+3              Conclusion and outlook
+
+ [\[JRE1\]](#_msoanchor_1)\@Daniel please check.

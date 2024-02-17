@@ -1,0 +1,91 @@
+---
+title: "Reprex"
+author:
+  - name: Daniel Antal
+    orcid: 0000-0003-1689-0557
+papersize: A4
+format:
+  html: default
+  pdf:
+    colorlinks: true
+    latex: 
+       - lof: true
+  docx: 
+   reference-doc: docx/OpenMusE_simple_template.docx
+editor: visual
+toc: true
+lang: en-GB
+date: today
+bibliography:
+- bib/antal.bib
+- bib/OpenMusE.bib
+- bib/openmusicrepositories.bib
+- bib/rpackages.bib
+---
+
+
+## WP5
+
+
+### Statement regarding policy relevance:
+
+In line with the expectations set forth in _Feasibility study for the establishment of a European Music Observatory_, the Open Music Observatory being developed in WP5 will act as a platform providing data and intelligence about the music sector to identify issues specific to the sector and pave the way for targeted evidence-based policies and solutions. Our deliverable, the Open Music Observatory, aims to be a full-fledged prototype of a European Music Observatory. 
+
+To ensure a high level of policy fit, we regularly consult essential stakeholders, such as the Commission (DG EAC), the European Music Council, CISAC, and national stakeholders to bo far beyond the expectations set in the _Feasibility study_, which is by 2023 somewhat dated. 
+
+The Observatory will allow policymakers to have greater insight and understanding of the importance of music for society by looking at participation in music activities. Information gathered by an independent platform using a modern knowledge model and reproducible research technologies allowing for permanent data collection and dissemination can better inform public policies related to the music sector than information gathered on an ad-hoc basis and with ad-hoc methodologies.
+
+### Statement regarding results beyond the state of the art:
+At the beginning of the project, we set up the necessary repository infrastructure and a contributors' handbook for all Work Packages; these repositories play a crucial role in the project's research data management. We created a Contributor's Guidebook (versions: 0.1.0 March 2023, 0.1.1 12 July 2023, 0.2.0 05 December 2023) (Antal 2023e). The contributions can be reviewed in the Repository for the Contributors' _Guidebook for the Data Observatories and Open Collections_ [@open_music_europe_contributors_guidebook_repository_2023]. The Open Policy Analysis (OPA) Guidelines on this scale are the first in the European Union, allowing for far greater transparency than required by current evidence-based policy standards in Europe.
+
+In March, the project signed _Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMuse Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors' public policies_ [@open_music_europe_sk_mou_2023] with the Slovak Ministry of Culture to form an open policy collaboration based on the OPA Guidelines. This MoU allowed us to initiate a series of ongoing policy stakeholder consultations in the Slovak Republic with an increasing number of relevant bodies, providing very clear exploitation pathways (in the policy field) and maximising potential policy impact. _workshop_
+
+### Statement regarding project partnerships:
+WP5 connects in particular to the _Polifonia Horizon 2020_ project. The two projects have started to work together on various opportunities to create synergies and ways to boost the dissemination and exploitation of the results of both projects. This includes, on one hand, adopting Polifonia’s Ontology Network for the metadata definitions of the Open Music Observatory; and on the other hand, providing a dissemination platform for Polifonia through the Observatory.
+
+### Open Science
+Before the beginning of the project, at the time we proposed, we created a repository on Zenodo and placed our key assumptions' background there. This allows an independent and transparent evaluation of our progress in terms of deliverables and requires a reconciliation on the part of the Consortium when goals and assumptions change. This aligns with the Open Policy Analysis Guidelines, to which we pledged adherence in our Grant Agreement. 
+
+Replicability and reproducibility are at the heart of Open Science. The significance of the Open Music Observatory developed in WP5 in this regard is that it integrates various software components that enable better replicability and reproducibility by removing cost-, skill- and time-barriers not only within the OpenMusE project, but beyond it as well. 
+
+## Other WPs
+
+### Contributions to WP5 & WP6
+
+The OMO is the key deliverable of Reprex, and it is due only in May 2024. It is very heavily depending on T1.1, T2.1, T3.1, T1.2, T2.2, T3.2 (data inputs) and T4.1 (data processing software) and T4.2 (metadata). It is also related to the T6.3 task, which should have resulted in a work plan by March according to the Horizon Europe recommendations.
+
+`Open Music Europe` is committed to Open Policy Analysis. In the beginning of the project, we set up the necessary repository infrastructure and a contributors\' handbook for all Work Packages; these repositories play a crucial role in the research data management of the project. We created a **Contributor's Guidebook** (versions: 0.1.0 March 2023, 0.1.1 12 July 2023, 0.2.0 05 December 2023) [@contributors_guidebook_2023]. The contributions can be reviewed in the  _Repository for the Contributors\`s Guidebook for the Data Observatories and Open Collections_ [@open_music_europe_contributors_guidebook_repository_2023]
+
+On 14 May 203, we took over the **Data Management Plan** and created its first version (technically a WP6 task, though it is very strongly connected to T5.1). REPREX\'s first delivered result was the **D6.3 Data Management Plan**, which, contrary to the work plan, delivered alone without contributors. Our contributions can be reviewed in the repository of the task [@open_music_europe_dmp_2023]
+
+In October REPREX participated in the Polifonia H2020 Horizon Europe project\'s stakeholder meeting and discussed in detail the possibilities of reusing the metadata ontologies developed by this project to form a basis for the OMO. The Open Music Europe project does not have an ontology development task, and in T5.1 we only foresaw the reuse of existing statistical and music ontologies.
+
+Given that Polifonia just developed and released with 2.5 years\' work a brand-new ontology family, we realised that the OMO can be built with a much broader usability, increasing particularly the interoperability and reusability of our data if we work together. Consequently, we switched to the same requirement solicitation methodology that Polifonia uses (eXtreme Design) and started a joint requirement iteration process with internal and external stakeholders; most of this results in better task descriptions for both T4.1 and T5.1.
+
+Our first longer open policy document laid out for internal and external steakholders the outlines of the deliverable D5.1  [@data_pillars_omo]. We discussed  our working plan and working paper _Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic_ with the key stakeholders _IKP_, _Statististical Office of the Slovak Republic_, and _Hudobné centrum_ in October, and after an initial very positive feedback, with European stakeholders on the CreativeFlip and MusicAIRE conferences in Brussels. [@slovak-cult-stat-pilot]
+### WP1 Music economy
+
+Originally Reprex was a task leader in T1.3 but the T1.1 task was orphaned; the task leader quit the project and Reprex took over this role in the first 8 months. So, apart from creating a first draft of our own subtask [@antal_market_comparator], we took over almost the entire D1.1 as delivered in July and amended in September was almost exclusively carried out by REPREX, which resulted in a very different use our budget  [@antal_et_al_music_economy_2023]. Our contributions can be reviewed in the repository of the task  [@open_music_europe_economy_repository].
+
+### WP2 Music Diversity & Circulation
+
+In WP2 Reprex is the task leader of T2.2; the work package is heavily building on the background of Reprex’s and SOZA’s _Feasibility Study On Promoting Slovak Music In Slovakia \& Abroad_ [@antal_promoting_slovak_2020], therefore we decided in April to form a task force with REPREX, SOZA, and ALOADED to carry out T2.2 and T2.3 together. In a dissemination event on the SHARPE festival and in other forums, we started to engage stakeholders to join the requirement setting and testing of our planned applications and exploitation pathways under the titles `Listen Local` and `Unlabel`.
+
+Our grant specifies using the Eurostat indicator design methodology, which requires researchers to iterate indicator requirements with policy and business users. Neither the documents of T1.1, T2.1 or T3.1 were in a shape that could be presented for feedback from national or EU-level policy stakeholders. In August and September, the work was focused on making up for the delays in Taskstream 1 to avoid a catastrophic delay with starting Taskstream 2, which was again a deviation from our original work plan and budget and resulted in higher senior PMs used.
+
+
+### WP3 Music & Society, Citizenship, Sustainability
+
+In WP3, our joint background with the WP leader SINUS is `SurveyHarmonies`, a conceptual service that provides survey harmonisation services for the music industry. Reprex was involved in knowledge mapping and designing functional requirements for WP4 to improve the `retorharmonize` software package (which is a background contribution of Reprex in its 0.2.4 version [@r_package_retroharmonize]), and that will be the reproducible platform of the work package.
+
+In November and December, we worked on an ex-ante harmonisation of the KULT surveys in Slovakia to enrich the insights of T1.1, T2.1 and T3.1, and mainly to set requirements for T4.1 and T5.1 for developing the necessary tools (WP4) and knowledge model (WP5) to carry out and disseminate ex-ante harmonised surveys in WP3. We contributed one chapter to D3.1 and spelled out the functional development requirements and methodologies to make retroharmonize usable for the envisioned WP3 tasks  [@antal_kult_harmonization_2023].
+
+### WP4 Music Innovation
+
+On the kick-off meeting, we presented a roadmap on how we see the initial needs of the D4.1 software ecosystem deliverable. In the original plans, the WP4's software ecosystem was supposed to help the Taskstream 2 data collection task and to some extent, if needed, the Taskstream 3 tasks with software development in the R language. Both WP1 and WP2 Taskstream 1 tasks were so delayed that the WP4 work did not really start before November.
+
+In November, we mainly worked on translating the non-functional and functional requirements of the critical stakeholders SOZA, Hudobné centrum, Hudobny Fond, and IKP and assisting SINUS to tasks that WP4 can turn into subtasks and "issues", the smallest task elements in open-source software design.
+
+Reprex's background was the concept of the _dataset_ R package [@r_package_dataset], which was released for a conceptual peer review on CRAN and rOpenSci before the start of Open Music Europe. Based on the peer review and the evolving needs of the project participants, we created a working paper on creating this vital ingredient of our planned software ecosystem [@antal_dataset_working_paper]. The first major release as a software, dataset 0.3.0 is expected to start the external peer-review process in December.
+
+# References
