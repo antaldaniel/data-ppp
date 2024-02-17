@@ -9,10 +9,14 @@ bibliography:
   - bib/archivesLOD.bib
 ---
 
-## Listen Local {.scrollable transition="slide"}
+## Open Music Europe {.scrollable transition="slide"}
+
+![](png/ome/Banner_OME_Software_Ecosystem.png){width="800"}
+
+## Listen Local {.smaller .scrollable transition="slide"}
 
 ::: panel-tabset
-### Feasibility
+### Feasibility 
 
 [![Projektová štúdia propagácie slovenskej hudby na Slovensku a v zahranicí \[Feasibility Study On Promoting Slovak Music In Slovakia & Abroad\] \[https://doi.org/10.5281/zenodo.6427514\](https://doi.org/10.5281/zenodo.6427514\])](png/listen_local/listen_local_study_covers.png){fig-align="center" width="600"}](https://doi.org/10.5281/zenodo.6427514)
 
@@ -22,7 +26,23 @@ bibliography:
 
 ### MoU
 
-[![Memorandum o porozumení o využití výsledkov analýz otvorených politík v kontexte slovenského kultúrneho a kreatívneho priemyslu a sektorových verejných politík v spolupráci s konzorciom pre výskum a inovácie s názvom OpenMuse. \[Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMuse Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors’ public policies\] [link](https://www.crz.gov.sk/zmluva/7645338/)](png/ome/MoU_signing.png){fig-align="center" width="800"}](https://www.crz.gov.sk/zmluva/7645338/)
+[![Memorandum o porozumení o využití výsledkov analýz otvorených politík v kontexte slovenského kultúrneho a kreatívneho priemyslu a sektorových verejných politík v spolupráci s konzorciom pre výskum a inovácie s názvom OpenMuse. \[Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMuse Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors' public policies\] \[link\](https://www.crz.gov.sk/zmluva/7645338/)](png/ome/MoU_signing.png){fig-align="center" width="800"}](https://www.crz.gov.sk/zmluva/7645338/)
+:::
+
+## Data problems {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Ambiguity 
+
+![Information science grew out of library science. Libraries have been working longer than us on putting books of the right James Campbell on the right shelf.](png/listen-local/Library_Thing_James_Campbell_16x9.png){width="800"}
+
+### Pollution
+
+![Comparing the database of a national heritage institution with other public, global databases.](png/listen-local/problem_mapping_mic_wikidata.png){width="800"}
+
+### Misinformation
+
+![Spotify, Apple, YouTube are learning from polluted, unreliable, outdated or patchy knowledge bases.](png/listen-local/Wikipedia_low_data_quality_example_2x1.png){width="800"}
 :::
 
 ## Dataspace model
@@ -36,7 +56,7 @@ bibliography:
 
 "A data space is an ecosystem of exchange, processing, sharing and provision of data between trusted partners, for a fee or not. It is not about copying or repatriating data centrally, but about ensuring that each data holder has full control over the conditions (e.g., who, when, and under what condition) of access to their data."
 
-EBU and Gaia-X. 2022.“[Dataspace for Cultural and Creative Industries](https://gaia-x.eu/wp-content/uploads/2022/10/EBU_position-paper_Media-Data-Space.pdf). Position Paper.
+EBU and Gaia-X. 2022."[Dataspace for Cultural and Creative Industries](https://gaia-x.eu/wp-content/uploads/2022/10/EBU_position-paper_Media-Data-Space.pdf). Position Paper.
 
 ### SKCMDb
 
@@ -113,15 +133,15 @@ Ontology is a formal explicit description of concepts in a music:
 ### Best practice {.smaller}
 
 ::: {style="font-size: 60%;"}
--   Veen, Theo van. 2019. ‘Wikidata: From “an” Identifier to “the” Identifier’. Information Technology and Libraries 38 (2): 72–81. <https://doi.org/10.6017/ital.v38i2.10886>.
+-   Veen, Theo van. 2019. 'Wikidata: From "an" Identifier to "the" Identifier'. Information Technology and Libraries 38 (2): 72--81. <https://doi.org/10.6017/ital.v38i2.10886>.
 
--   Siler, M. 2022. ‘Beyond the Fountain: Mapping a New Entry Point to the Society of Independent Artists’. Art Documentation 41 (2): 219–41. <https://doi.org/10.1086/722172>.
+-   Siler, M. 2022. 'Beyond the Fountain: Mapping a New Entry Point to the Society of Independent Artists'. Art Documentation 41 (2): 219--41. <https://doi.org/10.1086/722172>.
 
--   Rossenova, Lozana, Paul Duchesne, and Ina Blümel. 2022. ‘Wikidata and Wikibase as Complementary Research Data Management Services for Cultural Heritage Data’. In [CEUR Workshop Proceedings](https://serwiss.bib.hs-hannover.de/frontdoor/deliver/index/docId/2573/file/rossenova_etal2022-wikidata_research_data_mgmt.pdf).
+-   Rossenova, Lozana, Paul Duchesne, and Ina Blümel. 2022. 'Wikidata and Wikibase as Complementary Research Data Management Services for Cultural Heritage Data'. In [CEUR Workshop Proceedings](https://serwiss.bib.hs-hannover.de/frontdoor/deliver/index/docId/2573/file/rossenova_etal2022-wikidata_research_data_mgmt.pdf).
 
--   Fagerving, Alicia. 2023. ‘Wikidata for Authority Control: Sharing Museum Knowledge with the World’. Digital Humanities in the Nordic and Baltic Countries Publications 5 (1): 222–39. <https://doi.org/10.5617/dhnbpub.10665>.
+-   Fagerving, Alicia. 2023. 'Wikidata for Authority Control: Sharing Museum Knowledge with the World'. Digital Humanities in the Nordic and Baltic Countries Publications 5 (1): 222--39. <https://doi.org/10.5617/dhnbpub.10665>.
 
--   Bianchini, Carlo, Stefano Bargioni, and Camillo Carlo Pellizzari di San Girolamo. 2021. ‘Beyond VIAF Wikidata as a Complementary Tool for Authority Control in Libraries’. Information Technology and Libraries 40 (2). <https://doi.org/10.6017/ital.v40i2.12959>.
+-   Bianchini, Carlo, Stefano Bargioni, and Camillo Carlo Pellizzari di San Girolamo. 2021. 'Beyond VIAF Wikidata as a Complementary Tool for Authority Control in Libraries'. Information Technology and Libraries 40 (2). <https://doi.org/10.6017/ital.v40i2.12959>.
 :::
 
 ### Wikibase

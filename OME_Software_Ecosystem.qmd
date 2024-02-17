@@ -91,7 +91,7 @@ R is a high-level language that is not intended for general-purpose programming.
 The problem of this emerging system of grant application was two-fold:
 
 -   [ ] It required at least intermediate programming skills with R; it did not come with GUI applications to make them work for other music researchers;
--   [ ] It did not embrace the last decades’ improvement in the information modelling of statistics (the SDMX model), generally the open data (the DCAT-AP application model of the EU Open Data Portal) and metadata harmonization work that could reach the best practices of open science interoperability and offer a wide range of data access to datasets that are specifically more relevant to the music sector.
+-   [ ] It did not embrace the last decades' improvement in the information modelling of statistics (the SDMX model), generally the open data (the DCAT-AP application model of the EU Open Data Portal) and metadata harmonization work that could reach the best practices of open science interoperability and offer a wide range of data access to datasets that are specifically more relevant to the music sector.
 
 ## Requirements elicitation {.unnumbered}
 
@@ -153,22 +153,22 @@ Our software ecosystem offers reproducible support for a data-to-policy pipeline
 
 4.  Administrative data sources often take the form of a ledger or inventory book, such as national or royalty accounts. They require some sort of expert-based active learning support and partly can be processed with machine learning ("link prediction").
 
-+---------------------------+-----------------------------------------------------------------------------------------+------------+
-| Data source               | Software components                                                                     |            |
-+===========================+=========================================================================================+============+
-| Music industry databases  | -   The crosswalk package.                                                              |            |
-|                           | -   The dataset (and tuRtle package for                                                 |            |
-+---------------------------+-----------------------------------------------------------------------------------------+------------+
-| Music industry APIs       | -   The musicstreaming from *spotifyr*                                                  |            |
-|                           |                                                                                         |            |
-|                           | -   The sampler                                                                         |            |
-+---------------------------+-----------------------------------------------------------------------------------------+------------+
-| Music surveys             | -   The KULT package is being developed to generalise the capability of retroharmonize. |            |
-|                           |                                                                                         |            |
-|                           | -   The retroharmonize                                                                  |            |
-+---------------------------+-----------------------------------------------------------------------------------------+------------+
-| Music administrative data | -                                                                                       |            |
-+---------------------------+-----------------------------------------------------------------------------------------+------------+
++---------------------------+-----------------------------------------------------------------------------------------+---+
+| Data source               | Software components                                                                     |   |
++===========================+=========================================================================================+===+
+| Music industry databases  | -   The crosswalk package.                                                              |   |
+|                           | -   The dataset (and tuRtle package for                                                 |   |
++---------------------------+-----------------------------------------------------------------------------------------+---+
+| Music industry APIs       | -   The musicstreaming from *spotifyr*                                                  |   |
+|                           |                                                                                         |   |
+|                           | -   The sampler                                                                         |   |
++---------------------------+-----------------------------------------------------------------------------------------+---+
+| Music surveys             | -   The KULT package is being developed to generalise the capability of retroharmonize. |   |
+|                           |                                                                                         |   |
+|                           | -   The retroharmonize                                                                  |   |
++---------------------------+-----------------------------------------------------------------------------------------+---+
+| Music administrative data | -                                                                                       |   |
++---------------------------+-----------------------------------------------------------------------------------------+---+
 
 : Software components for data ingestion
 
@@ -218,17 +218,17 @@ The [Data Coordination Solution](#data-coordination-solutions) section explains 
 
 Data processing is very well supported in the R ecosystem. We have to add very little to it; our goal is to enable users with R scripting skills to benefit from them.
 
-+--------------------------+---------------------------------------+
-| Processing task          | Software ecosystem components         |
-+==========================+=======================================+
-| Music industry databases | -   ETL scrips for SOZA               |
-|                          |                                       |
-|                          | -   ETL Scripts for Hudobné centrum   |
-+--------------------------+---------------------------------------+
-|                          |                                       |
-+--------------------------+---------------------------------------+
-|                          |                                       |
-+--------------------------+---------------------------------------+
++--------------------------+-------------------------------------+
+| Processing task          | Software ecosystem components       |
++==========================+=====================================+
+| Music industry databases | -   ETL scrips for SOZA             |
+|                          |                                     |
+|                          | -   ETL Scripts for Hudobné centrum |
++--------------------------+-------------------------------------+
+|                          |                                     |
++--------------------------+-------------------------------------+
+|                          |                                     |
++--------------------------+-------------------------------------+
 
 : Software components for data processing
 
@@ -725,7 +725,7 @@ Crosswalking as a metadata adjustment is a statistical or data management proces
 
 # 4 Data Release
 
-The Open Music Observatory thrives to be compatible with the EU Publication Office’s Open Data Portal, therefore offering full interoperability with Eurostat, a wide range of governmental and scientific open data sources. This requires software components in our ecosystem that meet the standards of the EU Open Data Portal; those requirements are still evolving and not set into stone.
+The Open Music Observatory thrives to be compatible with the EU Publication Office's Open Data Portal, therefore offering full interoperability with Eurostat, a wide range of governmental and scientific open data sources. This requires software components in our ecosystem that meet the standards of the EU Open Data Portal; those requirements are still evolving and not set into stone.
 
 Our Grant Agreement mentions the Digital Music Observatory prototype for the OMO. We the software ecosystem will complement the current configuration of the DMO to reach compatibility with Eurostat and the EU Open Data Portal.
 
