@@ -18,6 +18,7 @@ format: html
 url: https://reprex.nl/event/2024-02-20_idcc24/
 editor: visual
 bibliography: 
+ - bib/antal.bib
  - bib/dataspace.bib
 ---
 
@@ -30,13 +31,13 @@ To put the scale of PPP advantages in a different scope, if we placed the music 
 ## Slovak Comprehensive Music Database & Listen Local Apps
 ![](images/Slide3.PNG){fig-align="center"}
 
-Our project goes back many years. In 2020 we made a [feasibility study](https://music.dataobservatory.eu/publication/listen_local_2020/) where we tried to understand why the Spotify recommender systems do not recommend Slovak music for Slovak people in Slovakia. Needless to say that behind this puzzle is a lot of bias in public music databases against an intersection of non-American, non-English-speaking, and of course, ethic minority of women artists. At the same time, we reviewed the 600 most played songs in the country to see what kind of data problems there were with their rights management--and found out that more than 50% of professionally managed songs had data problems that resulted in late or missed royalty payments.
+Our project goes back many years. In 2020 we made a [feasibility study](https://music.dataobservatory.eu/publication/listen_local_2020/) [@antal_promoting_slovak_2020] where we tried to understand why the Spotify recommender systems do not recommend Slovak music for Slovak people in Slovakia. Needless to say that behind this puzzle is a lot of bias in public music databases against an intersection of non-American, non-English-speaking, and of course, ethic minority of women artists. At the same time, we reviewed the 600 most played songs in the country to see what kind of data problems there were with their rights management--and found out that more than 50% of professionally managed songs had data problems that resulted in late or missed royalty payments.
 
 There are obvious ways how private and public data systems could help each other. Currently, private companies have far bigger datasets and digital libraries than public institutions, but they often try to rely on the knowledge stored in music libraries, on Wikipedia or other public knowledge.
 
 Just imagine three obvious data sources that, although have very different data governance, could play an important role in the data curation of scientific research or library services.
 
--   Statistical data coordination can result in more complete registers which can improve the data curation for any type of census-like or sampled data collection. Statistics registers can identify every single music creator, entity the publishes music works, or releases sound recordings for the public.
+-   Statistical data coordination can result in more complete registers which can improve the data curation for any type of census-like or sampled data collection. Statistics registers can identify every single music creator, entity the publishes music works, or releases sound recordings for the public [@slovak-cult-stat-pilot].
 
 -   Much of the knowledge carriers that public research data systems want to use, such as books, journals, literary and music works, audiovisual material, architecture plans, and photographs currently have an effective copyright management term of around 130 years, or seventy years after the death of the last surviving rightsholder. They have an up-to-date name register, for example, because they must pay royalties monthly, quarterly or annually. They must ensure that a person receives monthly or annual royalties after a marriage or name change for another reason, or that the royalties keep flowing to heirs after the original rightsholder deceases. Synchronising these timely registers with public heritage namespaces would save costs and create a large value.
 
@@ -46,6 +47,7 @@ Take the example of data exchange with statistical agencies. They have unrivalle
 
 ## Data coordination
 ![](images/Slide4-01.PNG) 
+
 >Our work is technically challenging because we work with multi-modal data: we have datasets, texts, images, sound recordings and audiovisual files. In 2024, we will only work with textual information and datasets of tabular data. For example, we want to ensure that people can find any Slovak music works in a public data space, listen to a recorded fixation of the work on a licensed streaming platform, and get information about the availability of the music scores in public libraries for lending, or in webshops for buying.
 
 Let us take a very important problem. We often see that many recordings in public archives cannot be listened to by a broader audience, for example, outside a research room, because any rights clearance, even a negative clearance for no need of rights management, would require the identification of works in connections to authors and their recorded manifestations in connection to neighboring rightsholder persons. Often, the identification is missing, errorneous, outdated, or there is no global id present at all. 
@@ -61,7 +63,7 @@ Second, we will use the QID as a temporary PID and ensure, for example, that
 ## Dataspace model
 ![](images/Slide5.PNG){fig-align="center"}
 
-We are following the dataspace models that had been recommended by several working groups in the past years, for example, the EBU [@dataspace_for_cci_2022]. We also heavily borrow on the work popularised by the EU Open Data portal with the use of Wikibase an identity brokerage and content negotiation tool.
+We are following the dataspace models that had been recommended by several working groups in the past years, for example, the EBU [@dataspace_for_cci_2022]. We also heavily borrow on the work popularised by the EU Open Data portal with the use of Wikibase an identity brokerage and content negotiation tool. (See also [@@design_principles_data_spaces_2021].)
 
 
 ## Value proposition for curators
