@@ -9,7 +9,7 @@ format:
     latex: 
        - lof: true
 author:
-  - name: "Antal Dániel, CFA"
+  - name: "Daniel Antal, CFA"
     orcid: 0000-0001-7513-6760
     url: https://reprex.nl/author/daniel-antal/
     affiliations:
@@ -28,7 +28,9 @@ bibliography:
  - bib/dataspace.bib
 ---
 
-{{< pagebreak >}} \## Public-private Partnership
+{{< pagebreak >}}
+
+## Public-private Partnership
 
 ![](images/IDCC24_2.PNG) While open data infrastructures are growing fast, we must bare in mind that private infrastructure is growing at an even faster scale. Last weekend, Europeana had 12,416 sound recordings that you could use without restrictions and altogether, 206,280 music sound recordings were made available over ten years. The same amount is made available with excellent intelligent recommenders and free listening options on Spotify in every 2 days. If we can find ways to connect private and public data infrastructures, the benefits are enormous for all cycles of data curation: in some cases, we can save much cost, and in other cases we can enrich the data and build fantastic new public applications, like we plan to in music libraries.
 
@@ -42,15 +44,13 @@ To put the scale of PPP advantages in a different scope, if we placed the music 
 
 Our project goes back many years. In 2020 we made a [feasibility study](https://music.dataobservatory.eu/publication/listen_local_2020/) [@antal_promoting_slovak_2020] where we tried to understand why the Spotify recommender systems do not recommend Slovak music for Slovak people in Slovakia. Needless to say that behind this puzzle is a lot of bias in public music databases against an intersection of non-American, non-English-speaking, and of course, ethic minority of women artists. At the same time, we reviewed the 600 most played songs in the country to see what kind of data problems there were with their rights management--and found out that more than 50% of professionally managed songs had data problems that resulted in late or missed royalty payments.
 
-There are obvious ways how private and public data systems could help each other. Currently, private companies have far bigger datasets and digital libraries than public institutions, but they often try to rely on the knowledge stored in music libraries, on Wikipedia or other public knowledge.
+There are obvious ways how private and public data systems could help each other.
 
-Just imagine three obvious data sources that, although have very different data governance, could play an important role in the data curation of scientific research or library services.
+- [x] Currently, private companies have far bigger datasets and digital libraries than public institutions, but they often try to rely on the knowledge stored in music libraries, on Wikipedia or other public knowledge. The private sector has digitized practically all books, cinematic works, music, music sheets, and billions of photographs.
 
--   Statistical data coordination can result in more complete registers which can improve the data curation for any type of census-like or sampled data collection. Statistics registers can identify every single music creator, entity the publishes music works, or releases sound recordings for the public [@slovak-cult-stat-pilot].
+- [x]  Statistical data coordination can result in more complete registers which can improve the data curation for any type of census-like or sampled data collection. Statistics registers can identify every single music creator, entity the publishes music works, or releases sound recordings for the public [@slovak-cult-stat-pilot].
 
--   Much of the knowledge carriers that public research data systems want to use, such as books, journals, literary and music works, audiovisual material, architecture plans, and photographs currently have an effective copyright management term of around 130 years, or seventy years after the death of the last surviving rightsholder. They have an up-to-date name register, for example, because they must pay royalties monthly, quarterly or annually. They must ensure that a person receives monthly or annual royalties after a marriage or name change for another reason, or that the royalties keep flowing to heirs after the original rightsholder deceases. Synchronising these timely registers with public heritage namespaces would save costs and create a large value.
-
--   Last, but not least, the private sector has digitized practically all books, cinematic works, music, music sheets, and billions of photographs.
+-  [x]  Much of the knowledge carriers that public research data systems want to use, such as books, journals, literary and music works, audiovisual material, architecture plans, and photographs currently have an effective copyright management term of around 130 years, or seventy years after the death of the last surviving rightsholder. They have an up-to-date name register, for example, because they must pay royalties monthly, quarterly or annually. They must ensure that a person receives monthly or annual royalties after a marriage or name change for another reason, or that the royalties keep flowing to heirs after the original rightsholder deceases. Synchronising these timely registers with public heritage namespaces would save costs and create a large value.
 
 Take the example of data exchange with statistical agencies. They have unrivalled access to create census-like information (for example, they know of every person who makes music in the Slovak Republic or every enterprise that releases their recordings). Yet rights management organisations have far more timely and accurate information about royalty income than statisticians, who rely on imprecise surveying instead of accessing data from the financial ledgers of music royalty accounts.
 
@@ -78,7 +78,7 @@ Second, we will use the QID as a temporary PID and ensure, for example, that
 
 ![](images/Slide5.PNG){fig-align="center"}
 
-We are following the dataspace models that had been recommended by several working groups in the past years, for example, the EBU [@dataspace_for_cci_2022]. We also heavily borrow on the work popularised by the EU Open Data portal with the use of Wikibase an identity brokerage and content negotiation tool. (See also [\@ @design_principles_data_spaces_2021].)
+We are following the dataspace models that had been recommended by several working groups in the past years, for example, the EBU [@dataspace_for_cci_2022]. We also heavily borrow on the work popularised by the EU Open Data portal with the use of Wikibase an identity brokerage and content negotiation tool. (See also [@design_principles_data_spaces_2021].) We are very much indebted to the groundbreaking work of the Luxembourg Shared Authority File, but we want to go further, and include statistical agencies and private parties into the data sharing, which requires a more thorough understanding of potential conflicts of interests, shared interests, and different data jurisdictions.
 
 ## Value proposition for curators
 
