@@ -1,7 +1,8 @@
 ---
-title: "SKCMDb"
+title: "Towards a European Music Dataspace"
+subtitle: "Listen Local Slovakia & SKCMDb"
 author:
-  - name: "Antal Dániel, CFA"
+  - name: "Daniel Antal, CFA"
     orcid: 0000-0001-7513-6760
     url: https://reprex.nl/author/daniel-antal/
     affiliations:
@@ -17,22 +18,25 @@ author:
 format: revealjs
 editor: visual
 bibliography:
+  - bib/datagovernance.bib
   - bib/datalinking.bib
   - bib/dataspace.bib
   - bib/libraryLOD.bib
   - bib/archivesLOD.bib
 ---
 
-## Open Music Europe {.scrollable transition="slide"}
+# Open Music Europe {.scrollable transition="slide"}
 
 ![](png/ome/Banner_OME_Software_Ecosystem.png){width="800"}
+
+# From Listen Local to the European Music Observatory 
 
 ## Listen Local {.smaller .scrollable transition="slide"}
 
 ::: panel-tabset
 ### Feasibility
 
-[![Projektová štúdia propagácie slovenskej hudby na Slovensku a v zahranicí \[Feasibility Study On Promoting Slovak Music In Slovakia & Abroad\] \[https://doi.org/10.5281/zenodo.6427514\](https://doi.org/10.5281/zenodo.6427514\])](png/listen_local/listen_local_study_covers.png){fig-align="center" width="600"}](https://doi.org/10.5281/zenodo.6427514)
+[![Projektová štúdia propagácie slovenskej hudby na Slovensku a v zahranicí \[Feasibility Study On Promoting Slovak Music In Slovakia & Abroad\]  (Click image to download ⬇️)](png/listen_local/listen_local_study_covers.png){fig-align="center" width="600"}](https://doi.org/10.5281/zenodo.6427514)
 
 ### Demo App
 
@@ -67,8 +71,39 @@ Please click through the three tabs Harmonisation, **Feasibility**, **Demo App**
 Please click through the three tabs Harmonisation, **Ambiguity**, **Pollution**, **Misinformation**.
 :::
 
-## Dataspace model
+## Enriched and self-correcting databases
 
+![Data federation in the Slovak Music Dataspace](png/listen-local/ll-sk-feasibility.png){fig-align="center"}
+
+## Interoperability {.scrollable transition="slide"}
+
+[![We follow the European Interoperability Framework to develop systems that can work across legal, institutional and technical barriers to create a shared big data space for the benefit of the European music sector .](png/interoperability/eif_conceptual_model_p46.png)](https://op.europa.eu/en/publication-detail/-/publication/bca40dde-deee-11e7-9749-01aa75ed71a1/language-en)
+
+## Similar Initiative: PRS Nexus {.scrollable transition="slide"}
+
+![](png/music-data-ecosystem/prs_nexus_linking_metadata.png)
+
+::: {style="font-size: 60%;"}
+"Establishing the link between the identifiers for the recording, the International Standard Recording Code (ISRC), and the work, the International Standard Works Code (ISWC), is the most effective way of tracking where and when a work has been used online." [Read more ➡️](https://www.prsformusic.com/press/2023/prs-for-music-expands-pioneering-nexus-programme)
+:::
+
+# Towards a Europen Music Dataspace {.scrollable transition="slide"}
+
+## An ecosystem with interoperable, federated music data {.scrollable transition="slide"}
+
+![A Data Ecosystem is a “purposeful collaboration or partnership consuming, producing and providing interoperable data and related resources” [@bdva_data_sharing_spaces_interoperability_2023, p19]. The chart is a modification of the schematic chart of [dataspaces.info](https://dataspaces.info/).](png/music-data-ecosystem/music_data_ecosystem.png)
+
+## Data space
+
+::: {layout-ncol="2" style="font-size: 70%;"}
+[![“Data Sharing Spaces and Interoperability.” Click to download paper.](png/dataspace/music_data_space_SQ.png){width="500"}](https://bdva.eu/download/92/publications/3841/data-sharing-spaces-and-interoperability-bdva-discussion-paper-december-2023.pdf)
+
+A data space is a data and knowledge sharing and coordination tool for the “public collection of findable, accessible, interoperable and reusable quality data and related resources consumed, produced and provided by identified participants, each respecting societal values and operating within an explicit framework of trust and governance”. While it relies on modern computer and data science, it is mainly a business and data regulatory innovation to foster cooperation among many "small" data owners in the era of big data.
+:::
+
+## Dataspace model {.scrollable transition="slide"}
+
+::: {style="font-size: 80%;"}
 ::: panel-tabset
 ### Dataspace
 
@@ -95,9 +130,14 @@ EBU and Gaia-X. 2022."[Dataspace for Cultural and Creative Industries](https://g
 -   New classroom pedagogy with trustworthy recommenders for teenagers
 :::
 
+::: {style="font-size: 40%;"}
 ::: footer
 Please click through the three tabs Harmonisation, **Authority**, **Definitions**, **Global**.
 :::
+:::
+:::
+
+## Connect to authoritative sources {.scrollable transition="slide"}
 
 ::: panel-tabset
 ### Harmonisation
@@ -177,6 +217,8 @@ Ontology is a formal explicit description of concepts in a music:
 -   We have support proposal from the developers (Wikimedia Deutschland). Reprex is building a team of three administrators.
 :::
 
+# Ongoing work {.scrollable transition="slide"}
+
 ## Personal data protection {.smaller .scrollable transition="slide"}
 
 ::: panel-tabset
@@ -196,11 +238,11 @@ Ontology is a formal explicit description of concepts in a music:
 
 ### Purposes
 
--   SOZA: improved collective rights management; reduced payment lateness and lost payment, reduced documentation costs.
+-   `SOZA`: improved collective rights management; reduced payment lateness and lost payment, reduced documentation costs.
 
--   Hudobné centrum: public sector obligations fulfilled at best available technology (documentation, education and promotion.)
+-   `Hudobné centrum`: public sector obligations fulfilled at best available technology (documentation, education and promotion.)
 
--   IKP-Policy: various policy measurements and indicators, including a potential measuring of the Slovak local content requirements in the broadcasting law.
+-   `IKP-Policy`: various policy measurements and indicators, including a potential measuring of the Slovak local content requirements in the broadcasting law.
 
 -   Voluntary: improving the visibility of opt-in artists, reducing missed payments, combating misinformation and data breaches on the internet.
 
