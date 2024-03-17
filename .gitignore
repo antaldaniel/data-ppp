@@ -51,3 +51,5 @@ po/*~
 rsconnect/
 docs/
 /.quarto/
+
+iroda.qmd
