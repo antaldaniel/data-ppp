@@ -1,0 +1,153 @@
+---
+title: "Slovak"
+format: html
+editor: visual
+---
+
+## Glossary
+
+### Project definitions
+
+Slovak Music Dataspace: a data sharing space to exchnage data between SOZA, Hudobné centrum, Hudobny Fond, and global music organisations. The Slovak Music Dataspace is designed to be scaleable to a European Music Dataspace. As a data sharing space, we create a legal, business process, semantic and technical interoperability among the organisations using the data space.
+
+Slovak Comprehensive Music Database (SKCMDb): a shared database that is derived with data integration via the Slovak Music Dataspace. A part of the SKCMDb that is conforms with GDPR data protection rules and the business interestes of the parties will be made public. We aim to create a public database that allows muisc listeners, radio editors, concert and festival promoters to build playlists and lineups with any music that has a connection to the modern Slovak Republic: it was composed by an artitst who lived in the territory of current Slovakia, or was produced and published in the country. This database can be used to train educational applications that teach familiarity with the Slovak music repertoire, or help the monitoring of the national (local) content on radios, help radio editors to find suitable Slovak music to their broadcasting program.
+
+Replication: We are designing from the onset the Slovak Music Dataspace with international interoperability in mind, and we will create minimal replications (Hungary, Lithuania, Bulgaria,...) to showcase the extensibility of the approach. Federation: We see the European Music Dataspace as a federation of pan-European data sources (for example, Europeana) and national music dataspaces. Digital Music Observatory: the Digital Music Observatory is an institutional framework to facilitate the creation of national and international music dataspaces which can be federated with the European Music Dataspace.
+
+### Standards
+
+`data`: reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing Note 1 to entry: Data can be processed by humans or by automatic means. \[SOURCE:ISO/IEC 2382:2015, 2121272\]
+
+data analytics: composite concept consisting of data acquisition, data collection, data validation, data processing (3.1.9), including data quantification, data visualization, and data interpretation Note 1 to entry: Data analytics is used to understand objects represented by data (3.1.5), to make predictions for a given situation, and to recommend on steps to achieve objectives. The insights obtained from analytics are used for various purposes such as decision-making, research, sustainable development, design, planning, etc.
+
+`database`: collection of `data` (3.1.5) organized according to a conceptual structure describing the characteristics of these data and the relationships among their corresponding entities, supporting one or more application areas \[SOURCE:ISO/IEC 2382:2015, 2121413\]
+
+`data model`: pattern of structuring `data in a`database\` according to the formal descriptions in its information system and according to the requirements of the database management system to be applied \[SOURCE:ISO/IEC 2382:2015, 2125519\]
+
+`relational model`: `data model` whose structure is based on a set of relations \[SOURCE:ISO/IEC 2382:2015, 17.04.04\]
+
+`data set` or `dataset`: identifiable collection of data (3.1.5) available for access or download in one or more formats \[SOURCE:Adapted from ISO 19115-2:2009, 4.7\] *Beware: various conceptual and information models use different dataset definitionns*.
+
+`interoperability`: Ability of two or more systems or applications to exchange information and to mutually use the information that has been exchanged. (ISO/IEC 19941:2017)
+
+`data portability`: Ability to easily transfer data from one system to another without being required to re-enter data.
+
+`conceptual model`: representation of the characteristics of a universe of discourse by means of entities and entity relationships (ISO/IEC 2382-17:1999). *In this document, we use conceptual models for models that can be used by humans and computers, too, and we use the information model term for use in IT systems.*
+
+## Digital Music Observatory
+
+The Digital Music Observatory aims to automate data exchanges, data collection and data-driven tasks common in the music industry in a way that it can serve the needs of an automated future European Music Observatory.
+
+::: callout-note
+An **observatory** is a location historically used for observing terrestrial, marine, or celestial events. In the last 30 years, many social, humanities and economic observatories were established to provide a consistent and permanent data and knowledge recording point. We have counted more than 80 EU, OECD or UN institution recognised, international data observatories; every year, about 3-5 new ones go functional and 1-2 become discontinued. Their services, data quality and quantity varies.
+:::
+
+Concert promoters, radio editors, composers, rights management organisations, music librarians, and music archivists all work with music, but in very different workplaces and utilising different business processes. A digital distributor or a collective management agency needs to perform such tasks to pay out royalties to the composer, performer and producer; a librarian or archivist needs this information to ensure that they handle copies of the work or recording in a way that does not infringe copyrights or other norms. These organisations can help each other if they work in an interoperable way. In the age of big data, all music organisations are small; to remain competitive with global technology platforms or companies, they should be able to share data collection or processing problems or to access large enough datasets to deploy trustworthy artificial intelligence that works for them (and not against them.)
+
+Making music business processes and their data interoperable is the way to achieve these shared knowledge resources. Interoperability has been more of a desired state than a reality in the last decades. When we embrace the European Interoperability Framework with four key aspects of interoperability (interoperability of business processes, their legal regulations, a shared meaning and technically compatible formats), we are preparing to move data across organisational boundaries and contexts. The aim of a data sharing space, including the Slovak Data Space that we use as a replicable and scalable prototype for a European Music Dataspace, is to prepare data owners and users for these new layers of interoperability.
+
+Music professionals often talk about music data and metadata. Such a distinction loses its meaning in a data space when we aim to take out data from one institution and context and move it to another one. Take the example of the date of death for a composer. Often, dates of birth and dates of death are used for the disambiguation of names, xxxxx, xxxxxx. In the rights management practice, the date of death has a legal consequence, because it defines the remaining copyright protection term: a musical work needs data management until the start of the 71st year beginning with the date of death of the author (or the last surviving author in the case of co-authored works). For music historians, the date of death may be an important data point in itself that they want to publish. For a rights management agency, this is more of a metadata that can remain in the background but is still essential to determine if works connected to the author still need rights management. Metadata is information about data, it helps us make data informative. In a data-sharing space, often one organisation's data becomes the other organisation's metadata.
+
+Re-purposing another organisation's data as metadata can greatly increase the efficiency of IT systems. It creates new value in the form of data quality increase, data value increase, or a decreasing cost of processing or collecting data. To make the most out of this new value, stakeholders of the data-sharing space must align their business strategies and re-think their legal regulations.
+
+The value proposition of a data-sharing space is that it creates new value with such interoperability: this new economic and moral value should be shared by those stakeholders who make the value creation possible. Re-purposing data for a completely different use also requires a very thorough revision of the protection of the data from a general data protection point of view as well as from more nuanced privacy, business confidentiality or rights management points of view. We are prototyping this work in Slovakia. We want to show how we can make the work of SOZA and Hudobné centrum interoperable in a way that other entities, such as the Germany-based HearDis! Background music producers or the Sweden-based ALOADED digital distributor can use and promote Slovak music better. Legal interoperability: we create legal rules about sharing data, metadata about music, and eventually the sheets of musical works or their recordings. Organisational interoperability: we design workflows that can be supported by a shared information system in SOZA, Hudobné centrum, HearDis! and Aloaded; and ensure that definitive identification of the best Slovak music to be played in a public performance or to be distributed to a relevant online platform. Semantic interoperability: we ensure that data, information and knowledge about Slovak music and its creators are understood the same way by the music professionals working in SOZA, Hudobné centrum, HearDis! and Aloaded; furthermore, this shared understanding is well understood by computer agents working on their behalf or in other systems. The meaning of ‘composer’, ‘copyright protection term limits’, and ‘musical work’ must be properly understood by all of these professionals, their supporting software systems and the databases that store information and data about these concepts. Technical interoperability: we must ensure that the data can be exchanged for the different information systems of SOZA, Hudobné centrum, HearDis! and Aloaded, or anybody that wants to cooperate with them via the Slovak Music Dataspace or the broader European Music Dataspace. The four levels of interoperability are a common conceptual framework about author and authorship, music works and their recordings, and the identification of the use of protected works and their recordings in broadcasting streams or restaurant background music or live music public performance. Because music is both global and local, usually this conceptual framework is not only widely used but often has many decades of history. The role of Open Music Europe is to translate these terms into an information model that can provide computerised support for the work of music professionals.
+
+The heart of the Digital Music Observatory is an information model, a high-level, institution and infrastructure-independent description of data and data procedures in a standardised form; an independent yet standardised model that helps translate the data models applied by various music organisation’s IT systems in Slovakia and beyond. Whenever possible, we develop or adopt parts of conceptual models for wider use. We use the term information model as a computer-actionable form a conceptual model that can help not only computers but generally music professionals to organise their work in an interoperable way. Open Music Europe aims to develop four pillars of this information model in the Open Music Observatory, covering music economy, music diversity, sustainability related to society and citizenship, and innovation. This Open Music Observatory may serve as pillars of a future European Music Observatory or remain in a public-private partnership-based Digital Music Observatory without official EU recognition.
+
+## Planning
+
+| EIF Level | Description                                                                                                                   |
+|------------------|------------------------------------------------------|
+| ORG       | Identification of work processes to be supported by the system. Process adjustment for interoperability across organisations. |
+| ORG       | Learning needs assessment for improved processes and IT tools.                                                                |
+| LEG       | Legal requirements for information, data, or metadata transfer.                                                               |
+| SEM       | Requirements for shared ontologies, information models, taxonomies, controlled vocabularies.                                  |
+| TECH      | Software requirements to make systems work in an interoperable way.                                                           |
+
+: requiremets
+
+### User stories
+
+In October-November 2023 we collected stories of users about the work they would like to improve. We interviewed the Open Music Europe consortium members in WP2 about their prototype application/service needs.
+
+We translated their needs into requirements on the semantic and technological level and noted the need for learning and process alignment. Parallel to these procedures, another part of the project team was working on the identification of legal requirements.
+
+### Business cases for process alignment:organisational interoperability
+
+To benefit from interoperability, organizations must align their business processes to allow for sharing data collection and processing costs or increase the jointly used data’s richness and value. For example, we found that both commercial and public users of music data suffer from costly entity recognition and entity linking problems; for example, connecting names of authors to their works, or further connecting the recorded fixations of the performances of such works. A need for shared authority files, such as collections of rightsholder names (ISNI identifiers), work title names (ISWC identifiers) and sound recording title names (ISRC identifiers) is an acute need, regardless if we talk about a background music providers, a digital distributor, a collective rights management agency or music library.
+
+We tried to limit our use cases where there is a business sense in operational interoperability. We do not aim to solve all the data/interoperability problems of all music organizations. Instead, we are focusing on niche applications with a strong business case that requires interoperability among some business processes. We do not aim to provide full interoperability for music library systems (which would be a project of its own), but a high level of interoperability among music libraries, rights managers, and B2B users of music licenses in public performance or digital streaming. We aim to facilitate cross-domain work with music in public and private organisations, or various parts of the music lifecycle from creation to distribution, rights management, promotion, and archiving or heritage management. Such cross-domain cooperation requires a shared understanding of music data that goes beyond data: we need to explicitly align the knowledge bases of rights managers, librarians, playlist editors, and music promoters. To arrive at a shared knowledge base we need to set the semantic requirements, i.e., the requirements to arrive at shared meanings of data structure and contents.
+
+### Semantic requirements: building a music knowledge base across institutional barriers
+
+To ensure that a music librarian, a playlist editor and a rights management professionals work together efficiently, they must have a shared understanding of the information objects (entities, things) of their work processes. They must understand the concept of a musical work, and the relationship of authorship between this work and a living and deceased human being in the same way. Such an understanding of the *meaning* of words and relationships seems simple at first sight but becomes very complicated in detail. Various domains use, to start with, different vocabularies to name entities or things or objects.
+
+In our work, we have a shared semantic understanding of both the structure of the data (what is in the columns, what is in the rows, how are cells organised) and the meaning of the data (what do variables in the column represent, or what kind of subjects or collection points are represented in the rows.) Statisticians and data analysts tend to use tabular datasets; royalty accountants and librarians often use ledger-type inventory or bookkeeping entries.
+
+Aligning the definitions of the data structure is more likely to be discussed with the data users and IT professionals of our shared dataspace; the meanings of information stored in observational rows (records) and in variable columns requires a shared understanding among music sociologists, copyright lawyers, royalty economists, librarians, distributors, playlist editors. The semantic definitions of data structure and content are usually stored in shared vocabularies, hierarchical taxonomies, and ontologies that describe taxonomical objects together with their relationships. In 2023, we started a cooperation with Polifonia, a Horizon Europe project aimed at designing a new set of ontologies for music use. We adopted a similar user requirement solicitation methodology to their eXtreme Design to ensure that our knowledge base and applications are compatible. We interviewed the Open Music Europe consortium members in WP2 about their prototype application/service needs. The use of the new Polifonia Ontology Network’s ontologies is promising, and we initiated tests on data snippets to establish usability and gaps between ontology coverage and desired use.
+
+### Legal interoperability:
+
+Music professionals often talk about music data and metadata. Such a distinction may be useful for music professionals to grasp the requirements of data in various information systems, but the data/metadata distinction is not useful for understanding the needs of organizational and legal interoperability. Metadata is often data itself, information on how to make the data useful and informative for a particular application in a particular context. When we create business processes that cross institutional boundaries, one organisation’s data becomes useful metadata in the other organisations.
+
+-   General data protection regulation (GDPR): We need to harmonise the way data is protected in the participating organisations. Because private organisations, like SOZA, HearDis!, and ALOADED have a mandate mainly to protect the data, and public memory organisations like Hudobné centrum to disseminate the data, we needed to re-align who can do what with different aspects of the data.
+
+-   Copyright data management: We must consider the legal requirements for copyright management.
+
+-   Business confidentiality: In some cases, we had to deal with business confidentially issues, because we wanted to avoid suggesting data sharing that is contrary to the business strategies of the participating organisations. This is particularly important to better align our work with the business strategy of CISAC and GESAC, for example, as we would like to work with many of their members.
+
+#### Technical (software) requirements
+
+We aim to provide software tools that allow the technical interoperability of the data exchange along the limited business use cases.
+
+| EIF Level | Description                                                                                                                                                                                                      |
+|-------------------|-----------------------------------------------------|
+| SEM       | Reading and coordinating database schemas, data structure, and data definitions in datasets, and bringing them to a shared, interoperable format, the creation of a shared information model.                    |
+| TECH      | Extract, transfer, load scripts and other processing scripts to extract the data from participating databases, process according to the shared information model, and load them into participant's data systems. |
+
+: Technical software requirements
+
+1.  On the semantic level, we are using and reusing existing ontologies, taxonomies, controlled vocabularies and information models. In this aspect, we only work with open-source models expressed in the OWL/RDF language. We are creating a shared information model that allows interoperability among such elements.
+
+2.  On a technical level, we are creating or upgrading open-source software elements in the R statistical language and environment that bring the data to a shared structure and data semantics.
+
+3.  Bridging the two levels, we are building R language parsers and bindings to convert data to RDF formats.
+
+Our project is not an ontology or semantic design project, and we only reuse and coordinate the use of existing, open source information models. We are aiming to the use of open-source models that are either endorsed as international ISO standards (for example, CIDOC-CRM for music heritage data, RiC for archival data, SDMX for statistical data) or have a very widely accepted use (such as the Europeana EDM model.)
+
+To bring down the semantics to the data processing and wrangling level, we started the creation of foundational R packages that enrich R language objects with semantic metadata required for the interoperable reuse of music-relevant data from various sources. We have been releasing the first versions of the *dataset* package that aims to xxxx, and the first version of the *tuRtle* package to faciliate human-readable RDF conversion.
+
+In our long-term view, dataset and tuRtle will accompany our more specific R packages that deal with different aspects of music-relevant data:
+
+-   retroharmonize for the retrospective harmonisation of survey data; the semantic interopability will greatly increase the efficiency of variable coding, and variable label harmonisation or translation.
+
+-   iotables for the input-output model-based environmental, social and economic analysis of music.
+
+-   eurostat for accessing and reusing data from the Eurostat data warehouse in a way that makes efficient and meaningful data combination more efficient with semantic interoperability.
+
+## Shared Conceptual Models to Build Interoperable Applications
+
+We want to build intelligent applications that cross institutional boundaries and the data silos of music libraries, rights managers, and promoters. To achieve this goal, we must ensure a high level of interoperability above the technical and semantic level: we need to make sure that a business process in a digital distributor company, a playlisting company, a rights management agency and a music library uses the same techniques of composer and work identification, or the use of name recognition and name disambigouation.
+
+It would be tempting but over-ambition goal to build a common conceptual model for such tasks. While libraries and digital distributors both struggle with name recognition and name disambigouation of the same entities, there is a good reason for libraries not engaging in the music distribution business and music distributors not managing public libraries. We want to respect the various, often highly regulated workflows of libraries and distributors, and focus on making the same difficult, such as name disamgbigouation, interoperable.
+
+Various organisations and professions work with music in a different way, and many of them already have their well-established, globally standardised conceptual models. These organisations can help each other if their conceptual models allow interoperability of the both the data and the workflow that uses the data: for example, if name recognition or name disambigouation works similarly in libraries as in copyright management; or they use information the same way to undestand if a musical work requires copyright management, or it can be treated as part of the public domain, or perhaps as an orphaned work.
+
+Many of these business processes are well-regulated; which means that the IT systems that support the business processes must be also regulated.
+
+-   Statisticians, including cultural statisticians, use the SDMX information model as a conceptual framework for the production and quality control of statistics; this ensures statistical data comparability on the level of the United Nations, and the staisticla production in the European Union via the participation in Eurostat and the European System of Statistics.
+-   Museums and heritage organisations use the CIDOC-CRM conceptual reference model. CIDOC, ICOM's International Committee for Documentation, provides the museum community with advice on good practice and developments in museum documentation, and their reference model (ISO 21127) is generally accepted to describe and support national and institution-level museum policies.
+-   Archives started the conversion of four international archiving ISO standards into RiC, a general conceptual model for archiving business processes. RiC replaces four existing ICA standards: General International Standard Archival Description (ISAD(G))
+-   Accounting and finance, including royalty finance, relies on FIBO, an ontological description of various finance term. These conceptual models are partially interoperable, because they are described with the OWL onotolgy language and the Resource Description Framework, which is the world wide web standard for describing informaiton carriers, for example, datasets, databases, books, scanned documents. The RiC standard was derived with a decade-long work from CIDOC.
+
+We do not see the need for the development of a conceptual model for music, because the various workflows of rights management organisatoins, archivists, librarians will remain regulated by distinct rules of financial or library record keeping. Instead, we are desigingn a decentralised information model that increases interoperability among the users of their own domain-specific conceptual models; or helps smaller organisations to adopt such conceptual models. This way, we help not only intra-music interoperability (for example, cooperation between the documentation functions of a collective rights management organisatoin and a music library) but functional interoperabiltiy (music library with other music or general purpose libraries.)
+
+### Our decentralised information model: Wikibase
+
+For prototyping a future European Music Observatory, we chose the decentralized Wikibase model. For coordinating music data, it is an appropriate tool, because it was designed at the level of citizen scientists, and therefore smaller organisations who cannot depend on the ontologist, statistician, or data engineer in-house can work together on the same platform with larger organisations who have such human capacities and skills.
+
+The Wikibase model was originally designed to provide an easy-to-use but precise coordination tool for the various national language versions of Wikipedia and its supporting databases, such as Wiktionary or Wikispecies. While the Wikibse model would not be a suitable solution for every statistical or librarian business process, it is an ideal tool for building a bridge between shared aspects and problems of statistical or librarian processes. Originally designed for citizen scientists, it is a great coordination tool among data-literate professionals, who are far above the citizen scientist level in their domain, for example, in their workplace in a music library or a cultural statistics unit; but they do not more than a citizen about rights management. A music librarian is not an expert in cultural statistics, and a statistician is usually not an expert in library science or copyright management.
+
+From a technical point of view, Wikibase is ideal because it can export data to RDF (and be compatible with professional users who rely on explicit, standardised ontologies and conceptual models, such as large museums) but also SQL relational databases or even Excel/CSV spreadsheets (and remain compatible with small institutions or enterprises.)
+
+-   Our adoption of the Wikibase information model will result in a simplified, quasi-ontology that can be exported to RDF (for more specialised RDF-conceptual models). Naturally, we do not claim to replace conceptual model design. A music archive should adopt RiC, and cultural statisticians should seek conformity with the SDMX information model. We are focusing on the niches where different music professionals, like archivists, librarians, or statisticians can help each other’s work with the creation of interoperable processes and data: for example, to create shared names spaces of composer names, institutional (corporate body) names, or work title names. Wikibase, and its public instance, Wikidata is exceptionally good at creating narrow bridges over many professions.

@@ -1,0 +1,188 @@
+---
+title: "Dataspace and Data Linking Reader"
+editor: visual
+subtitle: "List of references and some quotes"
+format: 
+   html: 
+     toc-depth: 2
+   gfm: 
+     toc-depth: 2
+bibliography:
+  - bib/ISOdata.bib
+  - bib/datalinking.bib
+  - bib/dataspace.bib
+  - bib/libraryLOD.bib
+  - bib/archivesLOD.bib
+---
+
+## Dataspaces
+
+-   *Dataspaces: Fundamentals, Principles, and Technique*: "A dataspace is an emerging approach to data management which recognises that in large-scale integration scenarios, involving thousands of data sources, it is difficult and expensive to obtain an upfront unifying schema across all sources. Data is integrated on an \`\`as-needed'' basis with the labour-intensive aspects of data integration postponed until they are required. Dataspaces reduce the initial effort required to set up data integration by relying on automatic matching and mapping generation techniques." [@curry_dataspaces_2020]
+
+-   *Dataspace for Cultural and Creative Industries* (Position paper): "A data space is an ecosystem of exchange, processing, sharing and provision of data between trusted partners, for a fee or not. It is not about copying or repatriating data centrally, but about ensuring that each data holder has full control over the conditions (e.g., who, when, and under what condition) of access to their data." [@dataspace_for_cci_2022, p16]
+
+-   *Design Principles for Data Spaces* (Position paper): "From a technical perspective, a data space can be seen as a data integration concept which does not require common database schemas and physical data integration, but is rather based on distributed data stores and integration on an “as needed” basis on a semantic level. Abstracted from this technical definition, a data space can be defined as a federated data ecosystem within a certain application domain and based on shared policies and rules." [@design_principles_data_spaces_2021, p7]
+
+-   *Towards a European-governed Data Sharing Space. Enabling data exchange and unlocking {AI} potential* [@bdva_data_sharing_space_2020, p6]
+
+    ![Figure 2 Tools and mechanisms that strategic stakeholders can make use of to jointly realise a data sharing space, boost the European data economy and create various lasting societal impacts. (p6)](png/dataspace/dataspace-ppp-6x4.png){#dataspace-ppp}
+
+![Figure 1 The Data Sharing Value ‘Wheel’ - core pillars and principles of the envisioned European-governed Data Sharing Space that generate value for all sectors of society. (p5)](png/dataspace/data_sharing_value_wheel_6x4.png)
+
+-   *Catalog and Entity Management Service for Internet of Things-Based Smart Environments*: "Dataspaces can provide an approach to enable data management in smart environments that can help to overcome technical, conceptual, and social/organisational barriers to information sharing. A fundamental requirement for intelligent decision-making within a smart environment is the availability of information about entities and their schemas across multiple data sources and intelligent systems." [@ulHassan_catalog_entity_management_2020]
+
+-   *Human-in-the-Loop Tasks for Data Management, Citizen Sensing, and Actuation in Smart Environments*: "Humans are playing critical roles in the management of data at large scales, through activities including schema building, matching data elements, resolving conflicts, and ranking results. The application of human-in-the-loop within intelligent systems in smart environments presents challenges in the areas of programming paradigms, execution methods, and task design." [@ulHassan_human-in-the-loop_2020]
+
+-   *Data Sharing Spaces and Interoperability*: A discussion paper that focuses on the problem of how to achieve interoperability in and between Data Spaces. It collects inputs and provides insights that can be useful to future standardisation activities in the area [@bdva_data_sharing_spaces_interoperability_2023].
+
+Further reading:
+
+-   Culture Data Space: A Case Study in Federated Data Ecosystems [@jarke_culture_data_space_2023]
+
+-   Report on a European collaborative cloud for cultural heritage – Ex–ante impact assessment [@eccch_ex-ante_2022]
+
+-   Commission Recommendation (EU) 2021/1970 of 10 November 2021 on a common European data space for cultural heritage (*available in all EU official languages*) [@commission_recommendation_common_culture_dataspace_2021]
+
+## Functions of data spaces
+
+According to the recommendations of the expert group behind *Design Principles for Data Spaces*, the following requirements need to to be met by data spaces [@design_principles_data_spaces_2021, p26]:
+
+-   [x] Data spaces should provide a framework for effective and efficient data exchange, supporting the decoupling of data producers and data consumers. This means they should allow for adoption of common APIs and security schemas, as well as adoption of data models that can be represented in data formats compatible with adopted APIs, for the purpose of sharing and exchanging data.
+
+-   [x] Data spaces should provide a structure for defining and enforcing agreements on the use of data (including potential monetization of both data provision and data use). This means they should allow for incorporation of capabilities for specifying and publishing data offerings comprising terms and conditions (including pricing) that can be enforced during data exchange transactions.
+
+-   [x] Data spaces should provide a structure for trustworthiness, in which data consumers and data providers can share their business interests on the basis of common ethical values. This means they should provide security capabilities to protect data ownership aspects as well as business operations, including capabilities for privacy protection that can be engineered and deployed.
+
+-   [x] Data spaces should provide a structure on the basis of which specific policies and regulations can be supported.
+
+### Linked Open Data in Statistics
+
+`bib/statisticalLOD.bib`
+
+-   In Publishing census as linked open data: a case study Petrou, Papastefanatos and Dalamagas provide a case study of LOD publication in Greece [@PetrouIrene2013Pcal].
+
+-   Linked Open Data Statistics: Collection and Exploitation [@ermilov_et_al_lod_statistics_2013] in the collection Knowledge Engineering and the Semantic Web.
+
+### Linked Open Data in Libraries
+
+`bib/libraryLOD.bib`
+
+-   *Evaluating the quality of linked open data in digital libraries*: Cultural heritage institutions have recently started to share their metadata as Linked Open Data (LOD) in order to disseminate and enrich them. In this report, the methodology defined by previous research for the evaluation of the quality of LOD is analysed and adapted to the specific case of Resource Description Framework (RDF) triples containing standard bibliographic information. The specified quality measures are reported in the case of four highly relevant libraries [@CandelaGustavo2022Etqo]
+
+-   Evaluating implementation of the Transparency and Openness Promotion (TOP) guidelines: the TRUST process for rating journal policies, procedures, and practices [@Mayo-Wilson_et_al_evaluating_TOP_2021]
+
+### Linked Open Data in Archives
+
+`bib/archivesLOD.bib`
+
+-   The *Records in Contexts–Conceptual Mode* (RiC-CM) reconciles, integrates, builds on, and replaces the four existing standards: General International Standard Archival Description (ISAD(G)); International Standard Archival Authority Records–Corporate Bodies, Persons, and Families (ISAAR(CPF)); International Standard Description of Functions (ISDF); and International Standard Description of Institutions with Archival Holdings (ISDIAH).[@RiC-CM_1_0]
+
+## Reprex
+
+-   \[x\]
+
+    -   Data spaces should provide a structure for trustworthiness in which data consumers and data providers. The dataspace partners build trust with common ethical values and with the disclosure and addressing of potential conflicts of interest, for example, among private and public institutions, composers, producers and performers. Partners increase trust with high data quality. They minimise biases by excluding groups of artists or genres of music. Data protection rules, including a clear interpretation of GDPR, ensure the balance between public interest and privacy concerns.
+
+## Vocabulary 
+
+
+Table 1 lists definitions on the concept of data as they have been provided by ISO/IEC 20546:2019 (Big data – Overview and vocabulary).
+Data and metadata
+[4] These definitions can be found here: https://www.iso.org/obp/ui/#home
+Data
+Re-interpretable representation of information in a formalised
+manner suitable for communication, interpretation, or processing
+Note 1 to entry: Data can be processed by humans or by automatic
+means.
+Data Analytics
+Data Processing
+Dataset
+Information
+Metadata
+Composite concept consisting of data acquisition, data collection,
+data validation, data processing, including data quantification, data
+visualisation and data interpretation
+Systematic performance of operations upon data
+Note 1 to entry: Example: Arithmetic or logic operations upon data,
+merging or sorting of data, or operations on text, such as editing,
+sorting, merging, storing, retrieving, displaying, or printing.
+Identifiable collection of data available for access or download in
+one or more formats
+Data that are processed, organised and correlated to produce
+meaning. Note 1 to entry: Information concerns facts, concepts,
+objects, events, ideas, processes, etc.
+Data about data or data elements, possibly including their data
+descriptions and data about data ownership, access paths, access
+rights and data volatility
+
+3.1.2
+`big data`: extensive datasets (3.1.11) — primarily in the data (3.1.5) characteristics of volume, variety, velocity, and/or variability — that require a scalable technology for efficient storage, manipulation, management, and analysis
+Note 1 to entry: Big data is commonly used in many different ways, for example as the name of the scalable technology used to handle big data extensive datasets.
+
+`data`: reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing
+Note 1 to entry: Data can be processed by humans or by automatic means.
+[SOURCE:ISO/IEC 2382:2015, 2121272]
+
+`data analytics`: composite concept consisting of data acquisition, data collection, data validation, data processing (3.1.9), including data quantification, data visualization, and data interpretation Note 1 to entry: Data analytics is used to understand objects represented by data (3.1.5), to make predictions for a given situation, and to recommend on steps to achieve objectives. The insights obtained from analytics are used for various purposes such as decision-making, research, sustainable development, design, planning, etc.
+
+`database`: collection of data (3.1.5) organized according to a conceptual structure describing the characteristics of these data and the relationships among their corresponding entities, supporting one or more application areas
+[SOURCE:ISO/IEC 2382:2015, 2121413]
+
+`data processing`: systematic performance of operations upon data (3.1.5)
+Note 1 to entry: Example: Arithmetic or logic operations upon data, merging or sorting of data, or operations on text, such as editing, sorting, merging, storing, retrieving, displaying, or printing.
+Note 2 to entry: The term data processing should not be used as a synonym for information processing.
+[SOURCE:ISO/IEC 2382:2015, 01.01.06]
+
+`data model` pattern of structuring data (3.1.5) in a database (3.1.7) according to the formal descriptions in its information system and according to the requirements of the database management system to be applied
+[SOURCE:ISO/IEC 2382:2015, 2125519]
+
+
+`data science`: extraction of actionable knowledge from data (3.1.5) through a process of discovery, or hypothesis and hypothesis testing
+
+3.1.11
+`data set` or `dataset`:  identifiable collection of data (3.1.5) available for access or download in one or more formats
+[SOURCE:Adapted from ISO 19115-2:2009, 4.7]
+
+`data type` or `datatype`: defined set of data (3.1.5) objects of a specified data structure and a set of permissible operations, such that these data objects act as operands in the execution of any one of these operations Note 1 to entry: Example: An integer type has a very simple structure, each occurrence of which, usually called value, is a representation of a member of a specified range of whole numbers and the permissible operations include the usual arithmetic operations on these integers. Note 2 to entry: The term "type" may be used instead of "data type" when there is no ambiguity.
+Note 3 to entry: Data type; datatype: terms and definition standardized by ISO/IEC [ISO/IEC 2382-15:1999].
+Note 4 to entry: 15.04.01 (17.05.08) (2382).
+[SOURCE:ISO/IEC 2382:2015, 2122374]
+
+`file`: named set of records treated as a unit
+[SOURCE:ISO/IEC 2382:2015, 04.07.10]
+
+
+3.1.24
+`metadata` data (3.1.5) about data or data elements, possibly including their data descriptions, and data about data ownership, access paths, access rights and data volatility (3.1.17) [SOURCE:ISO/IEC 2382:2015, 17.06.05] [@iso_2382_2015]
+
+3.1.25
+non-relational database
+database (3.1.7) that does not follow a relational model (3.1.31)
+Note 1 to entry: NoSQL, which is typically translated as “non SQL” or “not only SQL”, is the term in common usage to refer to databases that do not conform to a relational model.
+
+3.1.30
+`relational database`: database (3.1.7) in which the data are organized according to a relational model (3.1.31) 
+[SOURCE:ISO/IEC 2382:2015, 17.04.05]
+
+3.1.31 `relational model`: data model (3.1.10) whose structure is based on a set of relations [SOURCE:ISO/IEC 2382:2015, 17.04.04]
+
+
+structured data
+data (3.1.5) which are organized based on a pre-defined (applicable) set of rules
+Note 1 to entry: The predefined set of rules governing the basis on which the data is structured needs to be clearly stated and made known.
+Note 2 to entry: A pre-defined data model is often used to govern the structuring of data.
+3.1.36
+SQL
+database language specified by ISO/IEC 9075
+Note 1 to entry: SQL is sometimes interpreted to stand for Structured Query Language, but that name is not used in the ISO/IEC 9075 series
+3.1.37
+unstructured data
+data (3.1.5) which are characterized by not having any structure apart from that record or file level
+Note 1 to entry: On the whole unstructured data is not composed of data elements.
+EXAMPLE:An example of unstructured data is free text.
+
+
+`Interoperability`:Ability of two or more systems or applications to exchange
+information and to mutually use the information that has been exchanged. (ISO/IEC 19941:2017)
+
+`Data Portability`: Ability to easily transfer data from one system to another without being required to re-enter data.
