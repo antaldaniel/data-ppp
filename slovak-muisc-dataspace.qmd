@@ -57,7 +57,7 @@ The heart of the Digital Music Observatory is an information model, a high-level
 ## Planning
 
 | EIF Level | Description                                                                                                                   |
-|------------------|------------------------------------------------------|
+|-----------|-------------------------------------------------------------------------------------------------------------------------------|
 | ORG       | Identification of work processes to be supported by the system. Process adjustment for interoperability across organisations. |
 | ORG       | Learning needs assessment for improved processes and IT tools.                                                                |
 | LEG       | Legal requirements for information, data, or metadata transfer.                                                               |
@@ -101,7 +101,7 @@ Music professionals often talk about music data and metadata. Such a distinction
 We aim to provide software tools that allow the technical interoperability of the data exchange along the limited business use cases.
 
 | EIF Level | Description                                                                                                                                                                                                      |
-|-------------------|-----------------------------------------------------|
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | SEM       | Reading and coordinating database schemas, data structure, and data definitions in datasets, and bringing them to a shared, interoperable format, the creation of a shared information model.                    |
 | TECH      | Extract, transfer, load scripts and other processing scripts to extract the data from participating databases, process according to the shared information model, and load them into participant's data systems. |
 

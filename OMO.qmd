@@ -1,0 +1,185 @@
+---
+title: "OMO"
+format: html
+editor: visual
+---
+## Glossary
+
+3.1
+`audio recording`: fixation of sounds
+
+3.2 `music video recording`: fixation of sounds synchronized with pictures or moving pictures where (a) the fixed sounds are wholly or substantially a musical performance or (b) the *recording* (3.3) is intended for viewing in association with a recording of a musical performance. 
+> This definition includes music videos and concert recordings, together with music-related interviews and documentaries, but does not extend to general audiovisual material, even if it includes music.
+
+3.3 `recording`
+audio recording (3.1) or music video recording (3.2)
+- A recording can be composed of parts that are themselves recordings (see A.1.9).
+- A recording is distinct from the carrier in which it is embodied for release, even if no other recordings are included.
+
+A sound recording is a series of musical, spoken, or other sounds fixed in a
+recording medium, such as a CD or digital file, called a “phonorecord.” But
+note that sound recordings are not limited to recordings of musical works.
+Sound recordings can also be lectures, podcasts, or other audio recordings
+
+3.4
+registrant
+entity wishing to assign an ISRC to an applicable recording (3.3)
+3.5
+digit
+decimal numeral from the range 0 to 9, as represented by decimal codes 48 to 57 of ISO/IEC 8859-1
+Note 1 to entry: There is no requirement to use this encoding of these digits when an ISRC is stored or transmitted.
+3.6
+legacy country code
+code consisting of two letters (3.8) notified to a registrant (3.4) under previous editions of this document
+3.7
+legacy registrant code
+code consisting of three alphanumeric characters (3.9) allocated to a registrant (3.4) under previous editions of this document
+
+## Executive summary
+
+## Music data spaces
+
+A dataspace is an emerging approach to data management that recognises that large-scale integration scenarios involve many data sources, and upfront negotiations of ownership, usage rights, or database schema unification would be prohibitively costly. To reduce the initial effort required for data integration, it offers a set of legal, organisational, semantic, and technical protocols to map the potential benefits of a future data exchange. In the data (sharing) space, the actual data integration only happens on an "as-needed", "as-permitted", or "as-agreed" basis, with some of the labour and negotiation-intensive data integration aspects postponed until they are genuinely needed. 
+
+We follow the approach of the BVDA, which relates the interoperability needs of a data sharing space to the European Interoperability Framework. These
+
+-  [x] “Search for things, not strings” by Google, 2012
+
+-  [x] A knowledge graph links things (the artist known as "Katarzia" or the country known as "Slovakia" in different datasets
+
+-  [x] A knowledge graph can link people & processes and enhance technologies
+
+## Vision and ambition
+
+### Why we talk about things instead of things?
+
+Do you know the drummer Roger Taylor? The guy who played drums in _The Queen_ and in _Duran Duran_? Or wait, is it the *same* Roger Taylor? Or only the string is the same?
+
+Name or entity disambiguation is one of the costliest problems in the globalised music industry. If names of bands, titles of works or recordings, or names of artists are mixed up, then a lot of bad things can happen:
+
+-  [ ] Money may be withheld or sent to the wrong place.
+
+-  [ ] Money must be invested into investigating the case and increasing the collection costs that are deducted from the artist's income.
+
+-  [ ] A song is recommended to an unsuitable audience, who will create a negative history for it.
+
+Music research suffers from the same problems:
+
+- [ ] Peer review and quality control suffer when titles and names are mixed up.
+- [ ] Scientific workers who win promotions and grants for their work lose attribution and opportunities when their contribution is not correctly recorded.
+- [ ] Important source articles, data, and ideas are not found when databases mix up people, titles and scientific output.
+- [ ] The impact of a grant is diminished if the results created with its help cannot be found by the right audience and users.
+
+And eventually knowledge workers, like data scientists, statisticians, analysts, librarians who work with data will need to reinvent the wheel many times over, because they must spend time on disambiguation of meaning in datasets.
+
+- [ ] They must find out if the concerts happened in the same geographical area, same timeframe, and same venues, where they got the ticket revenue from.
+- [ ] Before joining the datasets, they must inquire if the exact same definition of "concert" was used and if this includes free events like liturgical music performances in places of worship that have no ticket price.
+- [ ] When comparing microdata as registers, they must know if the same definition of "jazz" was used to compile 
+- [ ] Spend time understanding if the prices are quoted in euros, dollars, or some other local currency.
+- [ ] When comparing microdata as registers, they must know if the same exact definition of "jazz" was used to compile performer lists or playlists by two different organisations.
+
+### Our technical approach
+
+The NFDI-MatWerk National Research Data Infrastructure for Materials Science & Engineering (*Nationale Forschungsdateninfrastruktur für Materialwissenschaft & Werkstofftechnik*) aims at the creation of materials science and engineering specifici digital data space. The development of this infrastructure has been a community-driven process supported by shared meaning in a materials ontology represented through a graph database infrastructure originally initiated in Wikibase.
+
+
+
+### Slovak Music Dataspace
+
+![The Slovak Music Dataspace creates interoperability with global knowledge graphs like Wikidata, MusicBrainz, and among the Slovak national knowledge bases of music in collective rights management, heritage management, libraries and other interested parties.](png/dataspace/Slovak_Music_Dataspace_EN.png)
+
+### Further dataspaces
+
+## OpenCollections
+
+::: callout-note
+*Design Principles for Data Spaces* (Position paper): "From a technical perspective, a data space can be seen as a data integration concept which does not require common database schemas and physical data integration, but is rather based on distributed data stores and integration on an “as needed” basis on a semantic level. Abstracted from this technical definition, a data space can be defined as a federated data ecosystem within a certain application domain and based on shared policies and rules." [@design_principles_data_spaces_2021, p7]
+:::
+
+Reprex's new OpenCollections system integrates various open-source components into a central data-sharing system. OpenCollections stores metadata about potentially informative objects, i.e., raw data, in the central database handled by the partners in the data-sharing space. Additionally, its central database may store data that is exchanged among the users, but it does not aim to take over the role of the data-sharing partners' own databases. 
+
+OpenCollections aims to provide a high degree of technical, syntactic, and semantic interoperability among the data systems of the partners in the data-sharing space. It imports data (or data maps) into a graph format, which is optimal for using heterogeneous data sources. Our innovative solutions aim to make this complex process as fast and weightless as possible. 
+
+The system is built around Wikibase, an information management software developed by Wikipedia based on the MariaDB relational database management system. Wikibase manages the world's most extensive open knowledge graph, Wikidata, and enables users to work in many natural languages with little or no IT or information science knowledge. Many use cases, including the creation of the EU Knowledge graph, inspired us because Wikibase has a much lower learning need than more optimised graph database management systems.
+
+OpenCollections improves the Wikibase experience with automated data-importing components with suitable job aids for users and exporting tools into more complex graphs that can provide data for training trustworthy AI systems.
+
+We understand the importance of compatibility. That's why we provide tools for mass importing data and schematic information from existing relational database management systems like MySQL, PostgreSQL, or simpler, spreadsheet-based data sources. This reassures our users that OpenCollections can seamlessly integrate with their existing systems, providing a secure and confident data management experience. 
+
+We provide training and job aids for manual data processes to keep partners' domain-level experts in the loop and provide human agency and oversight for trustworthy AI systems.
+
+We create a model supported by automation that translates the data held in Wikibase to standard machine-actionable ontologies like CIDOC, RiC, and DCAT-AP.
+
+Our system is inspired by the WB-CIDOC model developed at the University of Helsinki for translating knowledge stored in Wikibase into the statements described with the CIDOC ontology used by intelligent cultural heritage systems. CIDOC is a modern, events-based ontology that allows building trustworthy inference and deduction AI engines. The WB-CIDOC provides rules for writing data into Wikibase in a way that translates correctly into an event-based model, but we find its use counterintuitive and laborious for domain expert data curators. Most domain experts would think that a biographical entity of Albert Einstein should have a birthday property with the date of March 14, 1879, while an event-based ontology would create first an abstract event, the Birth of Albert Einstein, with a timespan of March 14, 1879, 0:00 to 23.59. We provide the extensions that translate the simple, Entity-Based Data Model of Wikibase to an event-based model that offers a lot more deductive and inductive capabilities to the extent of far more cumbersome data entry. 
+
+-  Records and document management: We provide translation for enterprise, institutional, and public records with the new Records in Context (RiC) ontology, which obsoletes the four international standards on archives that predate the Internet. This way, we enable private document management systems and regional or national archives to connect documentary evidence to a single knowledge graph, taking business intelligence applications to the next level.
+
+-  Data catalogues (statistical data, open data): We translate information about datasets, data codes and structures, and variable descriptions following the DCAT-AP specification of the EU Open Data Portal and Stxxxxx to offer full compatibility with European statistical portals and open data portals. This translation works with few limitations for global resources beyond Europe. It connects corporate or institutional datasets and accounts with statistical and national accounts data from public sources, offering unparalleled ease in creating economic or sustainability-controlling applications. 
+
+-  Cultural objects (music, film, buildings): We translate public and private inventories of physical, digital-born, or digitalised cultural objects to the CiDOC ontology, which has been the international standard for museums and cultural heritage organisations since 2014. The CIDOC vocabulary allows us to share data between rights management and cultural heritage organisations. Still, it can also be a first step in populating intelligent city applications with existing building data or can be extended with the inventories of various webshops.
+
+## Music Observatory
+
+::: callout-note
+An **observatory** is a location historically used for observing terrestrial, marine, or celestial events. In the last 30 years, many social, humanities and economic observatories were established to provide a consistent and permanent data and knowledge recording point. We have counted more than 80 EU, OECD or UN institution recognised, international data observatories; every year, about 3-5 new ones go functional and 1-2 become discontinued. Their services, data quality and quantity varies.
+:::
+
+Concert promoters, radio editors, composers, rights management organisations, music librarians, and
+
+## Music observatories
+
+### 
+
+Hypothesis:
+
+A Datasette instance running for providing access to statistical datasets. Each dataset has a MediaWiki textual description and Wikibase descriptive entry.
+
+-  May 17, we have the instance running with one dataset
+
+-  May 31 we have the instancne running with a few datasets that have MediaWiki and Wikibase descriptions.
+
+A mulitinstance Wikibase running, which has private and public properties.
+
+Instance 1: Sandbox for experimenting with data modelling and data import.
+
+-  We are able to import data (Entities and Properties) from the Sandbox to the two other intances.
+
+Instance 2: An endpoint for harvesting or exporting towards the EU Open Data Portal. The instance collects data to bescribe microdata and statistical datasets and research tools. It has descriptions of datasets, indicators (variables in datasets) and questionbank items (i.e. questions, statements used in a survey to collect the dataset.)
+
+-  May 17, we have a first draft of the data model, i.e. entities and properties to describe the information with a few examples. The instance has a SPARQL endpoint. A single dataset was manually described and placed to the EU Open Data portal (manual upload with correct data model)
+
+-  May 31, we have a more permanent instance that synchronised with the EU Open Data portal and the EOSC Cloud portal. This requires a translator script that translates the contests to StatDCAT-AP.
+
+Instance 3: An endpoint for haversting or exporting towards Europeana. The instance collects biographical data and music works data, in recorded, live performance and music sheet manifestations, and related books.
+
+-  May 17, we have a first draft of the data model, i.e. entities and properties to describe the information with a few examples. The instance has a SPARQL endpoint. A few datasets were translated to EDM and given to the Dutch aggregator for Europeana for inspection.
+
+-  May 31, we have a more permanent instance that synchronised with the EU Open Data portal. This requires a translator script that translates the contests to EDM and CIDOC.
+
+-  May 31 we have a manually synched version of our music instance on Wikibase Cloud.
+
+Contents:
+
+Entity microdata for linking
+
+Collections:
+
+Interoperable research tools collections (Instance #2):
+
+A collection of statistical datasets, which are described with the vocabulary of QD and StatDCAT-AP. The datasets are only described in Wikibase.
+
+A collection of survey questions and answer options, which are described with the vocabulary of DDI-C.
+
+A collection of ESRS indicators.
+
+Music collections (Instance #3)
+
+A collection of biographies of music-related persons, described with CIDOC, EDM, and PON vocabularies.
+
+A collection music works, described with CIDOC, EDM, and PON vocabularies.
+
+A collection of recorded fixations (recording) of music works, described with CIDOC, EDM, and PON vocabularies.
+
+A collection of music sheets, described with CIDOC, EDM, and PON vocabularies.
+
+Sandbox (Instance #2)
