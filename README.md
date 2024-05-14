@@ -7,7 +7,7 @@
 
 ## Slovak Pilot Program Proposal
 
-Latest consultation version: [Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic](https://music.dataobservatory.eu/documents/open_music_europe/slovakia/slovak-cult-stat-pilot.html) with `docx`, `epub` and `pdf` downloads. You can comment in Word/Google Docs the `docx` file if you do not want to work on the markdown [souce](https://github.com/antaldaniel/data-ppp/blob/main/slovak-cult-stat-pilot.qmd).
+Latest consultation version: [Pilot Program for Novel Music Industry Statistical Indicators in the Slovak Republic](https://music.dataobservatory.eu/documents/open_music_europe/slovakia/slovak-cult-stat-pilot.html) with `docx`, `epub` and `pdf` downloads. You can comment in Word/Google Docs the `docx` file if you do not want to work on the markdown [source](https://github.com/antaldaniel/data-ppp/blob/main/slovak-cult-stat-pilot.qmd).
 
 *Version history:*
 - 0.1.0: Sent for consultation to stakeholders on 2023-10-02.
@@ -17,10 +17,6 @@ Latest consultation version: [Pilot Program for Novel Music Industry Statistical
 ## Lightning Talk Proposal
 
 Proposal for a `Lightning Talk` on `Trust through Transparency`, the 18th [International Digital Curation Conference](https://www.dcc.ac.uk/events/18th-international-digital-curation-conference)
-
-Source document: `Ligthning-talk.qmd` (Quarto markdown)
-
-Submit Lighting Talk proposal by **October 15 2023**. 
 
 Rendered documents: 
 - `docs/Ligthning-talk.md` (Github Flavoured Markdown)
